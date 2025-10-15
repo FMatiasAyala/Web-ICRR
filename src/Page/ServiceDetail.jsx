@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom"
 const COMPONENTS = {
   "diagnostico-por-imagen": lazy(() => import("./Servicios/Diagnostico")),
   "terapia-radiante": lazy(() => import("./Servicios/Terapia")),
-  "sector-mujer": lazy(() => import("./Servicios/PisoDeLaMujer")),
+  "piso-de-la-mujer": lazy(() => import("./Servicios/PisoDeLaMujer")),
   "practicas-medicas": lazy(() => import("./Servicios/Practicas")),
+  "cheq-in": lazy(() => import("./Servicios/CheqIn")),
 }
 
 export default function ServiceDetail() {

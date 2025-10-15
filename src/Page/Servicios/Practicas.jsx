@@ -201,6 +201,8 @@ export default function PracticasMedicas() {
           ))}
         </div>
       </div>
+
+      {/* Turnos */}
       <div className="bg-gradient-to-r from-[#0A2342] to-[#2E86AB] text-white py-16 mt-5">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">

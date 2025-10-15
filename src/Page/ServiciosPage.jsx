@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { HeartPulse, Radiation, Stethoscope, LucideXCircle } from "lucide-react"
+import { HeartPulse, Radiation, Stethoscope, LucideXCircle, CalendarDays } from "lucide-react"
 
 export default function ServiciosPage() {
   const servicios = [
@@ -30,11 +30,19 @@ export default function ServiciosPage() {
     },
     {
       icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
-      title: "Sector Mujer",
+      title: "Piso De La Mujer",
       desc: "Atención integral con estudios específicos para la salud femenina y programas de prevención.",
       img: "/servicios/PisoDeLaMujer.png",
-      slug: "sector-mujer",
+      slug: "piso-de-la-mujer",
       bg: "bg-[#FDF5F5]",
+    },
+    {
+      icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
+      title: "Cheq-In",
+      desc: "Cheqin es el punto de partida. Un programa que te permite obtener en media jornada tu estado de salud general.",
+      img: "/servicios/Cheq-in.png",
+      slug: "cheq-in",
+      bg: "bg-[#E8F4FB]",
     },
   ]
 
@@ -90,16 +98,30 @@ export default function ServiciosPage() {
       </div>
 
       {/* CTA final */}
-      <div className="container mx-auto text-center mt-20">
-        <p className="text-lg text-gray-700 mb-5">
-          Si tenés dudas sobre qué estudio necesitás, contactanos y te asesoramos.
-        </p>
-        <Link
-          to="/turnos"
-          className="inline-flex rounded-full bg-[#2E86AB] px-8 py-3 font-semibold text-white hover:bg-[#246d88] shadow-md transition"
-        >
-          Reservar Turno
-        </Link>
+
+      <div className="bg-gradient-to-r from-[#0A2342] to-[#2E86AB] text-white py-16 mt-5">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-4">
+            <div className="bg-white/10 p-4 rounded-full">
+              <CalendarDays className="w-10 h-10 text-white" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold">
+                Si tenés dudas sobre qué estudio necesitás, contactanos y te asesoramos.
+              </h3>
+              <p className="text-white/80">
+                Accedé a turnos inmediatos, recordatorios automáticos y asistencia prioritaria.
+              </p>
+            </div>
+          </div>
+
+          <Link
+            to="/turnos"
+            className="inline-flex items-center justify-center rounded-full bg-white text-[#0A2342] font-semibold px-8 py-3 shadow-md hover:bg-gray-100 transition"
+          >
+            Reservar Turno
+          </Link>
+        </div>
       </div>
     </section>
   )

@@ -30,7 +30,7 @@ export default function Footer() {
           <h4 className="font-bold text-white text-lg mb-4">Servicios</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <Link to="/servicios/diagnostico" className="hover:text-white transition">
+              <Link to="/servicios/diagnostico-por-imagen" className="hover:text-white transition">
                 Diagnóstico por Imágenes
               </Link>
             </li>
@@ -45,8 +45,13 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/servicios/piso-mujer" className="hover:text-white transition">
+              <Link to="/servicios/piso-de-la-mujer" className="hover:text-white transition">
                 Piso de la Mujer
+              </Link>
+            </li>
+            <li>
+              <Link to="/servicios/cheq-in" className="hover:text-white transition">
+                Cheq-In
               </Link>
             </li>
           </ul>
