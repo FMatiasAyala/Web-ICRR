@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from "react"
 import { useParams } from "react-router-dom"
 
 const COMPONENTS = {
-  "diagnostico-por-imagen": lazy(() => import("./servicios/Diagnostico")),
-  "terapia-radiante": lazy(() => import("./servicios/Terapia")),
-  "sector-mujer": lazy(() => import("./servicios/PisoDeLaMujer")),
-  "practicas-medicas": lazy(() => import("./servicios/Practicas")),
+  "diagnostico-por-imagen": lazy(() => import("./Servicios/Diagnostico")),
+  "terapia-radiante": lazy(() => import("./Servicios/Terapia")),
+  "sector-mujer": lazy(() => import("./Servicios/PisoDeLaMujer")),
+  "practicas-medicas": lazy(() => import("./Servicios/Practicas")),
 }
 
 export default function ServiceDetail() {
