@@ -43,7 +43,7 @@ export default function Nosotros() {
         <h2 className="text-3xl md:text-4xl font-bold text-[#0A2342] mb-6">
           Nuestra Historia
         </h2>
-        <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-justify">
+        <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-justify px-6">
           Instituto Consultorio Radiológico Resistencia (ICRR) es una organización cuyos inicios fueron en el año 1977 por la avenida Italia al 100, cuyos principales servicios eran radiología convencional, tomografía y mamografía. Cuatro años más tarde, se añade el servicio de ecografía tras la instalación del primer ecógrafo dando pie al servicio de ultrasonido. Luego de 6 años se dan los primeros pasos para instalar cámara gamma, un servicio de medicina nuclear.<br />
 
           En 1990 se instala el densitómetro, generando el servicio número seis de la institución. El séptimo servicio concluye tras la instalación del primer acelerador lineal cuyo fin es mejorar la calidad de vida de los pacientes oncológicos. Un año más tarde, en 1993, se instala el resonador de 0,5 T y en 2006 el primer resonador de campo alto 1.5 T.<br />
