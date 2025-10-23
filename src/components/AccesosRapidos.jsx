@@ -4,9 +4,11 @@ import { Link } from "react-router-dom"
 function AccesosRapidos() {
   const accesos = [
     { title: "Solicitar Turno", img: "/icons/turno.png", to: "/turnos" },
-    { title: "Portal de Derivantes", img: "/icons/resultados.png", to: "https://pacientes.icrrportal.com.ar/derivante1.php" },
-    { title: "Novedades", img: "/icons/contacto.png", to: "/novedades" },
     { title: "Portal Pacientes", img: "/icons/portal.png", to: "https://pacientes.icrrportal.com.ar/" },
+
+    { title: "Novedades", img: "/icons/contacto.png", to: "/novedades" },
+    { title: "Portal de Derivantes", img: "/icons/resultados.png", to: "https://pacientes.icrrportal.com.ar/derivante1.php" },
+
   ]
 
   return (

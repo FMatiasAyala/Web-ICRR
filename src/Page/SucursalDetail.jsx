@@ -16,15 +16,15 @@ export default function SucursalDetail() {
 
   if (!Component) {
     return (
-      <div className="container mx-auto px-6 py-20 text-center">
-        <h1 className="text-2xl font-bold text-[#0A2342]">Sucursal no encontrada</h1>
-        <p className="text-gray-600 mt-2">
-          Volvé a{" "}
-          <a href="/#sucursales" className="text-[#2E86AB] underline">
-            nuestras sucursales
-          </a>.
-        </p>
-      </div>
+        <div className="container mx-auto px-6 py-20 text-center">
+          <h1 className="text-2xl font-bold text-[#0A2342]">Sucursal no encontrada</h1>
+          <p className="text-gray-600 mt-2">
+            Volvé a{" "}
+            <a href="/#sucursales" className="text-[#2E86AB] underline">
+              nuestras sucursales
+            </a>.
+          </p>
+        </div>
     )
   }
 

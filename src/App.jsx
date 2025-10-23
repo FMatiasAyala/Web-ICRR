@@ -11,13 +11,16 @@ import SucursalDetail from "./Page/SucursalDetail"
 import SucursalesHome from "./components/SucursalesHome"
 import Novedades from "./Page/Novedades"
 import Pacientes from "./Page/Pacientes"
+import ScrollToTop from "./components/ScrollToTop"
 
 export default function App() {
   return (
     <Suspense fallback={<div className="p-8">Cargando…</div>}>
+      <ScrollToTop/>
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<Home />} />
+          <Route path="inicio" element={<Home />} />
           <Route path="servicios" element={<ServiciosPage />} />
           <Route path="servicios/:slug" element={<ServiceDetail />} />
           <Route path="turnos" element={<Turnos />} />

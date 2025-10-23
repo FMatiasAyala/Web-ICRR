@@ -11,11 +11,11 @@ export default function Preparaciones() {
       nombre: "Cámara Gamma – Medicina Nuclear",
       estudios: [
         {
-          titulo: "Flegografía",
+          titulo: "FLEGOGRAFÍA",
           detalle: `No requiere preparación.`,
         },
         {
-          titulo: "Curva de Captación y Gammagrafía de Tiroides",
+          titulo: "CURVA DE CAPACITACIÓN Y GAMMAGRAFÍA DE TIROIDES",
           detalle: `Ayunas total de 6 hs antes (ni agua para el primer día). Los días restantes desayuno normal.
 
 Suspender la siguiente medicación:
@@ -27,7 +27,7 @@ Suspender la siguiente medicación:
 - Tinturas para el cabello, bronceadores, pescados y frutos de mar, etc.`,
         },
         {
-          titulo: "Estudio Dinámico Renal (Estática y Funcional)",
+          titulo: "ESTUDIO DINÁMICO RENAL (ESTÁTICA Y FUNCIONAL)",
           detalle: `1ª Parte – ESTÁTICA
 Debe asistir el primer día para la administración del radiofármaco y regresar entre 6 a 8 hs después de la administración para los registros de imágenes.
 

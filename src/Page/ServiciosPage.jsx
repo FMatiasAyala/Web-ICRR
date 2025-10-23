@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { HeartPulse, Radiation, Stethoscope, LucideXCircle, CalendarDays } from "lucide-react"
+import SeoTags from "../components/SeoTags"
 
 export default function ServiciosPage() {
   const servicios = [
@@ -47,82 +48,89 @@ export default function ServiciosPage() {
   ]
 
   return (
-    <section className="relative min-h-screen bg-gray-50 py-20">
-      {/* Encabezado */}
-      <div className="container mx-auto px-6 text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0A2342] mb-6">
-          Nuestros Servicios
-        </h1>
-        <p className="text-gray-600 max-w-3xl mx-auto">
-          Conocé las principales áreas de atención y diagnóstico del
-          <strong className="text-[#2E86AB]"> Consultorio Radiológico Resistencia</strong>.
-        </p>
-      </div>
-
-      {/* Grilla de servicios */}
-      <div className="container mx-auto px-6 grid gap-10 md:grid-cols-2 lg:grid-cols-2">
-        {servicios.map((s, i) => (
-          <div
-            key={i}
-            className={`${s.bg} relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition`}
-          >
-            {/* Imagen superior */}
-            <div className="relative h-56 overflow-hidden">
-              <img
-                src={s.img}
-                alt={s.title}
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 flex items-center gap-3 text-white">
-                {s.icon}
-                <h3 className="text-xl font-semibold">{s.title}</h3>
-              </div>
-            </div>
-
-            {/* Contenido */}
-            <div className="p-6 md:p-8">
-              <p className="text-gray-700 leading-relaxed">{s.desc}</p>
-
-              <div className="mt-6 flex justify-end">
-                <Link
-                  to={`/servicios/${s.slug}`}
-                  className="inline-flex items-center justify-center rounded-full border-2 border-[#2E86AB] px-6 py-2 text-sm font-semibold text-[#0A2342] transition hover:bg-[#2E86AB] hover:text-white"
-                >
-                  Ver más
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* CTA final */}
-
-      <div className="bg-gradient-to-r from-[#0A2342] to-[#2E86AB] text-white py-16 mt-5">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-4">
-            <div className="bg-white/10 p-4 rounded-full">
-              <CalendarDays className="w-10 h-10 text-white" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold">
-                Si tenés dudas sobre qué estudio necesitás, contactanos y te asesoramos.
-              </h3>
-              <p className="text-white/80">
-                Accedé a turnos inmediatos, recordatorios automáticos y asistencia prioritaria.
-              </p>
-            </div>
-          </div>
-
-          <Link
-            to="/turnos"
-            className="inline-flex items-center justify-center rounded-full bg-white text-[#0A2342] font-semibold px-8 py-3 shadow-md hover:bg-gray-100 transition"
-          >
-            Reservar Turno
-          </Link>
+    <>
+      <SeoTags
+        title="Servicios | ICRR"
+        description="Resonancias, tomografías, rayos X, densitometrías, ecografías y más. Conocé los servicios de diagnóstico por imágenes que ofrecemos en ICRR."
+        image="/logos/icrr_logo2.jpg"
+      />
+      <section className="relative min-h-screen bg-gray-50 py-20">
+        {/* Encabezado */}
+        <div className="container mx-auto px-6 text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#0A2342] mb-6">
+            Nuestros Servicios
+          </h1>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Conocé las principales áreas de atención y diagnóstico del
+            <strong className="text-[#2E86AB]"> Consultorio Radiológico Resistencia</strong>.
+          </p>
         </div>
-      </div>
-    </section>
+
+        {/* Grilla de servicios */}
+        <div className="container mx-auto px-6 grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+          {servicios.map((s, i) => (
+            <div
+              key={i}
+              className={`${s.bg} relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition`}
+            >
+              {/* Imagen superior */}
+              <div className="relative h-56 overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 flex items-center gap-3 text-white">
+                  {s.icon}
+                  <h3 className="text-xl font-semibold">{s.title}</h3>
+                </div>
+              </div>
+
+              {/* Contenido */}
+              <div className="p-6 md:p-8">
+                <p className="text-gray-700 leading-relaxed">{s.desc}</p>
+
+                <div className="mt-6 flex justify-end">
+                  <Link
+                    to={`/servicios/${s.slug}`}
+                    className="inline-flex items-center justify-center rounded-full border-2 border-[#2E86AB] px-6 py-2 text-sm font-semibold text-[#0A2342] transition hover:bg-[#2E86AB] hover:text-white"
+                  >
+                    Ver más
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA final */}
+
+        <div className="bg-gradient-to-r from-[#0A2342] to-[#2E86AB] text-white py-16 mt-5">
+          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex items-center gap-4">
+              <div className="bg-white/10 p-4 rounded-full">
+                <CalendarDays className="w-10 h-10 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold">
+                  Si tenés dudas sobre qué estudio necesitás, contactanos y te asesoramos.
+                </h3>
+                <p className="text-white/80">
+                  Accedé a turnos inmediatos, recordatorios automáticos y asistencia prioritaria.
+                </p>
+              </div>
+            </div>
+
+            <Link
+              to="/turnos"
+              className="inline-flex items-center justify-center rounded-full bg-white text-[#0A2342] font-semibold px-8 py-3 shadow-md hover:bg-gray-100 transition"
+            >
+              Reservar Turno
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
