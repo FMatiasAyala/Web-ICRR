@@ -12,7 +12,6 @@ import SucursalesHome from "./components/SucursalesHome"
 import Novedades from "./Page/Novedades"
 import Pacientes from "./Page/Pacientes"
 import ScrollToTop from "./components/ScrollToTop"
-import EncuestaSatisfaccion from "./components/EncuestaStisfaccion"
 
 export default function App() {
   return (
@@ -23,7 +22,6 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="inicio" element={<Home />} />
           <Route path="servicios" element={<ServiciosPage />} />
-          <Route path="encuesta" element={<EncuestaSatisfaccion />} />
           <Route path="servicios/:slug" element={<ServiceDetail />} />
           <Route path="turnos" element={<Turnos />} />
           <Route path="nosotros" element={<Nosotros />} />
