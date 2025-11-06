@@ -1,28 +1,26 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Search } from "lucide-react"
-// Si más adelante viene desde backend: import obrasSociales from "../data/obrasSociales.json"
-
-const obras = [
-  { nombre: "INSSSEP", logo: "/logos/insssep.png" },
-  { nombre: "OSDE", logo: "/logos/osde.png" },
-  { nombre: "Swiss Medical", logo: "/logos/swiss.png" },
-  { nombre: "IOMA", logo: "/logos/ioma.png" },
-  { nombre: "Medifé", logo: "/logos/medife.png" },
-  { nombre: "OSECAC", logo: "/logos/osecac.png" },
-  { nombre: "Galeno", logo: "/logos/galeno.png" },
-  { nombre: "Federada Salud", logo: "/logos/federada.png" },
-  { nombre: "Sancor Salud", logo: "/logos/sancor.png" },
-  { nombre: "OSPE", logo: "/logos/ospe.png" },
-  // ... podés agregar todas las que quieras
-]
 
 export default function ObraSociales() {
   const [busqueda, setBusqueda] = useState("")
+  const [obras, setObras] = useState([])
 
-  const filtradas = obras.filter((o) =>
-    o.nombre.toLowerCase().includes(busqueda.toLowerCase())
-  )
+  useEffect(() => {
+    fetch("/data/instituciones.json")
+      .then((res) => res.json())
+      .then((data) => setObras(data))
+      .catch((err) => console.error("Error cargando instituciones:", err))
+  }, [])
+
+  const obrasTop = obras.slice(0, 10)
+
+  const filtradas = busqueda
+    ? obras.filter((o) =>
+      o.sRazonSocial.toLowerCase().includes(busqueda.toLowerCase()) ||
+      o.sSigla.toLowerCase().includes(busqueda.toLowerCase())
+    )
+    : obrasTop
 
   return (
     <section className="container mx-auto px-6 py-16">
@@ -57,7 +55,7 @@ export default function ObraSociales() {
         </div>
       </div>
 
-      {/* Grid de logos */}
+      {/* Grid */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -68,26 +66,39 @@ export default function ObraSociales() {
         {filtradas.map((o, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="group relative w-[150px] h-[80px] flex items-center justify-center bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+            transition={{ duration: 0.4, delay: i * 0.03 }}
+            viewport={{once: true}}
+            className="group relative w-[150px] h-[120px] flex flex-col items-center justify-center bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4 text-center"
           >
-            <img
-              src={o.logo}
-              alt={o.nombre}
-              className="max-h-[60px] max-w-[120px] object-contain"
-            />
-            <span className="absolute bottom-2 text-xs text-gray-600 opacity-0 group-hover:opacity-100 transition">
-              {o.nombre}
-            </span>
+            {/* Logo (solo si existe) */}
+            {o.logo ? (
+              <>
+                <img
+                  src={o.logo}
+                  alt={o.sRazonSocial}
+                  className="max-h-[50px] max-w-[100px] object-contain mb-2"
+                  loading="lazy"
+                />
+                <span className="text-xs font-medium text-gray-700 leading-tight">
+                  {o.sRazonSocial}
+                </span>
+              </>
+            ) : (
+              <span className="text-sm font-medium text-gray-700 leading-tight">
+                {o.sRazonSocial}
+              </span>
+            )}
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Nota final */}
+
+      {/* Nota */}
       <p className="text-center text-gray-500 text-sm mt-12">
-        *Los convenios pueden variar según periodo o especialidad. Recomendamos confirmar al momento de solicitar turno.
+        *Los convenios pueden variar según periodo o especialidad. Recomendamos
+        confirmar al momento de solicitar turno.
       </p>
     </section>
   )

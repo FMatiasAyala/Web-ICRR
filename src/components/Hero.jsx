@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react"
 import { Link } from "react-router-dom"
 
-const SLIDE_INTERVAL = 5000 // ms
+const SLIDE_INTERVAL = 3000 // ms
 
 const slides = [
   {
@@ -25,7 +25,7 @@ const slides = [
     title: "Portal de pacientes",
     desc: "Consultá turnos, preparaciones y resultados online.",
     ctaLabel: "Ingresar al portal",
-    ctaTo: "/portal",
+    ctaTo: "https://pacientes.icrrportal.com.ar/",
     image: "/banners/Portaldepacientes.png",
   },
   {

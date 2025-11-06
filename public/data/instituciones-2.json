@@ -1,0 +1,594 @@
+[
+  {
+    "sRazonSocial": "INSSSEP",
+    "sSigla": "INSSSEP",
+    "logo":"/logos/insssep.png"
+  },
+  {
+    "sRazonSocial": "ORGANIZACION DE SERVICIOS DIRECTOS EMPRESARIOS",
+    "sSigla": "OSDE",
+    "logo":"/logos/osde.png"
+  },
+  {
+    "sRazonSocial": "ASOCIACION SANCOR SALUD",
+    "sSigla": "SANCOR",
+    "logo":"/logos/sancorSalud.png"
+  },
+  {
+    "sRazonSocial": "UNION PERSONAL DE LA UNION DEL PERSONAL CIVIL DE LA NACION",
+    "sSigla": "UP OBLIGATORIO",
+    "logo":"/logos/unionPersonal.png"
+  },
+  {
+    "sRazonSocial": "SWISS MEDICAL GROUP",
+    "sSigla": "SWISS MED OBLIG",
+    "logo":"/logos/swissMedical.png"
+  },
+  {
+    "sRazonSocial": "SWISS MEDICAL GROUP",
+    "sSigla": "SWISS VOLUNTARI",
+    "logo":"/logos/swissMedical.png"
+  },
+  {
+    "sRazonSocial": "O. S. CONDUCTORES CAMIONEROS Y PERSONAL DEL TRANSPORTE",
+    "sSigla": "CAMIONEROS",
+    "logo":"/logos/oschoca.png"
+  },
+  {
+    "sRazonSocial": "INSTITUTO DE SERVICIO SOCIALES UNNE",
+    "sSigla": "ISSUNNE",
+    "logo":"/logos/issunne.png"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL FEMECHACO SALUD",
+    "sSigla": "FEME",
+    "logo":"/logos/femechaco.png"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE SANIDAD",
+    "sSigla": "ATSA",
+    "logo":"/logos/atsa.png"
+  },
+  {
+    "sRazonSocial": "DIRECCION OBRA SOCIAL DEL SERVICIO PENITENCIARIO FEDERAL",
+    "sSigla": "SPF U7(RCIA)"
+  },
+  {
+    "sRazonSocial": "ASOC. MUTAL DEL PERS JERARQUICOS DE BANCOS OFICIAL NAC",
+    "sSigla": "JER OBLIGATORIO"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL DE LAS FUERZAS ARMADAS",
+    "sSigla": "IOSFA"
+  },
+  {
+    "sRazonSocial": "OSPECON OBRA SOCIAL DEL PERSONAL DE LA CONSTRUCCION",
+    "sSigla": "CONSTRUIR SALUD"
+  },
+  {
+    "sRazonSocial": "O. S. DE LA ASOC. DEL PERSONAL DEL AGUA Y LA ENERGIA",
+    "sSigla": "OSJERA"
+  },
+  {
+    "sRazonSocial": "AVALIAN",
+    "sSigla": "AVALIAN EXENTO"
+  },
+  {
+    "sRazonSocial": "ORGANIZACION DE SERVICIOS DIRECTOS EMPRESARIOS",
+    "sSigla": "OSDE REDUCIDO"
+  },
+  {
+    "sRazonSocial": "PREVENCION SALUD NO GRAVADO",
+    "sSigla": "PREV NO GRAVADO"
+  },
+  {
+    "sRazonSocial": "INSTITUTO OBRA SOCIAL DE LAS FUERZAS ARMADAS(IOSFA)",
+    "sSigla": "IOSE"
+  },
+  {
+    "sRazonSocial": "CORTE SUPREMA DE JUSTICIA OBRA SOCIAL DEL PODER JUDICIAL",
+    "sSigla": "PODER JUDI"
+  },
+  {
+    "sRazonSocial": "GALENO ARGENTINA SA",
+    "sSigla": "GALENO ARG SA",
+    "logo":"/logos/galeno.png"
+  },
+  {
+    "sRazonSocial": "AVALIAN",
+    "sSigla": "AVALIAN GRAVADO"
+  },
+  {
+    "sRazonSocial": "INST. NAC. DE SERV. SOC. PARA JUB. Y PENS.",
+    "sSigla": "PAMI"
+  },
+  {
+    "sRazonSocial": "UNION PERSONAL DE LA UNION PERSONAL CIVIL DE LA NACION",
+    "sSigla": "UP ADHERENTES"
+  },
+  {
+    "sRazonSocial": "PREVENCION ART SA",
+    "sSigla": "PREV ART"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE ENTIDADES DEPORTIVAS Y CIVILES",
+    "sSigla": "OSPEDYC"
+  },
+  {
+    "sRazonSocial": "MUTUAL COSECHA SALUD",
+    "sSigla": "COSECHA SAL"
+  },
+  {
+    "sRazonSocial": "HOSP. DR. JULIO C. PERRANDO",
+    "sSigla": "HOSP PERRANDO"
+  },
+  {
+    "sRazonSocial": "SINDICATO DE MECANICOS Y AFINES DEL TRANSP. AUTOMOTOR",
+    "sSigla": "SMATA"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DEL SEGURO",
+    "sSigla": "SEGUROS OBL"
+  },
+  {
+    "sRazonSocial": "PROGRAMA FEDERAL INCLUIR SALUD",
+    "sSigla": "PROGRAMA F"
+  },
+  {
+    "sRazonSocial": "PREVENCION SALUD S.A",
+    "sSigla": "PREV GRAVADO"
+  },
+  {
+    "sRazonSocial": "HOSP. PEDIATRICO DR. AV L CASTELAN",
+    "sSigla": "HOSP PEDIATRICO"
+  },
+  {
+    "sRazonSocial": "O. S. DE LOS EMPLEADOS DE COMERCIO Y ACTIVIDADES CIVILES",
+    "sSigla": "OSECAC"
+  },
+  {
+    "sRazonSocial": "DASUTEN",
+    "sSigla": "DASUTEN"
+  },
+  {
+    "sRazonSocial": "SANTA CLARA SALUD SA",
+    "sSigla": "SANTA CLARA"
+  },
+  {
+    "sRazonSocial": "O.S.PERSONAL ESTACIONES DE SERVICIO,GARAGES, PLAYAS Y LAVADE",
+    "sSigla": "OSPESCHA"
+  },
+  {
+    "sRazonSocial": "O. S. DE LA FED. ARG. TRABAJADORES DE LUZ Y FUERZA",
+    "sSigla": "LUZ Y FUERZA"
+  },
+  {
+    "sRazonSocial": "INSSEP CONVENIO",
+    "sSigla": "INSEP CON"
+  },
+  {
+    "sRazonSocial": "OSSIMRA-PARANA SALUD SA",
+    "sSigla": "PARANA"
+  },
+  {
+    "sRazonSocial": "MINISTERIO DE SALUD PUBLICA DEL CHACO",
+    "sSigla": "MINISTERIO"
+  },
+  {
+    "sRazonSocial": "POLICIA FEDERAL ARGENTINA",
+    "sSigla": "POLICIA FEDERAL"
+  },
+  {
+    "sRazonSocial": "PREVENCION A1 NO GRAVADO",
+    "sSigla": "PREV A1 NO GRAV"
+  },
+  {
+    "sRazonSocial": "PACIENTE BONIFICADO",
+    "sSigla": "BONIFICADO"
+  },
+  {
+    "sRazonSocial": "SISTEMAS MEDICOS  SRL",
+    "sSigla": "SISTEMAS M"
+  },
+  {
+    "sRazonSocial": "ASOCIACION DE CLINICAS Y SANATORIOS DEL CHACO",
+    "sSigla": "ACLYSA"
+  },
+  {
+    "sRazonSocial": "ASIPSALUD S.R.L",
+    "sSigla": "ASIPSALUD (GM)"
+  },
+  {
+    "sRazonSocial": "ROI SA",
+    "sSigla": "ROI SA"
+  },
+  {
+    "sRazonSocial": "ASOCIAR ART SA",
+    "sSigla": "ASOCIAR ART SA"
+  },
+  {
+    "sRazonSocial": "GALENO ART SA",
+    "sSigla": "GALENO ART SA",
+    "logo":"/logos/galenoArt.png"
+  },
+  {
+    "sRazonSocial": "ASOC. MUTUAL DEL PERS. JERARQUICOS DE BANCOS OFICIAL",
+    "sSigla": "JER VOLUNTARIOS"
+  },
+  {
+    "sRazonSocial": "O. S. DE DOCENTES PRIVADOS",
+    "sSigla": "OSDOP"
+  },
+  {
+    "sRazonSocial": "O. S. DE LA FED. ARG. TRAB. DE LUZ Y FUERZA",
+    "sSigla": "LUZ ALTA COMPLE"
+  },
+  {
+    "sRazonSocial": "DIRECCION DE OBRA SOCIAL DEL SERVICIO PENITENCIARIO FEDERAL",
+    "sSigla": "SPF U11(SPEÑA"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE IMPRENTAS DIARIOS Y AFINES",
+    "sSigla": "OSPIDA"
+  },
+  {
+    "sRazonSocial": "MUTUAL DE TRABAJADORES METALURGICOS DEL CHACO",
+    "sSigla": "UOM"
+  },
+  {
+    "sRazonSocial": "COLEGIO MEDICO GREMIAL GRAL SAN MARTIN",
+    "sSigla": "COLE SAN MARTIN"
+  },
+  {
+    "sRazonSocial": "HOSPITAL 4 DE JUNIO DR RAMON CARRILLO",
+    "sSigla": "HOSP 4 DE JUNIO"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE FARMACIA",
+    "sSigla": "FARMACIA"
+  },
+  {
+    "sRazonSocial": "PREVENCION SALUD PLANES ESPECIALES",
+    "sSigla": "PREV A1 GRAV"
+  },
+  {
+    "sRazonSocial": "EXPERTA ART SA",
+    "sSigla": "EXPERTA"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL DEL PERSONAL DE TELEVISION",
+    "sSigla": "TELEVISION (FED"
+  },
+  {
+    "sRazonSocial": "MEPLIFE SALUD SRL",
+    "sSigla": "MEPLIFE"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL ADM. Y TECNICOS DE LA CONSTRUCCION",
+    "sSigla": "OSPATCA"
+  },
+  {
+    "sRazonSocial": "O. S. PARA EL PERSONAL DE LA INDUSTRIA ACEITERA DESMOT",
+    "sSigla": "OSIAD"
+  },
+  {
+    "sRazonSocial": "OMINT S.A.",
+    "sSigla": "OMINT OBL O EXE"
+  },
+  {
+    "sRazonSocial": "GLOBAL EMPRESARIA SA",
+    "sSigla": "GLOBAL(COLEG ME"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL RURAL ESTIBADORES REP. ARG.",
+    "sSigla": "OSPRERA"
+  },
+  {
+    "sRazonSocial": "MEDIFE ASOCIACION CIVIL",
+    "sSigla": "MEDIFE OBLIGATO"
+  },
+  {
+    "sRazonSocial": "SANCOR INTEGRO",
+    "sSigla": "SANCOR INT"
+  },
+  {
+    "sRazonSocial": "BRAMED SRL",
+    "sSigla": "BRAMED EXENTO"
+  },
+  {
+    "sRazonSocial": "ANDINA ART SA",
+    "sSigla": "ANDINA ART"
+  },
+  {
+    "sRazonSocial": "ASOCIACION DE AGENTES DE PROPAGANDA MEDICA",
+    "sSigla": "APM"
+  },
+  {
+    "sRazonSocial": "LA SEGUNDA ART",
+    "sSigla": "LA SEGUNDA ART"
+  },
+  {
+    "sRazonSocial": "ENSALUD SA",
+    "sSigla": "ENSALUD"
+  },
+  {
+    "sRazonSocial": "RIO VARADERO SA",
+    "sSigla": "RIO VARADE"
+  },
+  {
+    "sRazonSocial": "INSTITUTO DE SERVICIOS SOCIALES DE LA UNIV. NAC. D",
+    "sSigla": "ISSUNCAUS"
+  },
+  {
+    "sRazonSocial": "O. S. DE PASTELEROS ELEVAR",
+    "sSigla": "ELEVAR-PASTELER"
+  },
+  {
+    "sRazonSocial": "O. S. DE EMPLEADOS TEXTILES Y AFINES",
+    "sSigla": "OSETYA"
+  },
+  {
+    "sRazonSocial": "TACCHI JULIO ALFREDO Y TACCHI JUAN CARLOS",
+    "sSigla": "OSUTHGRA"
+  },
+  {
+    "sRazonSocial": "FEDERACION PATRONAL SEGUROS SA",
+    "sSigla": "FEDER PATRONAL"
+  },
+  {
+    "sRazonSocial": "O. S. PATRONES DE CABOTAJE DE RIOS Y PUERTOS",
+    "sSigla": "OSPATRONES"
+  },
+  {
+    "sRazonSocial": "CLUB ATLETICO CHACO FOR EVER",
+    "sSigla": "FOR EVER"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE LA INDUSTRIA LECHERA",
+    "sSigla": "OSPIL"
+  },
+  {
+    "sRazonSocial": "PROVINCIA ART SA",
+    "sSigla": "PROVINCIA"
+  },
+  {
+    "sRazonSocial": "DIAGNOSTICO POR RESONANCIA MAGNETICA SA",
+    "sSigla": "RMN"
+  },
+  {
+    "sRazonSocial": "GRUPO URBE S.A.S",
+    "sSigla": "GRUPO URBE"
+  },
+  {
+    "sRazonSocial": "ASOC MUT DEL PERSONAL JERARQUICOS DE BANCOS OF NACIONALES",
+    "sSigla": "JERARQUICOS COL"
+  },
+  {
+    "sRazonSocial": "ECLESIASTICA SAN PEDRO",
+    "sSigla": "ECLES SAN PEDRO"
+  },
+  {
+    "sRazonSocial": "MUTUAL FEDERADA 25 DE JUNIO",
+    "sSigla": "FEDERADA 1"
+  },
+  {
+    "sRazonSocial": "MEDIFE ASOCIACION CIVIL",
+    "sSigla": "MEDIFE VOLUNT"
+  },
+  {
+    "sRazonSocial": "SCIS SA",
+    "sSigla": "SCIS"
+  },
+  {
+    "sRazonSocial": "VISITAR SRL",
+    "sSigla": "VISITAR COLEGIO"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL DEL PERSONAL DE TELEVISION",
+    "sSigla": "TELEVISION(COL"
+  },
+  {
+    "sRazonSocial": "PACIENTES GAMMA",
+    "sSigla": "PACIENTES GAMMA"
+  },
+  {
+    "sRazonSocial": "EQUIPO MEDICO DE EMERGENCIAS",
+    "sSigla": "EMME"
+  },
+  {
+    "sRazonSocial": "RECONQUISTA ART SA",
+    "sSigla": "RECONQUIS"
+  },
+  {
+    "sRazonSocial": "ITER MEDICINA SA",
+    "sSigla": "ITER MEDICINA"
+  },
+  {
+    "sRazonSocial": "ENSALUD SA",
+    "sSigla": "ENSALUD COLEGIO"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE LA INDUSTRIA MADERERA",
+    "sSigla": "OSPIM"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE DIR. DE EMPRESAS ALIMENTICIAS",
+    "sSigla": "OPDEA OBLIGATOR"
+  },
+  {
+    "sRazonSocial": "LA SEGUNDA COMPAÑIA DE SEGUROS DE PERSONAS SA",
+    "sSigla": "LA SEGUNDA CIA"
+  },
+  {
+    "sRazonSocial": "SWISS MEDICAL ART SA",
+    "sSigla": "SWIS MED ART"
+  },
+  {
+    "sRazonSocial": "SALUD BUENOS AIRES UTEPLIM SAS",
+    "sSigla": "UTEPLIM SAS"
+  },
+  {
+    "sRazonSocial": "O. S. SERVICIOS SOCIALES BANCARIOS",
+    "sSigla": "BANC"
+  },
+  {
+    "sRazonSocial": "CLUB ATLETICO SARMIENTO",
+    "sSigla": "CLUB SARMIENTO"
+  },
+  {
+    "sRazonSocial": "EX COMBATIENTES INSSSEP",
+    "sSigla": "INSSSEP EX COMB"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE EDIFICIOS DE RENTAS Y HORIZONTAL",
+    "sSigla": "OSPERyHRA"
+  },
+  {
+    "sRazonSocial": "VISITAR SRL",
+    "sSigla": "VISITAR(FEDERAC"
+  },
+  {
+    "sRazonSocial": "O. S. DEL PERSONAL DE LA INDUSTRIA TEXTIL",
+    "sSigla": "OSPIT"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL PARA LA ACTIVIDAD DOCENTE",
+    "sSigla": "OSPLAD OBLIGATO"
+  },
+  {
+    "sRazonSocial": "O. S. DE FUTBOLISTAS",
+    "sSigla": "FUTB"
+  },
+  {
+    "sRazonSocial": "HOSPITAL DEL BICENTENARIO GRAL GUEMES",
+    "sSigla": "HOS J J CASTELL"
+  },
+  {
+    "sRazonSocial": "OMINT S.A.",
+    "sSigla": "OMINT VOL GRAV"
+  },
+  {
+    "sRazonSocial": "SUPERINTENDENCIA DE BIENESTAR POLICIA FEDERAL ARGENTINA",
+    "sSigla": "POLICIA FEDERAL"
+  },
+  {
+    "sRazonSocial": "HEMISFERIO SALUD SA",
+    "sSigla": "HEMISF SALUD SA"
+  },
+  {
+    "sRazonSocial": "O. S. DE AGENTES DE LOTERIA Y AFINES DE LA REP. ARG.",
+    "sSigla": "OSALARA"
+  },
+  {
+    "sRazonSocial": "SANIDAD LUIS PASTEUR",
+    "sSigla": "LUIS PAS OBLIG"
+  },
+  {
+    "sRazonSocial": "SANIDAD LUIS PASTEUR",
+    "sSigla": "LUIS PAS VOLUNT"
+  },
+  {
+    "sRazonSocial": "ASOC. CLUB ATLETICO VILLA SAN MARTIN",
+    "sSigla": "CLUB VILLA S M"
+  },
+  {
+    "sRazonSocial": "SANATORIO CHACO SRL",
+    "sSigla": "CHACO"
+  },
+  {
+    "sRazonSocial": "FEDERACION MEDICA DEL CHACO",
+    "sSigla": "FEDER MEDICA"
+  },
+  {
+    "sRazonSocial": "SOCIEDAD DE CARDIOLOGIA DE CORRIENTES",
+    "sSigla": "SOCACORR"
+  },
+  {
+    "sRazonSocial": "SERVICIO PENITENCIARIO FEDERAL U11",
+    "sSigla": "SPF U11 SAENZ"
+  },
+  {
+    "sRazonSocial": "OSPIDA-STADYCA",
+    "sSigla": "OSPIDA-STADYCA"
+  },
+  {
+    "sRazonSocial": "MARINA MERCANTE",
+    "sSigla": "IMAGEN SALUD"
+  },
+  {
+    "sRazonSocial": "O.S DEL PERSONAL DEL SEGURO",
+    "sSigla": "SEGUROS ADHEREN"
+  },
+  {
+    "sRazonSocial": "INTEGRAL SALUD SRL",
+    "sSigla": "GMA SALUD"
+  },
+  {
+    "sRazonSocial": "LA HOLANDO SUD CIA DE SEG SA",
+    "sSigla": "LA HOLANDO"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL DE SEGUROS",
+    "sSigla": "SEGUROS OB"
+  },
+  {
+    "sRazonSocial": "MUT FEDERADA 25 DE JUNIO SPR",
+    "sSigla": "FEDER G1 COLEGI"
+  },
+  {
+    "sRazonSocial": "OSTEL JUBILADOS",
+    "sSigla": "OSTEL JUB"
+  },
+  {
+    "sRazonSocial": "BERKLEY INTERNATIONAL ART SA",
+    "sSigla": "BERKLEY"
+  },
+  {
+    "sRazonSocial": "OMINT ART",
+    "sSigla": "OMINT ART"
+  },
+  {
+    "sRazonSocial": "MINISTERIO DE SALUD PUBLICA DE CORRIENTES",
+    "sSigla": "SALUD PUBL CTES"
+  },
+  {
+    "sRazonSocial": "GLOBAL EMPRESARIA SA",
+    "sSigla": "GLOBAL(FED MED"
+  },
+  {
+    "sRazonSocial": "ITER MEDICINA SA",
+    "sSigla": "ITERMEDICINA"
+  },
+  {
+    "sRazonSocial": "SAN CRISTOBAL SMSG",
+    "sSigla": "SAN CRISTOBAL"
+  },
+  {
+    "sRazonSocial": "OBRA SOCIAL DEL PERSONAL DEL TURISMO Y GASTRONOMICO",
+    "sSigla": "OSUTGRA"
+  },
+  {
+    "sRazonSocial": "O. S. DE EMPRESARIOS PROFESIONALES Y MONOTRIBUTISTAS",
+    "sSigla": "OSDEPYM"
+  },
+  {
+    "sRazonSocial": "ASOC. MUTUAL DEL PERSONAL JERARQUICOS DE BANCOS OFICIAL",
+    "sSigla": "JER OBL REFACT"
+  },
+  {
+    "sRazonSocial": "MI ENTIDAD DE PRUEBA",
+    "sSigla": "PRUEBA"
+  },
+  {
+    "sRazonSocial": "ART MUTUAL RURAL DE SEGUROS DE RIESGOS DE TRABAJO",
+    "sSigla": "ART MUT RURAL"
+  },
+  {
+    "sRazonSocial": "MAPFRE ARGENTINA SEGUROS DE VIDA SA",
+    "sSigla": "MAPFRE"
+  },
+  {
+    "sRazonSocial": "OS DE LA ASOC CIVIL PRO SINDICATO DE AMAS DE CASA DE LA REPU",
+    "sSigla": "OSSACRA"
+  }
+]

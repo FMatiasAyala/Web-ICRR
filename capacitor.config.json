@@ -1,0 +1,9 @@
+{
+  "appId": "com.icrr.app",
+  "appName": "webicrr",
+  "webDir": "dist",
+    "server": {
+    "url": "http://bulonxpress.com/",
+    "cleartext": true
+  }
+}

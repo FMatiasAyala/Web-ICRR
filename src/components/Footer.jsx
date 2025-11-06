@@ -12,7 +12,7 @@ export default function Footer() {
           <h4 className="font-bold text-white text-lg mb-4">Casa Central</h4>
           <div className="flex items-start gap-3 text-gray-300 text-sm mb-2">
             <MapPin size={18} className="text-white/80 mt-0.5" />
-            <p>Av. 9 de Julio 635 - Resistencia</p>
+            <p>Av. 9 de Julio 635 - Resistencia, Chaco</p>
           </div>
           <div className="flex items-start gap-3 text-gray-300 text-sm mb-2">
             <Phone size={18} className="text-white/80 mt-0.5" />
@@ -21,8 +21,8 @@ export default function Footer() {
 
           <h4 className="font-bold text-white text-lg mt-6 mb-3">Sedes</h4>
           <p className="text-sm text-gray-300 leading-relaxed">
-            Av. Alvear 3876 - Fontana <br />
-            Av. J. D. Perón 1220 - Sáenz Peña
+            Av. Alvear 3876 - Fontana, Chaco <br />
+            Av. J. D. Perón 1220 - Presidencia Roque Sáenz Peña, Chaco
           </p>
         </div>
 
