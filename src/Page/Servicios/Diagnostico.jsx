@@ -156,13 +156,6 @@ Composición corporal total o DMO de cuerpo entero`,
     imagen: "/img/servicios/equipoDensito.jpg",
   },
   {
-    nombre: "Punción Mamaria",
-    descripcion:
-      "Procedimientos guiados por imagen que permiten localizar lesiones y obtener muestras de tejido con mínima invasión, garantizando seguridad y exactitud diagnóstica.",
-    detalle: `La PAAF es una prueba diagnóstica que consiste en la extracción de una muestra total o parcial de tejido para ser examinada al microscopio por un patólogo.`,
-    imagen: "/img/servicios/imagenPuncion.jpg",
-  },
-  {
     nombre: "Mamografía",
     descripcion:
       "Procedimientos guiados por imagen que permiten localizar lesiones y obtener muestras de tejido con mínima invasión, garantizando seguridad y exactitud diagnóstica.",
@@ -178,17 +171,6 @@ Focalizada Bilateral o Unilateral: esta técnica generalmente se utiliza para ve
 
 Tomo síntesis Bilateral o Unilateral: es una forma avanzada de toma de imágenes del seno en la que múltiples imágenes de los senos, tomadas desde diferentes ángulos, son capturadas y reconstruidas (sintetizadas) en grupos de imágenes tridimensionales. Esta técnica generalmente se utiliza para ver distorsiones y/o nódulos mamarios.`,
     imagen: "/img/servicios/equipoMamografia.jpg",
-  },
-  {
-    nombre: "Marcación Mamaria",
-    descripcion:
-      "Procedimientos guiados por imagen que permiten localizar lesiones y obtener muestras de tejido con mínima invasión, garantizando seguridad y exactitud diagnóstica.",
-    detalle: `La Marcación es un procedimiento que consiste en marcar la ubicación de una lesión no palpable (detectada en Mamografía, Ecografía Mamaria, Resonancia Magnética, etc.), que ha de ser extirpada quirúrgicamente.
-
-A través de una aguja fina, ha de colocarse una sustancia o producto “marcador” en la lesión no palpable, con objeto de facilitar la labor del cirujano.
-
-El procedimiento de marcación puede ser realizado por ecografía (cuando hay que marcar nódulos) o mamografía (generalmente empleado para marcar microcalcificaciones y distorsiones).`,
-    imagen: "/img/servicios/imagenMarcacion.jpg",
   },
 ]
 
