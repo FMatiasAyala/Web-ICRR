@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { CalendarDays } from "lucide-react"
+import { CalendarDays, Radiation } from "lucide-react"
 import { Link } from "react-router-dom"
+import SeoTags from "../../components/SeoTags"
 
 const servicios = [
   {
@@ -31,7 +32,7 @@ TC con contraste oral y endovenoso.
 Uro tomografía.
 
 Peso máximo autorizado por equipo: 120 kg.`,
-    imagen: "/img/servicios/equipoCt.jpg",
+    imagen: "/img/servicios/equipoCt.webp",
   },
   {
     nombre: "Resonancia Magnética",
@@ -56,7 +57,7 @@ Tipo de Resonancia que realizamos:
 Resonancia sin contraste, resonancia de abdomen – colangioresonancia – multiparamétrica de próstata, resonancia de abdomen – uro resonancia, resonancia de pelvis / ginecológica – próstata, resonancia obstétrica, resonancia con anestesia, artroresonancia.
 
 Peso máximo autorizado por equipo: 120 kg.`,
-    imagen: "/img/servicios/equipoRm.jpg",
+    imagen: "/img/servicios/equipoRm.webp",
   },
   {
     nombre: "Ecografía",
@@ -71,7 +72,7 @@ Tipos de ecografías que realizamos:
 Ecografías: Ginecológica, Transvaginal, Obstétrica, Mamaria y mamaria tridimensional, Tiroidea, Testicular, Abdominal, Hepatobiliar, Vejiga o Próstata, Renal, Pancreática o Suprarrenal, Ecografía de cerebro y caderas, músculos esqueléticos y partes blandas.
 
 Ecografías con Doppler: Transvaginal, tiroidea y testicular con Doppler, eco vasos del cuello con Doppler, ecocardiograma Doppler, ecografía abdominal y renal con Doppler, eco arterial de miembros inferiores.`,
-    imagen: "/img/servicios/equipoEcografia.jpg",
+    imagen: "/img/servicios/equipoEcografia.webp",
   },
   {
     nombre: "Radiología Digital",
@@ -83,7 +84,7 @@ Este estudio está contraindicado en el embarazo.
 Tipos de radiografías que realizamos: Simples y Contrastados.
 
 Radiografía Contrastada: Cistouretrografía Retrograda y Miccional, Rx Videodeglución, Rx Seriada Esofagastroduodenal/Tránsito Esofágico, Rx Tránsito de Intestino Delgado, Histerosalpingografía, Colon por enema`,
-    imagen: "/img/servicios/equipoRx.jpg",
+    imagen: "/img/servicios/equipoRx.webp",
   },
   {
     nombre: "Cámara Gamma – Medicina Nuclear",
@@ -94,7 +95,7 @@ Radiografía Contrastada: Cistouretrografía Retrograda y Miccional, Rx Videodeg
  
 
 Tipos de Cámara Gamma que realizamos: ósea, renal, paratiroides, pulmonar, linfática, flebogammagrafia, salival, vaciamiento gástrico, detección de hemorragia digestiva, ganglio centinela, rastreo corporal total, dosis terapéutica para cáncer de tiroides, amiloidosis cardiaca, ciprofloxacina para procesos de inflamación e infección, detección de mucosa gástrica ectópica, centellograma de tiroides para tiroideopatias (por ejemplo, hipertiroidismo, bocio), etc.`,
-    imagen: "/img/servicios/equipoGamma.jpg",
+    imagen: "/img/servicios/equipoGamma.webp",
   },
   {
     nombre: "PET-CT",
@@ -121,7 +122,7 @@ Equipamiento
 Tomógrafo Hibrido PET/CT Siemens BIOGRAPH HORIZON– Con modo de adquisición y reconstrucción 3D. CT espiral de alto rendimiento de 16 cortes.
 
 UltraHD-PET: Detectores basados en LSO y electrónica de alta velocidad. Ofrece una imagen con una relación señal-ruido mejorada que puede usarse para mejorar la calidad de la imagen, reducir la dosis o reducir el tiempo de adquisición de un paciente. Permitiendo escaneos más rápidos, menor dosis inyectada y mejor calidad de imagen.`,
-    imagen: "/img/servicios/equipoPet.jpg",
+    imagen: "/img/servicios/equipoPet.webp",
   },
   {
     nombre: "Densitometría Ósea",
@@ -129,7 +130,7 @@ UltraHD-PET: Detectores basados en LSO y electrónica de alta velocidad. Ofrece 
       "Evaluación precisa de la densidad mineral ósea para la detección y control de la osteoporosis. Equipos certificados con software de análisis comparativo.",
     detalle: `La densitometría ósea es el procedimiento por excelente para determinar la masa ósea y medir la disminución de la densidad cuando está por debajo del umbral de fractura.
 
-Permite medir la cantidad de calcio que tienen los huesos por cm2. El tejido óseo está compuesto básicamente por un mineral, el calcio, que le da la dureza y resistencia si se encuentra en un porcentaje apropiado.
+Permite medir la cantidad de calcio que tienen los huesos por cm2. El tejido óseo está compuesto básicamente por un mineral, el calcio, que le da la hace de dureza y resistencia si se encuentra en un porcentaje apropiado.
 
 La densitometría ósea es una manera segura, efectiva, no invasiva e indolora de obtener información acerca de los huesos.
 
@@ -153,7 +154,7 @@ DMO de cuello de fémur y columna lumbar.
 DMO dual de fémur (ambas caderas)
 DMO de tercio distal de radio/ radio 33/ radio ultra distal
 Composición corporal total o DMO de cuerpo entero`,
-    imagen: "/img/servicios/equipoDensito.jpg",
+    imagen: "/img/servicios/equipoDensito.webp",
   },
   {
     nombre: "Mamografía",
@@ -170,115 +171,167 @@ Magnificada Bilateral o Unilateral: esta técnica generalmente se utiliza para v
 Focalizada Bilateral o Unilateral: esta técnica generalmente se utiliza para ver distorsiones o asimetrías en las mamas, y en menor medida para la visualización de nódulos mamarios.
 
 Tomo síntesis Bilateral o Unilateral: es una forma avanzada de toma de imágenes del seno en la que múltiples imágenes de los senos, tomadas desde diferentes ángulos, son capturadas y reconstruidas (sintetizadas) en grupos de imágenes tridimensionales. Esta técnica generalmente se utiliza para ver distorsiones y/o nódulos mamarios.`,
-    imagen: "/img/servicios/equipoMamografia.jpg",
+    imagen: "/img/servicios/equipoMamografia.webp",
   },
 ]
 
 export default function Diagnostico() {
   const [abierto, setAbierto] = useState(null)
   return (
-    <section className="container mx-auto px-6 py-16">
-      {/* Encabezado */}
-      <div className="relative h-[50vh] w-full overflow-hidden rounded-3xl mb-16 shadow-md">
-        <img
-          src="/servicios/DI.png"
-          alt="Sala de diagnóstico por imágenes"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2342]/90 via-[#0A2342]/60 to-transparent" />
-        <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 text-white max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            Diagnóstico por Imágenes
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-            Tecnología avanzada, precisión diagnóstica y un equipo médico especializado
-            comprometido con la excelencia.
-          </p>
+    <>
+      <SeoTags
+        title="Diagnóstico por Imágenes | ICRR"
+        description="Servicios de ecografía, tomografía, resonancia y más con tecnología de vanguardia."
+        image="/logos/icrr_logo2.jpg"
+      />
+      <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
+        {/* Fondo decorativo tenue */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-10 mix-blend-luminosity">
+          <img
+            src="/servicios/DI.png"
+            alt="fondo"
+            className="w-full h-[600px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F4F6FB] opacity-100 h-[600px]" />
         </div>
-      </div>
 
-      {/* Grid de servicios */}
-      <div className="grid md:grid-cols-2 gap-16 relative overflow-visible">
-        {servicios.map((serv, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.05 }}
-            className="relative rounded-3xl shadow-xl bg-white overflow-visible"
-          >
-            {/* Imagen */}
-            <img
-              src={serv.imagen}
-              alt={serv.nombre}
-              className="w-full h-[320px] object-cover rounded-t-3xl"
-            />
-
-            {/* Info principal */}
-            <div className="relative -mt-12 mx-auto w-[90%] md:w-[85%] bg-white shadow-lg rounded-2xl p-6 md:p-8">
-              <h2 className="text-2xl font-semibold text-[#0A2342] mb-2">
-                {serv.nombre}
-              </h2>
-              <p className="text-gray-700 text-[15px] leading-relaxed">
-                {serv.descripcion}
-              </p>
-
-              {serv.detalle && (
-                <>
-                  <button
-                    onClick={() => setAbierto(abierto === i ? null : i)}
-                    className="mt-4 inline-flex items-center gap-2 text-[#2E86AB] font-medium hover:text-[#0A2342] transition"
-                  >
-                    {abierto === i ? "Ocultar detalle ▲" : "Ver más detalle ▼"}
-                  </button>
-
-                  <AnimatePresence>
-                    {abierto === i && (
-                      <motion.div
-                        key="detalle"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.4 }}
-                        className="absolute left-0 top-full mt-4 w-full bg-white p-6 rounded-2xl shadow-2xl z-50 border border-gray-100"
-                      >
-                        <p className="text-gray-700 whitespace-pre-line leading-relaxed text-[15px]">
-                          {serv.detalle}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </>
-              )}
-            </div>
-          </motion.div>
-        ))}
-      </div>
-      {/* BLOQUE TURNOS */}
-      <div className="bg-gradient-to-r from-[#0A2342] to-[#2E86AB] text-white py-16 mt-5">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-4">
-            <div className="bg-white/10 p-4 rounded-full">
-              <CalendarDays className="w-10 h-10 text-white" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold">
-                Atención personalizada y turnos online
-              </h3>
-              <p className="text-white/80">
-                Accedé a turnos inmediatos, recordatorios automáticos y asistencia prioritaria desde nuestra plataforma digital.
-              </p>
-            </div>
+        <div className="relative z-10 container mx-auto px-6 pt-16 md:pt-24">
+          {/* Encabezado Principal */}
+          <div className="text-center mb-20">
+            <motion.div 
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#0B2CF5] flex items-center justify-center border-[8px] border-white shadow-xl mx-auto mb-10"
+            >
+              <span className="text-white text-[40px] md:text-[56px] font-black tracking-tighter">Di</span>
+            </motion.div>
+            
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-7xl font-black text-[#0B2CF5] mb-6 tracking-tight"
+            >
+              Diagnóstico por Imágenes
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-[#505050] font-medium text-lg md:text-2xl max-w-2xl mx-auto leading-relaxed"
+            >
+               Servicios de ecografía, tomografía, resonancia y más con tecnología de vanguardia.
+            </motion.p>
           </div>
 
-          <Link
-            to="/turnos"
-            className="inline-flex items-center justify-center rounded-full bg-white text-[#0A2342] font-semibold px-8 py-3 shadow-md hover:bg-gray-100 transition"
+          {/* Grid de servicios */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative max-w-6xl mx-auto mb-24">
+            {servicios.map((serv, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col h-full hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 border border-gray-50"
+              >
+                {/* Imagen embutida */}
+                <div className="p-4 pb-0">
+                  <div className="relative h-[240px] md:h-[280px] rounded-[2rem] overflow-hidden">
+                    <img
+                      src={serv.imagen}
+                      alt={serv.nombre}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B2CF5]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </div>
+
+                {/* Contenido info */}
+                <div className="p-8 md:p-10 flex-grow flex flex-col">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F4F6FB] flex items-center justify-center text-[#0B2CF5] flex-shrink-0">
+                      <Radiation className="w-6 h-6" strokeWidth={2.5} />
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-black text-[#0B2CF5] leading-tight tracking-tight">
+                      {serv.nombre}
+                    </h2>
+                  </div>
+
+                  <p className="text-[#505050] text-[16px] leading-relaxed font-medium mb-8">
+                    {serv.descripcion}
+                  </p>
+
+                  {serv.detalle && (
+                    <div className="mt-auto">
+                      <button
+                        onClick={() => setAbierto(abierto === i ? null : i)}
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F4F6FB] text-[#0B2CF5] text-sm font-black hover:bg-[#0B2CF5] hover:text-white transition-all duration-300"
+                      >
+                        {abierto === i ? "VER MENOS" : "VER MÁS DETALLE"}
+                      </button>
+
+                      <AnimatePresence>
+                        {abierto === i && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden mt-8"
+                          >
+                            <div className="pt-8 border-t border-gray-100">
+                              <p className="text-[#505050] whitespace-pre-line text-[15px] leading-relaxed font-medium">
+                                {serv.detalle}
+                              </p>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA final */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-[#0B2CF5] rounded-[3rem] p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-[0_20px_50px_rgba(11,44,245,0.3)] overflow-hidden relative"
           >
-            Reservar Turno
-          </Link>
+            {/* Decoración sutil */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+              <div className="bg-white/10 p-5 rounded-[2rem] backdrop-blur-sm">
+                <CalendarDays className="w-12 h-12 text-white" />
+              </div>
+              <div className="max-w-xl">
+                <h3 className="text-3xl md:text-4xl font-black mb-4 leading-tight tracking-tight">
+                  Atención personalizada y turnos online
+                </h3>
+                <p className="text-white/80 font-medium text-lg">
+                  Accedé a turnos inmediatos, recordatorios automáticos y asistencia prioritaria desde nuestra plataforma digital.
+                </p>
+              </div>
+            </div>
+
+            <Link
+              to="/turnos"
+              className="relative z-10 inline-flex items-center justify-center rounded-full bg-white text-[#0B2CF5] font-black px-12 py-5 text-lg shadow-xl hover:bg-gray-50 transition-all hover:-translate-y-1 active:scale-95"
+            >
+              RESERVAR TURNOS
+            </Link>
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

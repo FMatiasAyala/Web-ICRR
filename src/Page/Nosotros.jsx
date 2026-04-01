@@ -4,137 +4,126 @@ import SeoTags from "../components/SeoTags"
 export default function Nosotros() {
   return (
     <>
-    <SeoTags
-      title="Sobre Nosotros | ICRR"
-      description="Conocé nuestro equipo médico, nuestra historia y compromiso con la salud diagnóstica en Resistencia."
-      image="/logos/icrr_logo2.jpg"
-    />
-      <section className="flex flex-col">
+      <SeoTags
+        title="Sobre Nosotros | ICRR"
+        description="Conocé nuestro equipo médico, nuestra historia y compromiso con la salud diagnóstica en Resistencia."
+        image="/logos/icrr_logo2.jpg"
+      />
+      <section className="flex flex-col bg-[#F4F6FB] pb-24">
         {/* === Encabezado con imagen del equipo === */}
-        <div className="relative h-[60vh] w-full overflow-hidden">
+        <div className="relative h-[65vh] w-full overflow-hidden">
           <img
-            src="/img/nosotros.jpg"
+            src="/img/nosotros.webp"
             alt="Equipo del Consultorio Radiológico Resistencia"
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="absolute inset-0 h-full w-full object-cover object-center translate-y-[-10%]"
           />
-          <div className="absolute inset-0 bg-[#0A2342]/60" />
+          {/* Nuevo overlay degradado azulino sutil a la izquierda */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#061D38]/80 via-[#061D38]/40 to-transparent" />
 
-          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-4">
+          <div className="relative z-10 h-full container mx-auto px-6 lg:px-12 flex flex-col justify-center text-white">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="text-4xl md:text-6xl font-bold tracking-wide"
+              className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight max-w-4xl"
             >
-              Instituto Consultorio Radiológico Resistencia
+              Nuestra <br />Historia y Valores
             </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 1 }}
-              className="mt-3 text-lg md:text-xl text-gray-100/90 max-w-2xl"
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="w-24 md:w-32 h-[8px] bg-white my-8 shadow-sm"
+            />
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 1 }}
+              className="mt-2 text-xl md:text-2xl text-gray-100 font-medium max-w-xl leading-relaxed"
             >
-              Profesionales comprometidos con la excelencia en diagnóstico por imágenes.
+              Más de 45 años comprometidos con la excelencia en diagnóstico del nordeste argentino.
             </motion.p>
           </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mt-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2342] mb-6">
-            Nuestra Historia
-          </h2>
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-justify px-6">
-            Instituto Consultorio Radiológico Resistencia (ICRR) es una organización cuyos inicios fueron en el año 1977 por la avenida Italia al 100, cuyos principales servicios eran radiología convencional, tomografía y mamografía. Cuatro años más tarde, se añade el servicio de ecografía tras la instalación del primer ecógrafo dando pie al servicio de ultrasonido. Luego de 6 años se dan los primeros pasos para instalar cámara gamma, un servicio de medicina nuclear.<br />
 
-            En 1990 se instala el densitómetro, generando el servicio número seis de la institución. El séptimo servicio concluye tras la instalación del primer acelerador lineal cuyo fin es mejorar la calidad de vida de los pacientes oncológicos. Un año más tarde, en 1993, se instala el resonador de 0,5 T y en 2006 el primer resonador de campo alto 1.5 T.<br />
+        {/* === Bloque Historia (Tarjeta Flotante) === */}
+        <div className="container mx-auto px-6 -mt-20 relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-10 md:p-16"
+          >
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-black text-[#0B2CF5] mb-10 tracking-tight text-center">
+                Nuestra Historia
+              </h2>
+              <div className="space-y-6 text-lg text-[#505050] font-medium leading-[1.8] text-justify tracking-tight">
+                <p>
+                  Instituto Consultorio Radiológico Resistencia (ICRR) nació en 1977 con la misión de brindar servicios médicos de vanguardia. Desde nuestros inicios en Av. Italia al 100, nos posicionamos como referentes en radiología convencional, tomografía y mamografía.
+                </p>
+                <p>
+                  A lo largo de las décadas hemos liderado la innovación tecnológica en el NEA: incorporamos ecografía en 1981, medicina nuclear con cámara gamma en 1987, densitometría en 1990 y nuestro primer acelerador lineal en 1991. En 1993 dimos el gran paso hacia la resonancia magnética, evolucionando constantemente hasta instalar resonadores de campo alto 1.5 T.
+                </p>
+                <p>
+                  Recientemente, en 2022, reafirmamos nuestro compromiso instalando el primer <span className="text-[#0B2CF5] font-black">PET CT</span> de la provincia y la región, permitiendo a nuestros pacientes acceder a diagnósticos de máxima precisión sin necesidad de trasladarse a grandes centros urbanos como Buenos Aires o Córdoba.
+                </p>
+                <p className="pt-4 border-t border-gray-100 text-center font-black text-[#0B2CF5] text-xl font-black">
+                  Cuarenta y cinco años trabajando al servicio de la salud del Chaco.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
-            El instituto CRR siempre se especializó en diagnostico por imágenes y radioterapia, pero año a año fue innovándose en tecnología para mejorar la salud y calidad de vida de las personas de nuestra comunidad.<br />
-
-            En el año 2021 se incorpora el mamógrafo con tomo síntesis, en 2013 primer equipo de cámara gamma con doble cabezal, en 2018 un equipo automático y 3d para la toma de imágenes mamarias y axilares.<br />
-
-            Comentando incorporaciones más recientes, en 2019 se expande el servicio de resonancia ya que se instala el resonador número tres. En 2020 se incorpora un nuevo acelerador lineal para ampliar el espectro de atención de los pacientes con diagnostico oncológico.<br />
-
-            En el año 2022, se instaló un nuevo equipo de resonancia, reemplazando a uno de ellos. Se compró un equipo nuevo de cámara gamma y, por último, se añadirá a nuestros servicios el PET CT permitiendo diagnosticar con mayor rapidez y precisión a los pacientes. También, comentar que es el único en la provincia y región, permitiendo que los pacientes se ahorren gastos de movilidad hasta ciudades como Buenos Aires y Córdoba.<br />
-
-            Desde 1977 y hasta la actualidad (2024) logramos consolidarnos como la institución líder en el nordeste argentino. Cuarenta y cinco años trabajando al servicio de la salud de la provincia del Chaco.
-          </p>
-        </motion.div>
-        {/* === Misión y Visión con imágenes === */}
-        <div className="container mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
-          {/* Bloque de texto */}
-          <div className="space-y-12">
+        {/* === Misión y Visión === */}
+        <div className="container mx-auto py-24 px-6">
+          <div className="grid md:grid-cols-2 gap-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="bg-white rounded-[2.5rem] p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2342] mb-4">
-                Nuestra Misión
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                La misión del Instituto CRR es mejorar la calidad de vida de nuestra comunidad a través de la prestación de servicios médicos de excelencia en las áreas de diagnóstico, prácticas médicas y quirúrgicas ambulatorias. Promoviendo la prevención, la investigación científica y la formación de profesionales con estándares de nivel internacional.
+              <div className="w-16 h-16 bg-[#F4F6FB] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#0B2CF5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-3xl font-black text-[#0B2CF5] mb-4 tracking-tight">Nuestra Misión</h3>
+              <p className="text-[16px] text-[#505050] font-medium leading-relaxed">
+                Mejorar la calidad de vida de nuestra comunidad a través de servicios médicos de excelencia en diagnóstico y prácticas quirúrgicas ambulatorias, promoviendo la prevención y formación profesional.
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2342] mb-4">
-                Nuestra Visión
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                La visión es convertirnos en una institución de salud líder en el norte argentino especializada en áreas de diagnóstico, prácticas médicas y quirúrgicas ambulatorias, reconocidos por la calidez de nuestros profesionales y por la calidad de nuestras prestaciones.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Bloque de imágenes interactivas */}
-          <div className="grid grid-cols-2 gap-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative group overflow-hidden rounded-2xl shadow-lg"
-            >
-              <img
-                src="/img/inicio1.png" // 🔹 Foto de los primeros equipos o instalaciones
-                alt="Inicios del consultorio"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative group overflow-hidden rounded-2xl shadow-lg"
+              className="bg-white rounded-[2.5rem] p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center"
             >
-              <img
-                src="/img/inicio2.png" // 🔹 Otra imagen histórica o del edificio original
-                alt="Historia del consultorio"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-16 h-16 bg-[#F4F6FB] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#0B2CF5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h3 className="text-3xl font-black text-[#0B2CF5] mb-4 tracking-tight">Nuestra Visión</h3>
+              <p className="text-[16px] text-[#505050] font-medium leading-relaxed">
+                Ser la institución de salud líder en el norte argentino, reconocida por la calidez humana de nuestros profesionales y la calidad tecnológica de nuestras prestaciones diagnósticas.
+              </p>
             </motion.div>
           </div>
         </div>
 
-        {/* === Valores o Historia adicional === */}
-        <div className="container mx-auto px-6 pb-20">
+        {/* === Valores === */}
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -142,46 +131,37 @@ export default function Nosotros() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2342] mb-8">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0B2CF5] mb-8 tracking-tight">
               Nuestros Valores
             </h2>
 
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg text-[#505050] font-medium max-w-2xl mx-auto mb-16 leading-relaxed">
               Los principios que guían cada una de nuestras acciones reflejan el compromiso del
-              Consultorio Radiológico Resistencia con la ética, la excelencia profesional y el
-              respeto por nuestros pacientes.
+              ICRR con la ética, la excelencia y el respeto humano.
             </p>
 
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {[
-                "Liderazgo",
-                "Responsabilidad",
-                "Respeto",
-                "Compañerismo",
-                "Ética",
-                "Honestidad",
-                "Integridad",
-                "Transparencia",
-                "Independencia",
-                "Compromiso",
-                "Excelencia",
-                "Innovación",
+                "Liderazgo", "Responsabilidad", "Respeto", "Compañerismo",
+                "Ética", "Honestidad", "Integridad", "Transparencia",
+                "Independencia", "Compromiso", "Excelencia", "Innovación",
               ].map((valor, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.05 }}
+                  whileHover={{ y: -5 }}
                   viewport={{ once: true }}
-                  className="bg-white border border-gray-200 shadow-sm hover:shadow-md rounded-xl p-5 transition-all"
+                  className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl p-6 border border-gray-50 flex items-center justify-center text-center group hover:bg-[#0B2CF5] transition-all duration-300 pointer-events-auto cursor-default"
                 >
-                  <h3 className="text-[#0A2342] font-semibold text-lg mb-1">
+                  <span className="text-[#0B2CF5] group-hover:text-white font-black text-sm uppercase tracking-wider transition-colors">
                     {valor}
-                  </h3>
-                  <div className="h-1 w-10 bg-[#2E86AB] rounded-full mx-auto mt-2" />
+                  </span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
         </div>
       </section>
     </>

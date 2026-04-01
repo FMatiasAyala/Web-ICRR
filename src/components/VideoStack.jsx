@@ -8,35 +8,34 @@ function VideoStack() {
       <div className="container mx-auto px-6">
         <div className="relative mx-auto max-w-5xl group">
           {/* Capa superior con el video */}
-          <div className="relative z-10 overflow-hidden rounded-3xl bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] ring-1 ring-black/10">
+          <div className="relative z-10 overflow-hidden rounded-[2.5rem] bg-black shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white">
             <video
               autoPlay
               loop
               muted
               playsInline
-              poster="/videoPoster.jpg"               // opcional
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              poster="/videoPoster.jpg"
+              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[450px]"
             >
               <source src="/videoInicio.mp4" type="video/mp4" />
             </video>
 
             {/* Overlay sutil para legibilidad del texto */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#061D38]/80 via-transparent to-transparent" />
 
             {/* Contenido sobre el video */}
-            <div className="absolute bg-gradient-to-t from-black/80 via-transparent to-transparent inset-x-0 bottom-0 p-5 md:p-7 flex items-end justify-between gap-4 text-white">
+            <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 flex items-end justify-between gap-6 text-white">
               <div className="max-w-2xl">
-                <h3 className="text-lg md:text-xl font-semibold">
-                  Conocé nuestro Centro de Diagnóstico
+                <h3 className="text-xl md:text-3xl font-black mb-2 tracking-tight">
+                  Conocé nuestro Instituto
                 </h3>
-                <p className="mt-1 text-sm md:text-base text-white/90">
-                  Infraestructura pensada para tu comodidad y precisión diagnóstica.
+                <p className="text-sm md:text-base text-white/90 font-medium">
+                  Infraestructura de vanguardia pensada para tu comodidad y mayor precisión diagnóstica.
                 </p>
               </div>
               <Link
                 to="/servicios"
-                className="hidden sm:inline-flex items-center justify-center rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-[#0A2342] shadow-md backdrop-blur transition
-                           hover:bg-white"
+                className="hidden sm:inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 font-bold text-[#0B2CF5] shadow-lg transition hover:bg-[#F4F6FB] hover:scale-105"
               >
                 Más información
               </Link>

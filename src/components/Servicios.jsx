@@ -6,23 +6,26 @@ import { Radiation, Stethoscope, HeartPulse, ClipboardCheck } from "lucide-react
 export default function ServiciosHome() {
   const servicios = [
     {
-      icon: <Radiation className="w-10 h-10 text-[#2E86AB]" />,
-      title: "Diagnóstico por Imagen",
-      desc: "Ecografía, tomografía, resonancia y más con equipos de última generación.",
-      img: "/servicios/Di-logo_03_blanco.png",
+      abbr: "Di",
+      color: "bg-[#254DF5]",
+      title: "Diagnóstico por imágenes",
+      desc: "Servicios de ecografía, tomografía, resonancia y más con equipos de última generación.",
+      img: "/img/diagnosticoImagen.webp",
       slug: "diagnostico-por-imagen",
       especial: false
     },
     {
-      icon: <Radiation className="w-10 h-10 text-[#2E86AB]" />,
+      abbr: "Tr",
+      color: "bg-[#25DF85]",
       title: "Terapia Radiante",
       desc: "Tratamientos personalizados con enfoque en precisión y seguridad.",
-      img: "/servicios/Tr-logo_03_blanco.png",
+      img: "/img/servicios/equipoTerapia.webp",
       slug: "terapia-radiante",
       especial: false
     },
     {
-      icon: <Stethoscope className="w-10 h-10 text-[#2E86AB]" />,
+      abbr: "Pm",
+      color: "bg-[#F5BB25]",
       title: "Prácticas Médicas",
       desc: "Procedimientos de apoyo diagnóstico y seguimiento clínico integral.",
       img: "/servicios/Pm-logo_03_blanco.png",
@@ -30,20 +33,50 @@ export default function ServiciosHome() {
       especial: false
     },
     {
-      icon: <HeartPulse className="w-10 h-10 text-[#2E86AB]" />,
-      title: "Piso de la Mujer",
-      desc: "Mamografías, ecografías ginecológicas y programas de prevención.",
-      img: "/servicios/PisoDeLaMujer.png",
-      slug: "piso-de-la-mujer",
-      especial: true
+      title: "CHEQ-IN General",
+      suffix: "General",
+      slug: "cheq-in-general",
+      especial: true,
+      color: "bg-[#0B2CF5]",
+      icon: null
     },
     {
-      icon: <ClipboardCheck className="w-10 h-10 text-[#2E86AB]" />,
-      title: "CHEQ-IN",
-      desc: "CHEQ-IN",
-      img: "/servicios/Cheq-in.png",
-      slug: "cheq-in",
-      especial: true
+      title: "CHEQ-IN Óseo",
+      suffix: "Óseo",
+      slug: "cheq-in-oseo",
+      especial: true,
+      color: "bg-[#E8BC3D]",
+      icon: (
+        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2 2 2 0 0 1-4 0 2 2 0 0 1 2-2V8a2 2 0 0 1-2-2 2 2 0 0 1 4 0 2 2 0 0 0 2 2h6a2 2 0 0 0 2-2 2 2 0 0 1 4 0 2 2 0 0 1-2 2v8a2 2 0 0 1 2 2 2 2 0 0 1-4 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "CHEQ-IN Cardio",
+      suffix: "Cardio",
+      slug: "cheq-in-cardio",
+      especial: true,
+      color: "bg-[#D93F4A]",
+      icon: (
+        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+        </svg>
+      )
+    },
+    {
+      title: "CHEQ-IN Mujer",
+      suffix: "Mujer",
+      slug: "cheq-in-mujer",
+      especial: true,
+      color: "bg-[#E379C7]",
+      icon: (
+        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="10" r="6" />
+          <line x1="12" y1="16" x2="12" y2="22" />
+          <line x1="9" y1="19" x2="15" y2="19" />
+        </svg>
+      )
     },
   ]
 
@@ -52,19 +85,19 @@ export default function ServiciosHome() {
 
   return (
     <>
-      <section className="relative bg-white py-16">
+      <section className="relative bg-[#F4F6FB] py-20">
         {/* ---------- SERVICIOS NORMALES ---------- */}
-        <div className="container mx-auto px-6 text-center mb-10">
+        <div className="container mx-auto px-6 text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-4xl font-bold text-[#0A2342] mb-4"
+            className="text-4xl md:text-[40px] font-black text-[#0B2CF5] mb-4 tracking-tight"
           >
-            Nuestros Servicios
+            Explorá nuestros servicios
           </motion.h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg md:text-xl font-medium max-w-3xl mx-auto">
             Tecnología, precisión y atención personalizada en cada área.
           </p>
         </div>
@@ -81,28 +114,30 @@ export default function ServiciosHome() {
                 delay: i * 0.1,
                 ease: [0.25, 0.1, 0.25, 1],
               }}
-              className="group rounded-3xl overflow-hidden shadow-lg hover:shadow-xl bg-gray-50 hover:bg-gray-100 transition"
+              className="relative group rounded-3xl shadow-md bg-white hover:bg-[#fcfdff] transition-all hover:-translate-y-1 mt-14"
             >
-              <div className="relative h-44 overflow-hidden">
+              <div className={`absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 ${s.color} rounded-full flex items-center justify-center z-20 border-[8px] border-[#F4F6FB] shadow-md`}>
+                <span className="text-white text-4xl font-black">{s.abbr}</span>
+              </div>
+
+              <div className="relative h-[200px] overflow-hidden rounded-t-3xl pt-1">
                 <img
                   src={s.img}
                   alt={s.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover px-3 pt-3 rounded-[2rem] transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
 
-              <div className="p-6 text-left">
-                <div className="flex items-center gap-3 mb-3">
-                  {s.icon}
-                  <h3 className="text-lg font-semibold text-[#0A2342]">{s.title}</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-5">{s.desc}</p>
+              <div className="px-6 pb-8 pt-6 text-center">
+                <h3 className="text-[22px] font-black text-[#505050] mb-3">{s.title}</h3>
+                <p className="text-[#8B8B8B] text-sm leading-relaxed mb-6 font-medium px-2">{s.desc}</p>
                 <Link
                   to={`/servicios/${s.slug}`}
-                  className="inline-block text-sm font-semibold text-[#2E86AB] hover:underline"
+                  className="inline-flex items-center justify-center text-[#505050] hover:text-[#0B2CF5] transition-colors"
                 >
-                  Ver más →
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </Link>
               </div>
             </motion.div>
@@ -116,52 +151,44 @@ export default function ServiciosHome() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-4xl font-bold text-[#0A2342] mb-4"
+            className="text-4xl md:text-[40px] font-black text-[#0B2CF5] mb-4 tracking-tight"
           >
-            Servicios Especiales
+            Chequeos completos
           </motion.h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-10">
+          <p className="text-gray-500 text-lg md:text-xl font-medium max-w-3xl mx-auto mb-12">
             Áreas dedicadas al cuidado integral, la prevención y el bienestar de nuestros pacientes.
           </p>
 
-          <div className="flex flex-col md:flex-row justify-center gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {especiales.map((s, i) => (
               <motion.div
                 key={s.slug}
-                initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{
-                  duration: 0.6,
-                  delay: i * 0.15,
-                  ease: [0.25, 0.1, 0.25, 1],
+                  duration: 0.4,
+                  delay: i * 0.1,
                 }}
-                className="relative group w-full md:w-[420px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
               >
-                {/* Imagen de fondo */}
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  className="h-[260px] w-full object-cover object-center brightness-90 group-hover:brightness-100 transition duration-700"
-                />
-
-                {/* Gradiente azul institucional */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2342]/90 via-[#0A2342]/40 to-transparent"></div>
-
-                {/* Contenido */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 text-left text-white">
-                  <div className="flex items-center gap-3 mb-2">
-                    {React.cloneElement(s.icon, { className: "w-8 h-8 text-[#b7dbf7]" })}
-                    <h3 className="text-2xl font-bold">{s.title}</h3>
+                <Link
+                  to={`/servicios/${s.slug}`}
+                  className={`group flex items-stretch ${s.color} rounded-full p-[3px] shadow-sm hover:opacity-90 transition-all duration-300 w-full max-w-[420px] mx-auto`}
+                >
+                  <div className="bg-white rounded-full px-6 py-3 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#0B2CF5] font-black tracking-tight text-2xl">cheq</span>
+                    <svg className="w-[22px] h-[22px] text-[#0B2CF5] mx-0.5 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span className="text-[#0B2CF5] font-black tracking-tight text-2xl">in<sup className="text-xs ml-0.5">®</sup></span>
                   </div>
-                  <p className="text-white/90 text-sm leading-relaxed mb-4">{s.desc}</p>
-                  <Link
-                    to={`/servicios/${s.slug}`}
-                    className="inline-block bg-white/90 text-[#0A2342] font-semibold px-5 py-2 rounded-full text-sm hover:bg-white transition"
-                  >
-                    Ver más →
-                  </Link>
-                </div>
+                  <div className="flex-1 flex justify-center items-center px-4 gap-3">
+                    {s.icon && <span className="text-white/90">{s.icon}</span>}
+                    <span className="text-white font-bold text-2xl tracking-wide">
+                      {s.suffix}
+                    </span>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>

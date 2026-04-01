@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-ExtraBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-Black.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('./assets/Neometric-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@keyframes kenburns-once {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+}
+
+.animate-kenburns-once {
+  animation: kenburns-once 8s ease-in-out forwards;
+}

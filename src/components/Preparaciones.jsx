@@ -650,30 +650,37 @@ Peso límite del paciente: 140 kg. Si el técnico o médico determinan que el pa
   ]
 
   return (
-    <section className="container mx-auto py-16 px-6">
-      <h1 className="text-4xl font-bold text-[#0A2342] mb-10 text-center">
-        Preparaciones para Estudios
-      </h1>
+    <section className="container mx-auto py-24 px-6">
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-[#0B2CF5] mb-6 tracking-tight">
+          Preparaciones para Estudios
+        </h2>
+        <p className="text-lg text-[#505050] font-medium">
+          Seleccioná tu estudio para conocer las indicaciones previas necesarias.
+        </p>
+      </div>
 
       <div className="space-y-6 max-w-4xl mx-auto">
         {data.map((servicio, i) => (
           <div
             key={i}
-            className="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+            className="bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden transition-all duration-300"
           >
             {/* === Servicio principal === */}
             <button
               onClick={() =>
                 setActivoServicio(activoServicio === i ? null : i)
               }
-              className="w-full flex justify-between items-center px-6 py-4 bg-[#f8f9fb] hover:bg-[#eef2f5] transition text-left"
+              className={`w-full flex justify-between items-center px-8 py-6 transition-all duration-300 ${activoServicio === i ? 'bg-[#F4F6FB]' : 'bg-white hover:bg-gray-50'}`}
             >
-              <h2 className="text-xl md:text-2xl font-semibold text-[#0A2342]">
+              <h2 className="text-xl md:text-2xl font-black text-[#0B2CF5] tracking-tight">
                 {servicio.nombre}
               </h2>
-              <span className="text-[#2E86AB] text-2xl font-light">
-                {activoServicio === i ? "–" : "+"}
-              </span>
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 border-[#0B2CF5]/20 text-[#0B2CF5] transition-transform duration-300 ${activoServicio === i ? 'rotate-180 bg-[#0B2CF5] text-white border-[#0B2CF5]' : ''}`}>
+                <svg className="w-5 h-5 fill-none stroke-current stroke-3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </button>
 
             {/* === Estudios dentro del servicio === */}
@@ -684,58 +691,59 @@ Peso límite del paciente: 140 kg. Si el técnico o médico determinan que el pa
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="px-6 pb-4 bg-white"
+                  className="px-8 pb-6 bg-white"
                 >
-                  {servicio.estudios.map((est, j) => (
-                    <div key={j} className="border-t border-gray-100 py-3">
-                      {/* === Botón desplegable === */}
-                      <button
-                        onClick={() =>
-                          setActivoEstudio(
-                            activoEstudio === `${i}-${j}` ? null : `${i}-${j}`
-                          )
-                        }
-                        className="w-full text-left text-[#0A2342] font-medium flex justify-between items-center"
-                      >
-                        <span>{est.titulo}</span>
-                        <span className="text-[#2E86AB] text-lg">
-                          {activoEstudio === `${i}-${j}` ? "–" : "+"}
-                        </span>
-                      </button>
+                  <div className="space-y-3 pt-2">
+                    {servicio.estudios.map((est, j) => (
+                      <div key={j} className="rounded-2xl border border-gray-100 overflow-hidden">
+                        {/* === Botón desplegable === */}
+                        <button
+                          onClick={() =>
+                            setActivoEstudio(
+                              activoEstudio === `${i}-${j}` ? null : `${i}-${j}`
+                            )
+                          }
+                          className={`w-full text-left px-5 py-4 font-bold flex justify-between items-center transition-colors ${activoEstudio === `${i}-${j}` ? 'bg-[#F4F6FB] text-[#0B2CF5]' : 'text-[#505050] hover:bg-gray-50'}`}
+                        >
+                          <span className="text-[15px]">{est.titulo}</span>
+                          <span className={`text-xl transition-transform duration-300 ${activoEstudio === `${i}-${j}` ? 'rotate-45 text-[#0B2CF5]' : 'text-[#8B8B8B]'}`}>
+                            +
+                          </span>
+                        </button>
 
-                      {/* === Contenido o PDF === */}
-                      <AnimatePresence>
-                        {activoEstudio === `${i}-${j}` && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="mt-3 pl-1 text-gray-700 whitespace-pre-line leading-relaxed text-[15px]"
-                          >
-                            {est.pdf ? (
-                              <div className="flex flex-col items-start gap-3">
-                                <p className="text-gray-700">
-                                  La preparación completa para este estudio se encuentra
-                                  disponible en el siguiente documento:
-                                </p>
-                                <a
-                                  href={est.pdf}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#2E86AB] hover:bg-[#246d88] text-white font-semibold transition shadow-md"
-                                >
-                                  📄 Descargar PDF
-                                </a>
-                              </div>
-                            ) : (
-                              est.detalle
-                            )}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
+                        {/* === Contenido o PDF === */}
+                        <AnimatePresence>
+                          {activoEstudio === `${i}-${j}` && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="p-5 bg-white text-[#505050] whitespace-pre-line border-t border-gray-100 leading-relaxed text-[14px] font-medium"
+                            >
+                              {est.pdf ? (
+                                <div className="flex flex-col items-center bg-[#F4F6FB] p-6 rounded-2xl text-center gap-4">
+                                  <p className="text-[#505050] max-w-xs">
+                                    La preparación completa para este estudio está disponible para descargar.
+                                  </p>
+                                  <a
+                                    href={est.pdf}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#0B2CF5] hover:bg-[#0820bb] text-white font-black transition shadow-md hover:shadow-xl hover:-translate-y-1"
+                                  >
+                                    📄 Descargar PDF
+                                  </a>
+                                </div>
+                              ) : (
+                                est.detalle
+                              )}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

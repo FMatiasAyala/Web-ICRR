@@ -4,7 +4,11 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}", // 👈 importantísimo
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Neometric', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
