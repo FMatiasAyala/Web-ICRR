@@ -106,13 +106,14 @@ export default function ServiciosHome() {
           {normales.map((s, i) => (
             <motion.div
               key={s.slug}
-              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
+              style={{ willChange: "transform, opacity" }}
               transition={{
                 duration: 0.6,
-                delay: i * 0.1,
                 ease: [0.25, 0.1, 0.25, 1],
+                delay: i * 0.15,
               }}
               className="relative group rounded-3xl shadow-md bg-white hover:bg-[#fcfdff] transition-all hover:-translate-y-1 mt-14"
             >
@@ -163,11 +164,13 @@ export default function ServiciosHome() {
             {especiales.map((s, i) => (
               <motion.div
                 key={s.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                style={{ willChange: "transform, opacity" }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.6,
+                  ease: [0.25, 0.1, 0.25, 1],
                   delay: i * 0.1,
                 }}
               >
