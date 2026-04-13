@@ -166,6 +166,7 @@ export default function ServiciosHome() {
                 key={s.slug}
                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
                 viewport={{ once: true, amount: 0.3 }}
                 style={{ willChange: "transform, opacity" }}
                 transition={{
@@ -176,7 +177,7 @@ export default function ServiciosHome() {
               >
                 <Link
                   to={`/servicios/${s.slug}`}
-                  className={`group flex items-stretch ${s.color} rounded-full p-[3px] shadow-sm hover:opacity-90 transition-all duration-300 w-full max-w-[420px] mx-auto`}
+                  className={`group flex items-stretch ${s.color} rounded-full p-[3px] shadow-sm transition-all duration-300 w-full max-w-[420px] mx-auto hover:shadow-xl`}
                 >
                   <div className="bg-white rounded-full px-6 py-3 flex items-center justify-center flex-shrink-0">
                     <span className="text-[#0B2CF5] font-black tracking-tight text-2xl">cheq</span>
