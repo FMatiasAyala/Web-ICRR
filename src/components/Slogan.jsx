@@ -7,7 +7,7 @@ export default function Slogan() {
     >
       {/* Imagen de fondo */}
       <img
-        src="/img/servicios/equipoPet.webp"
+        src="/banners/hero.webp"
         alt="Equipo Médico"
         className="absolute inset-0 h-full w-full object-cover object-[70%_50%]"
       />
