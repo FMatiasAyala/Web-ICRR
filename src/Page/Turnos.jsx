@@ -11,7 +11,7 @@ export default function Turnos() {
 
   const contactos = [
     {
-      servicio: "Diagnóstico por Imágenes",
+      servicio: "Densitometría | Radiografía | Ecografía | Mamografía | Resonancia | Tomografía",
       detalle: "Densitometría / Radiografía / Ecografía / Mamografía / Resonancia / Tomografía",
       telefono: "(362) 488-0444",
       whatsapp: "3624880444",
@@ -27,15 +27,15 @@ export default function Turnos() {
       img: "/qr/terapiaRadiante.png",
     },
     {
-      servicio: "Medicina Nuclear",
-      detalle: "Cámara Gamma / PET CT / Estudios Metabólicos",
+      servicio: "Medicina Nuclear | Camara gamma | PET CT",
+      detalle: "Cámara Gamma / PET CT ",
       telefono: "(362) 528-4431",
       whatsapp: "3625284431",
       horario: "Lunes a viernes 7:30hs. a 20:30hs.",
       img: "/qr/medicinaNuclear.png",
     },
     {
-      servicio: "Consultorios Externos",
+      servicio: "Practicas Medicas | Cheq-In",
       detalle: "Prácticas Médicas / Cheq-In / Especialidades",
       telefono: "(362) 548-8284",
       whatsapp: "3625488284",
@@ -73,74 +73,47 @@ export default function Turnos() {
         image="/img/turnos.jpg"
       />
 
-      <section id="turnos" className="bg-[#F4F6FB] pb-24 overflow-x-hidden">
+      <section id="turnos" className="bg-[#F8FAFC] pb-24 overflow-x-hidden pt-10">
 
-        {/* === HERO SECTION (Premium & Immersive) === */}
-        <div className="relative h-[70vh] w-full overflow-hidden bg-[#0B2CF5]">
-          <motion.img
-            initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.5 }}
-            transition={{ duration: 1.5 }}
-            src="/img/turnos.jpg"
-            alt="Atención al Paciente ICRR"
-            className="absolute inset-0 h-full w-full object-cover mix-blend-overlay"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B2CF5] via-[#0B2CF5]/20 to-transparent" />
-
-          <div className="relative z-10 container mx-auto h-full flex flex-col justify-center px-6 lg:px-12 text-white">
+        {/* === HERO SECTION (Clean & Modern) === */}
+        <div className="container mx-auto px-6 lg:px-12 relative">
+          <div className="flex flex-col lg:flex-row items-center justify-between min-h-[70vh] gap-12">
+            {/* Texto Left */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-3xl"
+              className="z-10 text-center lg:text-left pt-12 lg:pt-0"
             >
-              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-xs font-black uppercase tracking-[0.2em] mb-8 border border-white/20">
-                Atención Digital
-              </span>
-              <h1 className="text-6xl md:text-[100px] font-black mb-8 tracking-tighter leading-[0.9]">
-                Tu salud, <br className="hidden md:block" /> a un clic.
+              <h1 className="text-5xl md:text-6xl font-black text-[#0B2CF5] mb-6 tracking-tight leading-[1.1]">
+                Solicitá tu turno
               </h1>
-              <p className="text-xl md:text-2xl text-white/80 font-medium max-w-xl leading-relaxed mb-10">
-                Coordiná tus estudios de forma ágil y personalizada a través de nuestros canales oficiales de WhatsApp.
+              <p className="text-lg md:text-2xl text-[#64748B] font-medium max-w-2xl leading-relaxed">
+                Nuestro equipo está listo para ayudarte en lo que necesites.
               </p>
+            </motion.div>
 
-              <div className="flex flex-wrap gap-4">
-                <a href="#canales" className="bg-white text-[#0B2CF5] px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-gray-100 transition-all shadow-xl active:scale-95">
-                  Ver Canales
-                </a>
-                <a href="#preparaciones" className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white/10 transition-all active:scale-95">
-                  Preparaciones
-                </a>
-              </div>
+            {/* Imagen 3D Right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+              className="relative z-10 w-full lg:w-[45%] max-w-[600px]"
+            >
+              <img
+                src="/banners/turnos.png"
+                alt="Solicitá tu turno ICRR"
+                className="w-full h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.15)]"
+              />
+              {/* Círculos decorativos de fondo */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-50/50 rounded-full blur-[100px] -z-10" />
             </motion.div>
           </div>
         </div>
 
-        {/* === PASOS PARA TU TURNO (Timeline Overlay) === */}
-        <div className="container mx-auto px-6 -mt-16 relative z-30">
-          <div className="bg-white rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.08)] p-8 md:p-12 border border-gray-50">
-            <div className="grid md:grid-cols-3 gap-8 md:divide-x divide-gray-100">
-              {pasos.map((paso, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center px-4">
-                  <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-[#0B2CF5] font-black text-lg mb-4">
-                    {idx + 1}
-                  </div>
-                  <h4 className="text-lg font-black text-[#0B2CF5] mb-2 uppercase tracking-tight">{paso.title}</h4>
-                  <p className="text-[#505050] text-sm font-medium leading-relaxed">{paso.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* === CANALES DE ATENCIÓN (Grid de Tarjetas Premium) === */}
-        <div id="canales" className="container mx-auto px-6 pt-32 relative z-20">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-[#0B2CF5] mb-6 tracking-tight">Elegí tu canal de contacto</h2>
-            <p className="text-[#8B8B8B] font-medium text-lg max-w-2xl mx-auto">Digitá el servicio que necesitás y escaneá el QR o chateá directamente por WhatsApp.</p>
-          </div>
-
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {/* === CANALES DE ATENCIÓN (Grid de Tarjetas Reforzadas) === */}
+        <div id="canales" className="container mx-auto px-6 -mt-10 lg:-mt-24 relative z-20">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {contactos.map((c, i) => (
               <motion.div
                 key={i}
@@ -148,48 +121,37 @@ export default function Turnos() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.04)] p-10 flex flex-col items-center justify-between min-h-[520px] group hover:shadow-[0_25px_60px_rgba(11,44,245,0.08)] hover:-translate-y-3 transition-all duration-700 border border-transparent hover:border-[#0B2CF5]/10"
+                className="bg-white rounded-[2rem] shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-6 lg:p-8 f-col items-center justify-between min-h-[480px] border border-gray-100/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 flex flex-col"
               >
-                {/* Cabecera Tarjeta */}
-                <div className="w-full text-center">
-                  <div className="w-16 h-16 bg-[#F4F6FB] rounded-2xl flex items-center justify-center text-[#0B2CF5] mx-auto mb-8 group-hover:bg-[#0B2CF5] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
-                    <QrCode className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-black text-[#0B2CF5] leading-none tracking-tight mb-4 group-hover:scale-105 transition-transform origin-center">
+                {/* Título de Servicio */}
+                <div className="w-full text-center border-b border-gray-50 pb-6 mb-6">
+                  <h3 className="text-lg font-bold text-[#1e293b] leading-tight px-2">
                     {c.servicio}
                   </h3>
-                  <p className="text-[#8B8B8B] text-[13px] font-medium leading-relaxed min-h-[3rem] px-4">
-                    {c.detalle}
-                  </p>
                 </div>
 
-                {/* Imagen QR con Efecto */}
-                <div className="relative group/qr bg-[#F4F6FB] p-6 rounded-[2.5rem] mb-8 transition-all duration-500 border border-transparent group-hover:border-[#0B2CF5]/20 group-hover:bg-white shadow-inner">
+                {/* QR Code */}
+                <div className="bg-[#f8fafc] p-6 rounded-3xl mb-8 flex items-center justify-center w-full aspect-square max-w-[200px] border border-gray-50">
                   <img
                     src={c.img}
-                    alt="QR Turnos ICRR"
-                    className="w-28 h-28 rounded-xl object-contain mix-blend-multiply opacity-80 group-hover:opacity-100 transition-opacity"
+                    alt={c.servicio}
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-[#0B2CF5]/5 rounded-[2.5rem] opacity-0 group-hover/qr:opacity-100 transition-opacity" />
                 </div>
 
-                {/* Botón WhatsApp */}
-                <div className="w-full space-y-4">
-                  <div className="flex flex-col items-center text-[#505050] font-bold text-[11px] text-center bg-gray-50/50 py-3 rounded-2xl border border-gray-100 group-hover:bg-blue-50/50 transition-colors">
-                    <div className="flex items-center gap-1.5 mb-1 text-[#0B2CF5]">
-                      <WatchIcon className="w-3.5 h-3.5" />
-                      <span className="uppercase tracking-widest font-black">Disponibilidad</span>
-                    </div>
-                    <span className="text-[#8B8B8B] font-medium">{c.horario}</span>
+                {/* Footer Info */}
+                <div className="w-full space-y-3 pt-6 border-t border-gray-50">
+                  <div className="flex items-center gap-2 text-[#64748b]">
+                    <WatchIcon className="w-4 h-4 text-[#0B2CF5]" />
+                    <span className="text-xs font-semibold">{c.horario}</span>
                   </div>
-
                   <Link
                     to={`https://wa.me/549${c.whatsapp}`}
                     target="_blank"
-                    className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white font-black py-4 rounded-2xl hover:bg-[#20ba5a] transition-all shadow-[0_10px_20px_rgba(37,211,102,0.2)] hover:shadow-[0_15px_30px_rgba(37,211,102,0.3)] active:scale-95 group/btn"
+                    className="flex items-center gap-2 text-[#64748b] hover:text-[#0B2CF5] transition-colors"
                   >
-                    <FaWhatsapp className="w-6 h-6 group-hover:animate-bounce" />
-                    <span className="tracking-tight uppercase text-sm">{c.telefono}</span>
+                    <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
+                    <span className="text-xs font-bold tracking-tight">{c.telefono}</span>
                   </Link>
                 </div>
               </motion.div>
@@ -197,8 +159,28 @@ export default function Turnos() {
           </div>
         </div>
 
+        {/* === PASOS PARA TU TURNO (Timeline Overlay - Movido abajo) === */}
+        <div className="container mx-auto px-6 mt-32 relative z-30">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-[#0B2CF5] uppercase tracking-tighter">Cómo funciona</h2>
+          </div>
+          <div className="bg-white rounded-[3rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] p-8 md:p-12 border border-gray-50">
+            <div className="grid md:grid-cols-3 gap-8 md:divide-x divide-gray-100">
+              {pasos.map((paso, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center px-4">
+                  <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-[#0B2CF5] font-black text-lg mb-4">
+                    {idx + 1}
+                  </div>
+                  <h4 className="text-lg font-black text-[#0B2CF5] mb-2 uppercase tracking-tight">{paso.title}</h4>
+                  <p className="text-[#64748B] text-sm font-medium leading-relaxed">{paso.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* === PREPARACIONES (Importado) === */}
-        <div id="preparaciones" className="mt-32">
+        <div id="preparaciones" className="mt-40">
           <Preparaciones />
         </div>
 
