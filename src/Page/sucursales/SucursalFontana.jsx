@@ -46,8 +46,8 @@ export default function SucursalFontana() {
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
               { icon: <MapPin />, title: "Ubicación", desc: "Av. Alvear 3875", sub: "Fontana, Chaco" },
-              { icon: <Clock />, title: "Horarios", desc: "Lun a Vie: 8:00 a 20:00", sub: "Sábados: 8:00 a 12:00" },
-              { icon: <Phone />, title: "Contacto", desc: "(362) 444-5555", sub: "fontana@icrr.com.ar" }
+              { icon: <Clock />, title: "Horarios", desc: "Lun a Vie: 8:00 a 20:00" },
+              { icon: <Phone />, title: "Contacto", desc: "(362) 488-0444", sub: "turnoscrr@gmail.com" }
             ].map((item, i) => (
               <motion.div
                 key={i}

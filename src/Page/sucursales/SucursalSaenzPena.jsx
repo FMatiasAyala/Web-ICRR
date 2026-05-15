@@ -45,9 +45,9 @@ export default function SucursalSaenzPena() {
         <div className="container mx-auto px-6 -mt-20 relative z-20">
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { icon: <MapPin />, title: "Ubicación", desc: "Av. 33 y Calle 10", sub: "P. R. Sáenz Peña, Chaco" },
-              { icon: <Clock />, title: "Horarios", desc: "Lun a Vie: 7:00 a 19:00", sub: "Sábados: 8:00 a 12:00" },
-              { icon: <Phone />, title: "Contacto", desc: "(364) 442-7788", sub: "saenzpena@icrr.com.ar" }
+              { icon: <MapPin />, title: "Ubicación", desc: "Av. J. Domingo Perón 1220 (Calle 33 entre 28 y 26)", sub: "P. R. Sáenz Peña, Chaco" },
+              { icon: <Clock />, title: "Horarios", desc: "Lun a Vie: 8:00 a 20:00" },
+              { icon: <Phone />, title: "Contacto", desc: "(362) 488-0444", sub: "turnoscrr@gmail.com" }
             ].map((item, i) => (
               <motion.div
                 key={i}

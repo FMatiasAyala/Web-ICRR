@@ -45,9 +45,9 @@ export default function SucursalCentral() {
         <div className="container mx-auto px-6 -mt-20 relative z-20">
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { icon: <MapPin />, title: "Ubicación", desc: "Av. 9 de Julio 635", sub: "Resistencia, Chaco" },
-              { icon: <Clock />, title: "Horarios", desc: "Lun a Vie: 7:00 a 20:00", sub: "Sábados: 8:00 a 13:00" },
-              { icon: <Phone />, title: "Contacto", desc: "(362) 444-5555", sub: "central@icrr.com.ar" }
+              { icon: <MapPin />, title: "Ubicación", desc: "Av. 9 de Julio 635 - Monteagudo 62", sub: "Resistencia, Chaco" },
+              { icon: <Clock />, title: "Horarios", desc: "Lun a Vie: 7:30 a 20:00", sub: "Sábados: 8:00 a 13:00" },
+              { icon: <Phone />, title: "Contacto", desc: "(362) 488-0444", sub: "turnoscrr@gmail.com" }
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -108,7 +108,7 @@ export default function SucursalCentral() {
 
         {/* CTA final */}
         <div className="container mx-auto px-6 mb-32">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
