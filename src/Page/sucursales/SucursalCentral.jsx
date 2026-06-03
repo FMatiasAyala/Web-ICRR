@@ -1,4 +1,4 @@
-import React from "react"
+import { cloneElement } from "react"
 import { MapPin, Clock, Phone, Mail, CheckCircle, CalendarDays, Navigation } from "lucide-react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
@@ -57,7 +57,7 @@ export default function SucursalCentral() {
                 className="bg-white rounded-[2.5rem] p-10 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-50 flex flex-col items-center text-center group hover:bg-[#0B2CF5] transition-all duration-500"
               >
                 <div className="w-16 h-16 bg-[#F4F6FB] rounded-2xl flex items-center justify-center text-[#0B2CF5] mb-6 group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  {React.cloneElement(item.icon, { className: "w-8 h-8" })}
+                  {cloneElement(item.icon, { className: "w-8 h-8" })}
                 </div>
                 <h3 className="text-xl font-black text-[#0B2CF5] mb-3 group-hover:text-white transition-colors">{item.title}</h3>
                 <p className="text-[#505050] font-medium group-hover:text-white/90 transition-colors">{item.desc}</p>

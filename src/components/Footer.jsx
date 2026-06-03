@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Phone, MapPin, Mail } from "lucide-react"
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"

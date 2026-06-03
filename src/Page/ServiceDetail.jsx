@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react"
+import { lazy, Suspense } from "react"
 import { useParams, Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import SeoTags from "../components/SeoTags"
@@ -9,6 +9,9 @@ const COMPONENTS = {
   "piso-de-la-mujer": lazy(() => import("./Servicios/PisoDeLaMujer")),
   "practicas-medicas": lazy(() => import("./Servicios/Practicas")),
   "cheq-in": lazy(() => import("./Servicios/CheqIn")),
+  "cheq-in-general": lazy(() => import("./Servicios/CheqInGeneral")),
+  "cheq-in-cardio": lazy(() => import("./Servicios/CheqInCardio")),
+  "cheq-in-oseo": lazy(() => import("./Servicios/CheqInOseo")),
 }
 
 export default function ServiceDetail() {

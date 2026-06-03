@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { WatchIcon, QrCode, MessageSquare, CheckCircle, ChevronDown, HelpCircle, ArrowRight } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa"
 import { Link } from "react-router-dom"

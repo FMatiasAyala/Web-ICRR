@@ -1,4 +1,4 @@
-import React from "react"
+import { cloneElement } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { HeartPulse, Radiation, Stethoscope, LucideXCircle, CalendarDays } from "lucide-react"
@@ -10,34 +10,40 @@ export default function ServiciosPage() {
       icon: <LucideXCircle className="w-12 h-12 text-[#2E86AB]" />,
       title: "Diagnóstico por Imagen",
       desc: "Equipos de resonancia, tomografía, ecografía y mamografía digital con tecnología de alta resolución y baja dosis.",
-      img: "/servicios/DI.png",
+      img: "/img/diagnosticoImagen.webp",
       slug: "diagnostico-por-imagen",
       bg: "bg-[#E8F4FB]",
+      abbr: "Di",
+      color: "bg-[#254DF5]",
     },
     {
       icon: <Radiation className="w-12 h-12 text-[#2E86AB]" />,
       title: "Terapia Radiante",
       desc: "Tratamientos personalizados con planificación 3D, control de dosis y seguimiento médico integral.",
-      img: "/servicios/TR.png",
+      img: "/img/servicios/equipoTerapia.webp",
       slug: "terapia-radiante",
       bg: "bg-[#F5F8FF]",
+      abbr: "Tr",
+      color: "bg-[#25DF85]",
     },
     {
       icon: <Stethoscope className="w-12 h-12 text-[#2E86AB]" />,
       title: "Prácticas Médicas",
       desc: "Procedimientos mínimamente invasivos y de apoyo diagnóstico, realizados por profesionales especializados.",
-      img: "/servicios/PM.png",
+      img: "/img/practicasMedicas.webp",
       slug: "practicas-medicas",
       bg: "bg-[#EFFAF6]",
+      abbr: "Pm",
+      color: "bg-[#F5BB25]",
     },
-    {
-      icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
-      title: "Piso De La Mujer",
-      desc: "Atención integral con estudios específicos para la salud femenina y programas de prevención.",
-      img: "/servicios/PisoDeLaMujer.png",
-      slug: "piso-de-la-mujer",
-      bg: "bg-[#FDF5F5]",
-    },
+    /*     {
+          icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
+          title: "Piso De La Mujer",
+          desc: "Atención integral con estudios específicos para la salud femenina y programas de prevención.",
+          img: "/servicios/PisoDeLaMujer.png",
+          slug: "piso-de-la-mujer",
+          bg: "bg-[#FDF5F5]",
+        }, */
     {
       icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
       title: "Cheq-In",
@@ -45,6 +51,8 @@ export default function ServiciosPage() {
       img: "/servicios/Cheq-in.png",
       slug: "cheq-in",
       bg: "bg-[#E8F4FB]",
+      abbr: "Cq",
+      color: "bg-[#0B2CF5]",
     },
   ]
 
@@ -76,10 +84,14 @@ export default function ServiciosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white group overflow-hidden rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 border border-gray-50"
+              className="relative bg-white group rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 border border-gray-50 mt-14"
             >
+              <div className={`absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 ${s.color} rounded-full flex items-center justify-center z-20 border-[8px] border-[#F4F6FB] shadow-md`}>
+                <span className="text-white text-4xl font-black">{s.abbr}</span>
+              </div>
+
               {/* Imagen y overlay */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden rounded-t-[2.5rem] pt-1">
                 <img
                   src={s.img}
                   alt={s.title}
@@ -92,7 +104,7 @@ export default function ServiciosPage() {
               <div className="p-8 md:p-10">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-[#F4F6FB] rounded-2xl text-[#0B2CF5]">
-                    {React.cloneElement(s.icon, { className: "w-8 h-8" })}
+                    {cloneElement(s.icon, { className: "w-8 h-8" })}
                   </div>
                   <h3 className="text-2xl md:text-3xl font-black text-[#0B2CF5] tracking-tight">{s.title}</h3>
                 </div>

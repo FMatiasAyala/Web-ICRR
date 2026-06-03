@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import { Link } from "react-router-dom"
 
 const SLIDE_INTERVAL = 5000 // ms — más tiempo para que el movimiento se vea natural

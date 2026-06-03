@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Radiation, Stethoscope, HeartPulse, ClipboardCheck } from "lucide-react"
@@ -28,7 +28,7 @@ export default function ServiciosHome() {
       color: "bg-[#F5BB25]",
       title: "Prácticas Médicas",
       desc: "Procedimientos de apoyo diagnóstico y seguimiento clínico integral.",
-      img: "/servicios/Pm-logo_03_blanco.png",
+      img: "/img/practicasMedicas.webp",
       slug: "practicas-medicas",
       especial: false
     },
@@ -67,7 +67,7 @@ export default function ServiciosHome() {
     {
       title: "CHEQ-IN Mujer",
       suffix: "Mujer",
-      slug: "cheq-in-mujer",
+      slug: "piso-de-la-mujer",
       especial: true,
       color: "bg-[#E379C7]",
       icon: (

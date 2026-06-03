@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import { Suspense } from "react"
 import { Routes, Route } from "react-router-dom"
 import AppLayout from "./layouts/AppLayout"
 import Home from "./Page/Home"

@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Instagram, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -72,7 +72,7 @@ export default function NovedadesPlaceholder() {
           className="mt-20"
         >
           <a
-            href="https://www.instagram.com/icrr_resistencia/"
+            href="https://www.instagram.com/institutocrr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-full bg-white text-[#0B2CF5] px-12 py-5 font-black text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all group"

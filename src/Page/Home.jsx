@@ -1,4 +1,4 @@
-import React from "react"
+
 import Hero from "../components/Hero"
 import VideoStack from "../components/VideoStack"
 import Servicios from "../components/Servicios"
