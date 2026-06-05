@@ -108,14 +108,14 @@ export default function ServiciosHome() {
               key={s.slug}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
               style={{ willChange: "transform, opacity" }}
               transition={{
-                duration: 0.6,
+                duration: 0.5,
                 ease: [0.25, 0.1, 0.25, 1],
-                delay: i * 0.15,
               }}
-              className="relative group rounded-3xl shadow-md bg-white hover:bg-[#fcfdff] transition-all hover:-translate-y-1 mt-14"
+              className="relative group rounded-3xl shadow-md bg-white hover:bg-[#fcfdff] transition-colors mt-14"
             >
               <div className={`absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 ${s.color} rounded-full flex items-center justify-center z-20 border-[8px] border-[#F4F6FB] shadow-md`}>
                 <span className="text-white text-4xl font-black">{s.abbr}</span>
@@ -167,12 +167,11 @@ export default function ServiciosHome() {
                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.1 }}
                 style={{ willChange: "transform, opacity" }}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.5,
                   ease: [0.25, 0.1, 0.25, 1],
-                  delay: i * 0.1,
                 }}
               >
                 <Link
