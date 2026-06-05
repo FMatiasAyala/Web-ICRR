@@ -1,4 +1,3 @@
-
 import Hero from "../components/Hero"
 import VideoStack from "../components/VideoStack"
 import Servicios from "../components/Servicios"
@@ -7,6 +6,7 @@ import CTA from "../components/CTA"
 import SucursalesHome from "../components/SucursalesHome"
 import Slogan from "../components/Slogan"
 import SeoTags from "../components/SeoTags"
+import Testimonials from "../components/Testimonials"
 
 export default function Home() {
   return (
@@ -21,6 +21,7 @@ export default function Home() {
       <Servicios />
       <VideoStack />
       <SucursalesHome />
+      <Testimonials />
       <CTA />
     </>
   )
