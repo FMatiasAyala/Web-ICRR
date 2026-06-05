@@ -202,7 +202,7 @@ export default function ServiciosHome() {
         <div className="text-center mt-14">
           <Link
             to="/servicios"
-            className="inline-flex rounded-full bg-[#2E86AB] px-8 py-3 font-semibold text-white shadow-md hover:bg-[#246d88] transition"
+            className="inline-flex rounded-full bg-[#0B2CF5] px-8 py-3 font-semibold text-white shadow-md transition-all shadow-md hover:shadow-xl hover:-translate-y-1 active:scale-95"
           >
             Ver todos los servicios
           </Link>

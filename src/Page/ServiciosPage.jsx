@@ -86,9 +86,6 @@ export default function ServiciosPage() {
               transition={{ delay: i * 0.1 }}
               className="relative bg-white group rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 border border-gray-50 mt-14"
             >
-              <div className={`absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 ${s.color} rounded-full flex items-center justify-center z-20 border-[8px] border-[#F4F6FB] shadow-md`}>
-                <span className="text-white text-4xl font-black">{s.abbr}</span>
-              </div>
 
               {/* Imagen y overlay */}
               <div className="relative h-64 overflow-hidden rounded-t-[2.5rem] pt-1">

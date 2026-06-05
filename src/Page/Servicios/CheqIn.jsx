@@ -1,35 +1,41 @@
 import { motion } from "framer-motion"
-import { UserRound, FlaskConical, CalendarDays, MapPin } from "lucide-react"
+import { UserRound, FlaskConical, CalendarDays, MapPin, Check, HeartPulse } from "lucide-react"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
 
+const BoneSymbol = ({ className, strokeWidth = 2 }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2 2 2 0 0 1-4 0 2 2 0 0 1 2-2V8a2 2 0 0 1-2-2 2 2 0 0 1 4 0 2 2 0 0 0 2 2h6a2 2 0 0 0 2-2 2 2 0 0 1 4 0 2 2 0 0 1-2 2v8a2 2 0 0 1 2 2 2 2 0 0 1-4 0z" />
+  </svg>
+);
+
 export default function CheqIn() {
-    const programas = [
-        {
-            nombre: "CHEQ-IN General",
-            imagen: "/servicios/cheq-in-general.jpg",
-            dirigido:
-                "Cualquier paciente que quiera conocer su estado de salud general, deportistas y pacientes post COVID.",
-            incluye:
-                "Laboratorio de análisis clínicos completo, espirometría, ecocardiograma Doppler, eco Doppler vasos de cuello, prueba ergométrica computarizada, TAC de tórax sin contraste.",
-        },
-        {
-            nombre: "CHEQ-IN Cardio",
-            imagen: "/servicios/cheq-in-cardio.jpg",
-            dirigido:
-                "Pacientes con hipertensión arterial, diabéticos, tabaquistas, personas con obesidad, con insuficiencia renal o cardíaca, colesterol alto, o antecedentes cardiovasculares.",
-            incluye:
-                "Laboratorio de análisis clínicos completo, ecocardiograma Doppler, eco Doppler vasos de cuello, electrocardiograma, ergometría, estudio de perfusión miocárdica stress-reposo, MAPA y Holter de 24 hs.",
-        },
-        {
-            nombre: "CHEQ-IN Óseo",
-            imagen: "/servicios/cheq-in-oseo.jpg",
-            dirigido:
-                "Mayores de 50 años, personas con osteoporosis o enfermedades crónicas, en tratamiento con corticoides prolongados o anticoagulantes, en menopausia o con sedentarismo.",
-            incluye:
-                "Densitometría de columna lumbar y caderas, junto con laboratorio de análisis clínicos completo.",
-        },
-    ]
+  const programas = [
+    {
+      nombre: "CHEQ-IN General",
+      imagen: "/servicios/cheq-in-general.jpg",
+      dirigido:
+        "Cualquier paciente que quiera conocer su estado de salud general, deportistas y pacientes post COVID.",
+      incluye:
+        "Laboratorio de análisis clínicos completo, espirometría, ecocardiograma Doppler, eco Doppler vasos de cuello, prueba ergométrica computarizada, TAC de tórax sin contraste.",
+    },
+    {
+      nombre: "CHEQ-IN Cardio",
+      imagen: "/servicios/cheq-in-cardio.jpg",
+      dirigido:
+        "Pacientes con hipertensión arterial, diabéticos, tabaquistas, personas con obesidad, con insuficiencia renal o cardíaca, colesterol alto, o antecedentes cardiovasculares.",
+      incluye:
+        "Laboratorio de análisis clínicos completo, ecocardiograma Doppler, eco Doppler vasos de cuello, electrocardiograma, ergometría, estudio de perfusión miocárdica stress-reposo, MAPA y Holter de 24 hs.",
+    },
+    {
+      nombre: "CHEQ-IN Óseo",
+      imagen: "/servicios/cheq-in-oseo.jpg",
+      dirigido:
+        "Mayores de 50 años, personas con osteoporosis o enfermedades crónicas, en tratamiento con corticoides prolongados o anticoagulantes, en menopausia o con sedentarismo.",
+      incluye:
+        "Densitometría de columna lumbar y caderas, junto con laboratorio de análisis clínicos completo.",
+    },
+  ]
 
   return (
     <>
@@ -52,7 +58,7 @@ export default function CheqIn() {
         <div className="relative z-10 container mx-auto px-6 pt-16 md:pt-24 mb-16 space-y-24">
           {/* Encabezado Principal */}
           <div className="text-center">
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
@@ -60,8 +66,8 @@ export default function CheqIn() {
             >
               <span className="text-white text-[40px] md:text-[56px] font-black tracking-tighter">Cq</span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -69,8 +75,8 @@ export default function CheqIn() {
             >
               CHEQ-IN Integral
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -82,61 +88,157 @@ export default function CheqIn() {
           </div>
 
           {/* PROGRAMAS */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {programas.map((p, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 border border-gray-50 group hover:-translate-y-2"
-              >
-                <div className="w-full flex justify-center items-center bg-[#F4F6FB] py-12 border-b border-[#0B2CF5]/10">
-                  <img
-                    src={p.imagen}
-                    alt={p.nombre}
-                    className="h-[240px] w-auto object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-xl"
-                  />
+          <div className="grid lg:grid-cols-3 gap-8 md:gap-6 mt-16 lg:mt-20">
+            
+            {/* Tarjeta General */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all relative flex flex-col items-center text-center border border-gray-100 h-full mt-10"
+            >
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#001cf0] rounded-full flex items-center justify-center border-4 border-[#F4F6FB] shadow-lg">
+                <Check className="text-white w-10 h-10" strokeWidth={4} />
+              </div>
+              <h3 className="text-4xl font-black text-[#001cf0] mt-6 mb-4 tracking-tight">General</h3>
+              <div className="border-[2px] border-[#001cf0] rounded-full px-4 py-1 flex items-center justify-center mb-4">
+                <span className="text-[#001cf0] font-black tracking-tight text-lg">cheq</span>
+                <svg className="w-[16px] h-[16px] text-[#001cf0] mx-0.5 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span className="text-[#001cf0] font-black tracking-tight text-lg">in<sup className="text-[9px] ml-0.5">®</sup></span>
+              </div>
+              <p className="text-[#505050] text-sm mb-6 leading-snug">
+                <strong className="font-black text-[#606060]">Tu salud, en una evaluación</strong> <br/><span className="italic text-[#707070]">integral y en un solo lugar</span>
+              </p>
+              
+              <div className="w-full flex-grow flex flex-col items-center">
+                <div className="w-full mb-6 flex flex-col items-center">
+                  <div className="bg-[#001cf0] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">Evaluación clínica</div>
+                  <p className="text-[#606060] text-xs font-medium leading-relaxed max-w-[280px]">Comienza con una consulta clínica inicial, para orientar los estudios según tu necesidad.</p>
                 </div>
-
-                <div className="p-10 flex-grow flex flex-col">
-                  <h3 className="text-2xl md:text-3xl font-black text-[#0B2CF5] mb-8 tracking-tight text-center lg:text-left">
-                    {p.nombre}
-                  </h3>
-
-                  <div className="space-y-8">
-                    <div>
-                      <div className="flex items-center gap-3 mb-4 text-[#0B2CF5]">
-                        <div className="p-2 bg-blue-50 rounded-xl">
-                          <UserRound className="w-5 h-5" strokeWidth={2.5} />
-                        </div>
-                        <span className="font-black text-xs tracking-widest uppercase">Está dirigido a:</span>
-                      </div>
-                      <p className="text-[#505050] text-[15px] font-medium leading-[1.7]">
-                        {p.dirigido}
-                      </p>
-                    </div>
-
-                    <div>
-                      <div className="flex items-center gap-3 mb-4 text-[#0B2CF5]">
-                        <div className="p-2 bg-blue-50 rounded-xl">
-                          <FlaskConical className="w-5 h-5" strokeWidth={2.5} />
-                        </div>
-                        <span className="font-black text-xs tracking-widest uppercase">Incluye:</span>
-                      </div>
-                      <p className="text-[#505050] text-[15px] font-medium leading-[1.7]">
-                        {p.incluye}
-                      </p>
-                    </div>
-                  </div>
+                <div className="w-full mb-6 flex flex-col items-center">
+                  <div className="bg-[#001cf0] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">¿Para quién está pensado?</div>
+                  <ul className="text-[#606060] text-xs font-medium leading-relaxed max-w-[300px] text-left space-y-1">
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>Personas que desean conocer su estado de salud actual.</span></li>
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>Personas que buscan realizar un control preventivo completo.</span></li>
+                  </ul>
                 </div>
-              </motion.div>
-            ))}
+                <div className="w-full mb-8 flex flex-col items-center">
+                  <div className="bg-[#001cf0] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">Estudios que puede incluir</div>
+                  <ul className="text-[#606060] text-xs font-medium leading-relaxed text-left space-y-1">
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>Laboratorio completo</span></li>
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>Ecocardiograma Doppler</span></li>
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>Eco Doppler vasos cuello</span></li>
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>Ergometría computarizada</span></li>
+                    <li className="flex items-start"><span className="text-[#001cf0] mr-2">•</span><span>TAC tórax sin contraste</span></li>
+                  </ul>
+                </div>
+              </div>
+              <Link to="/servicios/cheq-in-general" className="w-full rounded-full bg-[#001cf0] text-white font-black px-6 py-3 text-sm shadow hover:bg-blue-800 transition-all mt-auto uppercase">VER DETALLE</Link>
+            </motion.div>
+
+            {/* Tarjeta Cardio */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all relative flex flex-col items-center text-center border border-gray-100 h-full mt-10"
+            >
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#D93F4A] rounded-full flex items-center justify-center border-4 border-[#F4F6FB] shadow-lg">
+                <HeartPulse className="text-white w-10 h-10" strokeWidth={2.5} />
+              </div>
+              <h3 className="text-4xl font-black text-[#D93F4A] mt-6 mb-4 tracking-tight">Cardio</h3>
+              <div className="border-[2px] border-[#D93F4A] rounded-full px-4 py-1 flex items-center justify-center mb-4">
+                <span className="text-[#001cf0] font-black tracking-tight text-lg">cheq</span>
+                <svg className="w-[16px] h-[16px] text-[#001cf0] mx-0.5 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span className="text-[#001cf0] font-black tracking-tight text-lg">in<sup className="text-[9px] ml-0.5">®</sup></span>
+              </div>
+              <p className="text-[#505050] text-sm mb-6 leading-snug">
+                <strong className="font-black text-[#606060]">Cuidar tu corazón</strong> <br/><span className="italic text-[#707070]">también es prevenir</span>
+              </p>
+              
+              <div className="w-full flex-grow flex flex-col items-center">
+                <div className="w-full mb-6 flex flex-col items-center">
+                  <div className="bg-[#D93F4A] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">Evaluación integral</div>
+                  <p className="text-[#606060] text-xs font-medium leading-relaxed max-w-[280px]">Una evaluación completa del corazón y el sistema cardiovascular guiada por indicación médica.</p>
+                </div>
+                <div className="w-full mb-6 flex flex-col items-center">
+                  <div className="bg-[#D93F4A] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">¿Para quién está pensado?</div>
+                  <ul className="text-[#606060] text-xs font-medium leading-relaxed text-center space-y-1">
+                    <li>Querés conocer tu salud cardiovascular</li>
+                    <li>Tenés factores de riesgo</li>
+                    <li>Buscás prevenir complicaciones</li>
+                  </ul>
+                </div>
+                <div className="w-full mb-8 flex flex-col items-center">
+                  <div className="bg-[#D93F4A] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">Estudios que puede incluir</div>
+                  <ul className="text-[#606060] text-xs font-medium leading-relaxed text-center space-y-1">
+                    <li>Laboratorio completo</li>
+                    <li>Electrocardiograma / Ecocardiograma</li>
+                    <li>Eco Doppler de vasos de cuello</li>
+                    <li>Ergometría computarizada</li>
+                    <li>Holter 24 hs / MAPA</li>
+                  </ul>
+                </div>
+              </div>
+              <Link to="/servicios/cheq-in-cardio" className="w-full rounded-full bg-[#D93F4A] text-white font-black px-6 py-3 text-sm shadow hover:bg-[#c03440] transition-all mt-auto uppercase">VER DETALLE</Link>
+            </motion.div>
+
+            {/* Tarjeta Óseo */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all relative flex flex-col items-center text-center border border-gray-100 h-full mt-10"
+            >
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#E8BC3D] rounded-full flex items-center justify-center border-4 border-[#F4F6FB] shadow-lg">
+                <BoneSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+              </div>
+              <h3 className="text-4xl font-black text-[#E8BC3D] mt-6 mb-4 tracking-tight">Óseo</h3>
+              <div className="border-[2px] border-[#E8BC3D] rounded-full px-4 py-1 flex items-center justify-center mb-4">
+                <span className="text-[#001cf0] font-black tracking-tight text-lg">cheq</span>
+                <svg className="w-[16px] h-[16px] text-[#001cf0] mx-0.5 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span className="text-[#001cf0] font-black tracking-tight text-lg">in<sup className="text-[9px] ml-0.5">®</sup></span>
+              </div>
+              <p className="text-[#505050] text-sm mb-6 leading-snug">
+                <strong className="font-black text-[#606060]">Cuidar tus huesos hoy</strong> <br/><span className="italic text-[#707070]">es prevenir mañana</span>
+              </p>
+              
+              <div className="w-full flex-grow flex flex-col items-center">
+                <div className="w-full mb-6 flex flex-col items-center">
+                  <div className="bg-[#E8BC3D] text-[#505050] font-black rounded-full px-6 py-1.5 text-xs mb-2">Evaluación integral</div>
+                  <p className="text-[#606060] text-xs font-medium leading-relaxed max-w-[280px]">La salud ósea es clave para mantener movilidad, fuerza y calidad de vida a lo largo del tiempo.</p>
+                </div>
+                <div className="w-full mb-6 flex flex-col items-center">
+                  <div className="bg-[#E8BC3D] text-[#505050] font-black rounded-full px-6 py-1.5 text-xs mb-2">¿Para quién está pensado?</div>
+                  <ul className="text-[#606060] text-xs font-medium leading-relaxed text-center space-y-1">
+                    <li>Mayores de 50 años / Menopausia</li>
+                    <li>Sedentarismo o mala nutrición</li>
+                    <li>Osteoporosis o trat. prolongados</li>
+                  </ul>
+                </div>
+                <div className="w-full mb-8 flex flex-col items-center">
+                  <div className="bg-[#E8BC3D] text-[#505050] font-black rounded-full px-6 py-1.5 text-xs mb-2">Estudios que puede incluir</div>
+                  <ul className="text-[#606060] text-xs font-medium leading-relaxed text-center space-y-1">
+                    <li>Densitometría ósea (columna y caderas)</li>
+                    <li>Laboratorio completo</li>
+                  </ul>
+                </div>
+              </div>
+              <Link to="/servicios/cheq-in-oseo" className="w-full rounded-full bg-[#E8BC3D] text-white font-black px-6 py-3 text-sm shadow hover:bg-[#d4a82b] transition-all mt-auto uppercase">VER DETALLE</Link>
+            </motion.div>
+
           </div>
 
           {/* CTA final */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -155,7 +257,7 @@ export default function CheqIn() {
                   Conocé tu estado de salud hoy
                 </h3>
                 <p className="text-white/80 font-medium text-lg">
-                   Reservá tu turno para cualquiera de los programas CHEQ-IN y recibí tu evaluación médica completa.
+                  Reservá tu turno para cualquiera de los programas CHEQ-IN y recibí tu evaluación médica completa.
                 </p>
               </div>
             </div>
@@ -171,8 +273,8 @@ export default function CheqIn() {
           {/* MAPA */}
           <div className="bg-white rounded-[3.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-10 md:p-20 border border-gray-50">
             <h3 className="text-3xl md:text-5xl font-black text-[#0B2CF5] mb-12 text-center tracking-tight flex items-center justify-center gap-4">
-               <MapPin className="w-10 h-10" />
-               ¿Dónde encontrarnos?
+              <MapPin className="w-10 h-10" />
+              ¿Dónde encontrarnos?
             </h3>
             <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-[500px] border border-gray-100">
               <iframe
@@ -188,5 +290,5 @@ export default function CheqIn() {
         </div>
       </section>
     </>
-    )
+  )
 }
