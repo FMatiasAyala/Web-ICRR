@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import { UserRound, FlaskConical, CalendarDays, MapPin } from "lucide-react"
 import { Link } from "react-router-dom"
+import { HeartPulse } from "lucide-react"
 import SeoTags from "../../components/SeoTags"
 
 export default function CheqInCardio() {
@@ -8,139 +8,167 @@ export default function CheqInCardio() {
     <>
       <SeoTags
         title="CHEQ-IN Cardio | ICRR"
-        description="Circuito de salud diseñado para evaluar tu salud cardiovascular en una sola jornada."
+        description="Conocé tu estado de salud cardiovascular en una sola jornada."
         image="/servicios/cheq-in-cardio.jpg"
       />
-      <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-10 mix-blend-luminosity">
-          <img
-            src="/servicios/cheq-in-cardio.jpg"
-            alt="fondo"
-            className="w-full h-[600px] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F4F6FB] opacity-100 h-[600px]" />
+      <section className="relative min-h-screen bg-[#Eef3f9] overflow-hidden flex flex-col items-center justify-center py-24">
+        
+        {/* Floating Background Circles */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          {/* Top Left */}
+          <motion.div 
+            animate={{ y: [0, -10, 0] }} 
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[10%] left-[15%] w-16 h-16 bg-[#D93F4A] rounded-full flex items-center justify-center transform rotate-12 shadow-md"
+          >
+            <HeartPulse className="text-white w-8 h-8" strokeWidth={2.5} />
+          </motion.div>
+          {/* Top Right (Blurred) */}
+          <motion.div 
+            animate={{ y: [0, 15, 0] }} 
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute top-[5%] right-[10%] w-24 h-24 bg-[#D93F4A] rounded-full flex items-center justify-center transform -rotate-12 blur-[2px]"
+          >
+            <HeartPulse className="text-white w-12 h-12" strokeWidth={2.5} />
+          </motion.div>
+          {/* Mid Left (Blurred) */}
+          <motion.div 
+            animate={{ y: [0, 10, 0] }} 
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute top-[40%] left-[5%] w-32 h-32 bg-[#D93F4A] rounded-full flex items-center justify-center transform rotate-45 blur-md opacity-90"
+          >
+            <HeartPulse className="text-white w-16 h-16" strokeWidth={2} />
+          </motion.div>
+          {/* Mid Right */}
+          <motion.div 
+            animate={{ y: [0, -15, 0] }} 
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute top-[45%] right-[8%] w-20 h-20 bg-[#D93F4A] rounded-full flex items-center justify-center transform -rotate-6 shadow-xl"
+          >
+            <HeartPulse className="text-white w-10 h-10" strokeWidth={2.5} />
+          </motion.div>
+          {/* Bottom Left */}
+          <motion.div 
+            animate={{ y: [0, -10, 0] }} 
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+            className="absolute bottom-[10%] left-[10%] w-20 h-20 bg-[#D93F4A] rounded-full flex items-center justify-center transform rotate-12 shadow-xl"
+          >
+            <HeartPulse className="text-white w-10 h-10" strokeWidth={2.5} />
+          </motion.div>
+          {/* Bottom Right (Blurred) */}
+          <motion.div 
+            animate={{ y: [0, 20, 0] }} 
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
+            className="absolute bottom-[15%] right-[5%] w-36 h-36 bg-[#D93F4A] rounded-full flex items-center justify-center transform -rotate-12 blur-md opacity-80"
+          >
+            <HeartPulse className="text-white w-16 h-16" strokeWidth={2} />
+          </motion.div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 pt-16 md:pt-24 mb-16 space-y-24">
-          <div className="text-center">
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#0B2CF5] flex items-center justify-center border-[8px] border-white shadow-xl mx-auto mb-10"
-            >
-              <span className="text-white text-[40px] md:text-[56px] font-black tracking-tighter">Cq</span>
-            </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-7xl font-black text-[#0B2CF5] mb-6 tracking-tight"
-            >
-              CHEQ-IN Cardio
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-[#505050] font-medium text-lg md:text-2xl max-w-2xl mx-auto leading-relaxed"
-            >
-              Conocé tu estado de salud cardiovascular en una sola jornada.
-            </motion.p>
-          </div>
-
+        {/* Main Card */}
+        <div className="relative z-10 w-full max-w-lg mx-auto mt-12 mb-12">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-6xl mx-auto bg-white rounded-[3.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-50 flex flex-col md:flex-row"
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative flex flex-col items-center text-center border border-gray-100"
           >
-            <div className="w-full md:w-1/2 bg-[#F4F6FB] p-12 flex items-center justify-center border-b md:border-b-0 md:border-r border-[#0B2CF5]/10">
-              <img
-                src="/servicios/cheq-in-cardio.jpg"
-                alt="CHEQ-IN Cardio"
-                className="w-full h-auto object-contain drop-shadow-2xl rounded-[2rem] transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-            <div className="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
-              <div className="space-y-10">
-                <div>
-                  <div className="flex items-center gap-3 mb-4 text-[#0B2CF5]">
-                    <div className="p-3 bg-blue-50 rounded-2xl">
-                      <UserRound className="w-6 h-6" strokeWidth={2.5} />
-                    </div>
-                    <span className="font-black text-sm tracking-widest uppercase">Está dirigido a:</span>
-                  </div>
-                  <p className="text-[#505050] text-[16px] md:text-lg font-medium leading-[1.8]">
-                    Pacientes con hipertensión arterial, diabéticos, tabaquistas, personas con obesidad, con insuficiencia renal o cardíaca, colesterol alto, o antecedentes cardiovasculares.
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-4 text-[#0B2CF5]">
-                    <div className="p-3 bg-blue-50 rounded-2xl">
-                      <FlaskConical className="w-6 h-6" strokeWidth={2.5} />
-                    </div>
-                    <span className="font-black text-sm tracking-widest uppercase">Incluye:</span>
-                  </div>
-                  <p className="text-[#505050] text-[16px] md:text-lg font-medium leading-[1.8]">
-                    Laboratorio de análisis clínicos completo, ecocardiograma Doppler, eco Doppler vasos de cuello, electrocardiograma, ergometría, estudio de perfusión miocárdica stress-reposo, MAPA y Holter de 24 hs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="bg-[#0B2CF5] rounded-[3rem] p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-[0_20px_50px_rgba(11,44,245,0.3)] overflow-hidden relative max-w-6xl mx-auto"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-              <div className="bg-white/10 p-5 rounded-[2rem] backdrop-blur-sm">
-                <CalendarDays className="w-12 h-12 text-white" />
-              </div>
-              <div className="max-w-xl">
-                <h3 className="text-3xl md:text-4xl font-black mb-4 leading-tight tracking-tight">
-                  Conocé tu estado de salud hoy
-                </h3>
-                <p className="text-white/80 font-medium text-lg">
-                   Reservá tu turno para CHEQ-IN Cardio y recibí tu evaluación médica completa.
-                </p>
-              </div>
+            {/* Top Center Icon */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#D93F4A] rounded-full flex items-center justify-center border-4 border-[#Eef3f9] shadow-lg">
+              <HeartPulse className="text-white w-10 h-10" strokeWidth={2.5} />
             </div>
 
+            {/* Title */}
+            <h1 className="text-5xl font-black text-[#D93F4A] mt-8 mb-4 tracking-tight">
+              Cardio
+            </h1>
+
+            {/* Logo Pill */}
+            <div className="border-[2px] border-[#D93F4A] rounded-full px-6 py-1.5 flex items-center justify-center mb-6">
+              <span className="text-[#001cf0] font-black tracking-tight text-xl">cheq</span>
+              <svg className="w-[18px] h-[18px] text-[#001cf0] mx-0.5 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span className="text-[#001cf0] font-black tracking-tight text-xl">in<sup className="text-[10px] ml-0.5">®</sup></span>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-[#505050] text-lg mb-10 leading-snug">
+              <strong className="font-black text-[#606060]">Cuidar tu corazón</strong> <br/><span className="italic text-[#707070]">también es prevenir</span> 
+            </p>
+
+            {/* Section 1 */}
+            <div className="w-full mb-8 flex flex-col items-center">
+              <div className="bg-[#D93F4A] text-white font-bold rounded-full px-8 py-2 text-sm mb-3">
+                Evaluación integral
+              </div>
+              <p className="text-[#606060] text-sm font-medium leading-relaxed max-w-[280px]">
+                Una evaluación completa del corazón y el sistema cardiovascular, guiada por indicación médica y con tecnología de alta complejidad.
+              </p>
+            </div>
+
+            {/* Section 2 */}
+            <div className="w-full mb-8 flex flex-col items-center">
+              <div className="bg-[#D93F4A] text-white font-bold rounded-full px-8 py-2 text-sm mb-3">
+                ¿Para quién está pensado?
+              </div>
+              <p className="text-[#707070] text-xs italic mb-2">Este chequeo es ideal si:</p>
+              <ul className="text-[#606060] text-sm font-medium leading-relaxed text-center space-y-1">
+                <li className="text-center">Querés conocer tu salud cardiovascular</li>
+                <li className="text-center">Tenés factores de riesgo</li>
+                <li className="text-center">Buscás prevenir complicaciones</li>
+              </ul>
+            </div>
+
+            {/* Section 3 */}
+            <div className="w-full mb-10 flex flex-col items-center">
+              <div className="bg-[#D93F4A] text-white font-bold rounded-full px-8 py-2 text-sm mb-3">
+                Estudios que puede incluir
+              </div>
+              <p className="text-[#707070] text-xs italic mb-2">Según indicación médica:</p>
+              <ul className="text-[#606060] text-sm font-medium leading-relaxed text-center space-y-1">
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Laboratorio de análisis clínicos completo</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Electrocardiograma</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Ecocardiograma Doppler</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Eco Doppler de vasos de cuello</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Prueba ergométrica computarizada</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Estudio de perfusión miocárdica estrés-reposo</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>MAPA</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#D93F4A] mr-1.5 text-xl leading-none">•</span>
+                  <span>Holter de 24 horas</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* CTA Button */}
             <Link
               to="/turnos"
-              className="relative z-10 inline-flex items-center justify-center rounded-full bg-white text-[#0B2CF5] font-black px-12 py-5 text-lg shadow-xl hover:bg-gray-50 transition-all hover:-translate-y-1 active:scale-95 uppercase tracking-tight"
+              className="w-full md:w-auto inline-flex items-center justify-center rounded-full bg-[#D93F4A] text-white font-black px-12 py-4 text-lg shadow-[0_10px_20px_rgba(217,63,74,0.3)] hover:bg-[#c03440] transition-all hover:-translate-y-1 active:scale-95"
             >
-              Reservar Turno
+              QUIERO UN TURNO
             </Link>
           </motion.div>
-
-          <div className="bg-white rounded-[3.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-10 md:p-20 border border-gray-50 max-w-6xl mx-auto">
-            <h3 className="text-3xl md:text-5xl font-black text-[#0B2CF5] mb-12 text-center tracking-tight flex items-center justify-center gap-4">
-               <MapPin className="w-10 h-10" />
-               ¿Dónde encontrarnos?
-            </h3>
-            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-[500px] border border-gray-100">
-              <iframe
-                title="Mapa Sede Central"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d744.2831331572827!2d-58.98068172737543!3d-27.455956964664026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450cf1d48612bd%3A0xd65f93c5771f8b81!2sDensitometr%C3%ADa%20Osea%20Resistencia!5e0!3m2!1ses!2sar!4v1759840589238!5m2!1ses!2sar"
-                className="w-full h-full border-0"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
         </div>
       </section>
     </>

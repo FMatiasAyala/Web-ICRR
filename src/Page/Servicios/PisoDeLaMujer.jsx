@@ -1,183 +1,166 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import { CalendarDays, Heart } from "lucide-react"
 import SeoTags from "../../components/SeoTags"
 
 export default function PisoDeLaMujer() {
-  const servicios = [
-    {
-      nombre: "Mamografía Digital",
-      descripcion:
-        "Estudio de detección temprana del cáncer de mama mediante tecnología digital directa de alta resolución, que permite mayor precisión diagnóstica y menor dosis de radiación.",
-      imagen: "/img/servicios/equipoMamografia.webp",
-    },
-    {
-      nombre: "Ecografía Mamaria y Ginecológica",
-      descripcion:
-        "Evaluación no invasiva que complementa la mamografía. Permite el estudio de tejidos blandos, control de nódulos, quistes, útero y ovarios.",
-      imagen: "/img/servicios/equipoEcografia.webp",
-    },
-    {
-      nombre: "Prevención y Salud Integral",
-      descripcion:
-        "Programas de chequeo preventivo femenino: control anual, asesoramiento ginecológico, evaluación endocrina y seguimiento integral de la salud de la mujer.",
-      imagen: "/img/servicios/equipoAbus.webp",
-    },
-  ]
+  const FemaleSymbol = ({ className, strokeWidth = 2 }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="10" r="6" />
+      <line x1="12" y1="16" x2="12" y2="22" />
+      <line x1="9" y1="19" x2="15" y2="19" />
+    </svg>
+  );
 
   return (
     <>
       <SeoTags
         title="Piso de la Mujer | ICRR"
-        description="Un espacio dedicado a la salud integral femenina, enfocado en la prevención y el diagnóstico temprano."
+        description="Un espacio pensado para el cuidado integral de la salud femenina"
         image="/servicios/PisoDeLaMujer.png"
       />
-      <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
-        {/* Fondo decorativo tenue */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-10 mix-blend-luminosity">
-          <img
-            src="/servicios/PisoDeLaMujer.png"
-            alt="fondo"
-            className="w-full h-[600px] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F4F6FB] opacity-100 h-[600px]" />
+      <section className="relative min-h-screen bg-[#Eef3f9] overflow-hidden flex flex-col items-center justify-center py-24">
+        
+        {/* Floating Background Circles */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          {/* Top Left */}
+          <motion.div 
+            animate={{ y: [0, -10, 0] }} 
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[10%] left-[15%] w-16 h-16 bg-[#e379c7] rounded-full flex items-center justify-center transform rotate-12 shadow-md"
+          >
+            <FemaleSymbol className="text-white w-8 h-8" strokeWidth={2.5} />
+          </motion.div>
+          {/* Top Right (Blurred) */}
+          <motion.div 
+            animate={{ y: [0, 15, 0] }} 
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute top-[5%] right-[10%] w-24 h-24 bg-[#e379c7] rounded-full flex items-center justify-center transform -rotate-12 blur-[2px]"
+          >
+            <FemaleSymbol className="text-white w-12 h-12" strokeWidth={2.5} />
+          </motion.div>
+          {/* Mid Left (Blurred) */}
+          <motion.div 
+            animate={{ y: [0, 10, 0] }} 
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute top-[40%] left-[5%] w-32 h-32 bg-[#e379c7] rounded-full flex items-center justify-center transform rotate-45 blur-md opacity-90"
+          >
+            <FemaleSymbol className="text-white w-16 h-16" strokeWidth={2} />
+          </motion.div>
+          {/* Mid Right */}
+          <motion.div 
+            animate={{ y: [0, -15, 0] }} 
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute top-[45%] right-[8%] w-20 h-20 bg-[#e379c7] rounded-full flex items-center justify-center transform -rotate-6 shadow-xl"
+          >
+            <FemaleSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+          </motion.div>
+          {/* Bottom Left */}
+          <motion.div 
+            animate={{ y: [0, -10, 0] }} 
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+            className="absolute bottom-[10%] left-[10%] w-20 h-20 bg-[#e379c7] rounded-full flex items-center justify-center transform rotate-12 shadow-xl"
+          >
+            <FemaleSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+          </motion.div>
+          {/* Bottom Right (Blurred) */}
+          <motion.div 
+            animate={{ y: [0, 20, 0] }} 
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
+            className="absolute bottom-[15%] right-[5%] w-36 h-36 bg-[#e379c7] rounded-full flex items-center justify-center transform -rotate-12 blur-md opacity-80"
+          >
+            <FemaleSymbol className="text-white w-16 h-16" strokeWidth={2} />
+          </motion.div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 pt-16 md:pt-24 mb-16 space-y-24">
-          {/* Encabezado Principal */}
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#EC407A] flex items-center justify-center border-[8px] border-white shadow-xl mx-auto mb-10"
-            >
-              <span className="text-white text-[48px] md:text-[56px] font-black">♀</span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-7xl font-black text-[#0B2CF5] mb-6 tracking-tight"
-            >
-              Piso de la Mujer
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-[#505050] font-medium text-lg md:text-2xl max-w-2xl mx-auto leading-relaxed"
-            >
-              Un espacio dedicado a la salud integral femenina, enfocado en la prevención y el diagnóstico temprano.
-            </motion.p>
-          </div>
-
-          {/* SERVICIOS */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {servicios.map((serv, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 border border-gray-50 group"
-              >
-                <div className="p-4 pb-0">
-                  <div className="relative h-[240px] rounded-[2rem] overflow-hidden">
-                    <img
-                      src={serv.imagen}
-                      alt={serv.nombre}
-                      className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#EC407A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </div>
-                <div className="p-8 pb-10 flex-grow flex flex-col">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-pink-50 flex items-center justify-center text-[#EC407A]">
-                      <Heart className="w-5 h-5" fill="currentColor" />
-                    </div>
-                    <h2 className="text-2xl font-black text-[#0B2CF5] tracking-tight">
-                      {serv.nombre}
-                    </h2>
-                  </div>
-                  <p className="text-[#505050] text-[15px] leading-relaxed font-medium">
-                    {serv.descripcion}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* SECCIÓN PREVENCIÓN */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] py-16 px-8 md:px-16 text-center border border-gray-50"
+        {/* Main Card */}
+        <div className="relative z-10 w-full max-w-lg mx-auto mt-12 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative flex flex-col items-center text-center border border-gray-100"
           >
-            <h3 className="text-3xl md:text-5xl font-black text-[#0B2CF5] tracking-tight mb-8">
-              Guía de Prevención Femenina
-            </h3>
-            <p className="text-[#505050] text-lg max-w-2xl mx-auto leading-relaxed mb-16 font-medium">
-              La detección temprana salva vidas. Recomendamos realizar los siguientes estudios según la etapa de tu vida:
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { edad: "A partir de los 20 años", info: "Control ginecológico anual y autoexploración mamaria mensual." },
-                { edad: "Desde los 30 años", info: "Papanicolaou y colposcopía cada 1 a 2 años. Ecografía mamaria si es necesario." },
-                { edad: "Desde los 40 años", info: "Mamografía anual y control clínico completo. Seguimiento endocrinológico." }
-              ].map((item, i) => (
-                <div key={i} className="bg-[#F4F6FB] rounded-[2.5rem] p-10 border border-white hover:bg-white hover:shadow-xl transition-all duration-300 group">
-                  <h4 className="font-black text-[#EC407A] tracking-tight mb-4 text-xl group-hover:scale-105 transition-transform">
-                    {item.edad}
-                  </h4>
-                  <p className="text-[#505050] text-[15px] font-medium leading-relaxed">
-                    {item.info}
-                  </p>
-                </div>
-              ))}
+            {/* Top Center Icon */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#e379c7] rounded-full flex items-center justify-center border-4 border-[#Eef3f9] shadow-lg">
+              <FemaleSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
             </div>
-          </motion.div>
 
-          {/* CTA final */}
-          <div className="mt-24">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="bg-[#0B2CF5] rounded-[3rem] p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-[0_20px_50px_rgba(11,44,245,0.3)] overflow-hidden relative"
-            >
-              {/* Decoración sutil */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl" />
+            {/* Title */}
+            <h1 className="text-5xl font-black text-[#e379c7] mt-8 mb-4 tracking-tight">
+              Mujer
+            </h1>
 
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-                <div className="bg-white/10 p-5 rounded-[2rem] backdrop-blur-sm">
-                  <CalendarDays className="w-12 h-12 text-white" />
-                </div>
-                <div className="max-w-xl">
-                  <h3 className="text-3xl md:text-4xl font-black mb-4 leading-tight tracking-tight">
-                    Cuidar tu salud es una forma de quererte
-                  </h3>
-                  <p className="text-white/80 font-medium text-lg">
-                    Te invitamos a realizar tus controles anuales y consultas preventivas con nuestro equipo especializado.
-                  </p>
-                </div>
+            {/* Logo Pill */}
+            <div className="border-[2px] border-[#e379c7] rounded-full px-6 py-1.5 flex items-center justify-center mb-6">
+              <span className="text-[#001cf0] font-black tracking-tight text-xl">cheq</span>
+              <svg className="w-[18px] h-[18px] text-[#001cf0] mx-0.5 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span className="text-[#001cf0] font-black tracking-tight text-xl">in<sup className="text-[10px] ml-0.5">®</sup></span>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-[#505050] text-lg mb-10 leading-snug">
+              <span className="italic text-[#707070]">Un espacio pensado para el</span> <br/><strong className="font-black text-[#606060]">cuidado integral de la salud femenina</strong> 
+            </p>
+
+            {/* Section 1 */}
+            <div className="w-full mb-8 flex flex-col items-center">
+              <div className="bg-[#e379c7] text-white font-bold rounded-full px-8 py-2 text-sm mb-3">
+                Piso de la Mujer
               </div>
+              <p className="text-[#606060] text-sm font-medium leading-relaxed max-w-[280px]">
+                Contamos con un espacio exclusivo y especialmente diseñado para realizar estudios de salud femenina.
+              </p>
+            </div>
 
-              <Link
-                to="/turnos"
-                className="relative z-10 inline-flex items-center justify-center rounded-full bg-white text-[#0B2CF5] font-black px-12 py-5 text-lg shadow-xl hover:bg-gray-50 transition-all hover:-translate-y-1 active:scale-95"
-              >
-                RESERVAR TURNO
-              </Link>
-            </motion.div>
-          </div>
+            {/* Section 2 */}
+            <div className="w-full mb-8 flex flex-col items-center">
+              <div className="bg-[#e379c7] text-white font-bold rounded-full px-8 py-2 text-sm mb-3">
+                ¿Para qué sirve este chequeo?
+              </div>
+              <p className="text-[#606060] text-sm font-medium leading-relaxed max-w-[300px] text-center">
+                Permite realizar controles preventivos y periódicos fundamentales para la salud de la mujer.
+              </p>
+            </div>
+
+            {/* Section 3 */}
+            <div className="w-full mb-10 flex flex-col items-center">
+              <div className="bg-[#e379c7] text-white font-bold rounded-full px-8 py-2 text-sm mb-3">
+                Estudios que puede incluir
+              </div>
+              <p className="text-[#707070] text-xs italic mb-2">Según indicación médica:</p>
+              <ul className="text-[#606060] text-sm font-medium leading-relaxed text-center space-y-1">
+                <li className="flex items-start justify-center">
+                  <span className="text-[#e379c7] mr-1.5 text-xl leading-none">•</span>
+                  <span>Laboratorio de análisis clínicos completo</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#e379c7] mr-1.5 text-xl leading-none">•</span>
+                  <span>Mamografía</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#e379c7] mr-1.5 text-xl leading-none">•</span>
+                  <span>Ecografía ginecológica</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#e379c7] mr-1.5 text-xl leading-none">•</span>
+                  <span>Ecografía mamaria</span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <span className="text-[#e379c7] mr-1.5 text-xl leading-none">•</span>
+                  <span>Densitometría ósea</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* CTA Button */}
+            <Link
+              to="/turnos"
+              className="w-full md:w-auto inline-flex items-center justify-center rounded-full bg-[#e379c7] text-white font-black px-12 py-4 text-lg shadow-[0_10px_20px_rgba(227,121,199,0.3)] hover:bg-[#d65eb5] transition-all hover:-translate-y-1 active:scale-95"
+            >
+              QUIERO UN TURNO
+            </Link>
+          </motion.div>
         </div>
       </section>
     </>
