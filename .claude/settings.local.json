@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(grep -iE \"tel|whatsapp|direccion|address|calle|av\\\\.|horario|@|http|resistencia|chaco|saenz|fontana|[0-9]{3,}\")",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npm -v)",
+      "Bash(pnpm -v)",
+      "Bash(pnpm import *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm rebuild *)",
+      "Bash(pnpm build *)"
     ]
   }
 }

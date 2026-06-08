@@ -1,0 +1,5 @@
+# Permite que estos paquetes ejecuten sus scripts de instalación (binarios nativos).
+# pnpm los bloquea por defecto desde la v10 por seguridad.
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
