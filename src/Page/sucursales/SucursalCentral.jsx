@@ -3,14 +3,26 @@ import { MapPin, Clock, Phone, Mail, CheckCircle, CalendarDays, Navigation } fro
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
+import { SUCURSALES } from "../../config/site"
+import { sucursalSchema, breadcrumbSchema } from "../../config/structuredData"
 
 export default function SucursalCentral() {
   return (
     <>
       <SeoTags
-        title="Sede Central | ICRR"
-        description="Nuestra casa matriz en Resistencia, con tecnología de alta complejidad y atención integral."
+        title="Sede Central Resistencia — Av. 9 de Julio 635 | ICRR"
+        description="Nuestra casa matriz en Resistencia, Chaco (Av. 9 de Julio 635), con tecnología de alta complejidad y atención integral en diagnóstico por imágenes."
         image="/sucursales/fachadaCentral.jpg"
+        path="/sucursales/central"
+        keywords="ICRR Resistencia, diagnóstico por imágenes Av. 9 de Julio, sede central Chaco"
+        jsonLd={[
+          sucursalSchema(SUCURSALES.find((s) => s.slug === "central")),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Sucursales", path: "/sucursales" },
+            { name: "Sede Central Resistencia", path: "/sucursales/central" },
+          ]),
+        ]}
       />
       <section className="bg-[#F4F6FB] pb-24">
 

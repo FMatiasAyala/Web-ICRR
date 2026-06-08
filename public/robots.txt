@@ -1,4 +1,9 @@
+# robots.txt — Instituto Consultorio Radiológico Resistencia (ICRR)
+
 User-agent: *
 Allow: /
 
-Sitemap: https://tusitio.com/sitemap.xml
+# Bloquear rutas de error/no útiles para indexación
+Disallow: /404
+
+Sitemap: https://www.icrr.com.ar/sitemap.xml

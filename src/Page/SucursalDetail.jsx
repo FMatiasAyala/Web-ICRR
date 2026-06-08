@@ -19,7 +19,7 @@ export default function SucursalDetail() {
   if (!Component) {
     return (
       <>
-        <SeoTags title="Sucursal no encontrada | ICRR" />
+        <SeoTags title="Sucursal no encontrada | ICRR" noindex />
         <section className="min-h-screen bg-[#F4F6FB] flex items-center justify-center px-6">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

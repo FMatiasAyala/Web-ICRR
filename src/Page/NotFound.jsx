@@ -5,7 +5,7 @@ import SeoTags from "../components/SeoTags"
 export default function NotFound() {
   return (
     <>
-      <SeoTags title="Página no encontrada | ICRR" />
+      <SeoTags title="Página no encontrada | ICRR" noindex />
       <section className="min-h-screen bg-[#F4F6FB] flex items-center justify-center px-6">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}

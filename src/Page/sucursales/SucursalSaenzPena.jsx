@@ -3,14 +3,26 @@ import { MapPin, Clock, Phone, Mail, CheckCircle, CalendarDays, Navigation } fro
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
+import { SUCURSALES } from "../../config/site"
+import { sucursalSchema, breadcrumbSchema } from "../../config/structuredData"
 
 export default function SucursalSaenzPena() {
   return (
     <>
       <SeoTags
-        title="Sucursal Sáenz Peña | ICRR"
-        description="Atención médica y diagnóstico por imágenes en Presidencia Roque Sáenz Peña, Chaco. Tecnología y calidad en el corazón de la provincia."
+        title="Sucursal Sáenz Peña — Av. J. D. Perón 1220 | ICRR"
+        description="Atención médica y diagnóstico por imágenes en Presidencia Roque Sáenz Peña, Chaco (Av. J. Domingo Perón 1220). Tecnología y calidad en el corazón de la provincia."
         image="/sucursales/fachadaSP.jpg"
+        path="/sucursales/saenzPena"
+        keywords="ICRR Sáenz Peña, diagnóstico por imágenes Sáenz Peña, Presidencia Roque Sáenz Peña, Chaco"
+        jsonLd={[
+          sucursalSchema(SUCURSALES.find((s) => s.slug === "saenzPena")),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Sucursales", path: "/sucursales" },
+            { name: "Sucursal Sáenz Peña", path: "/sucursales/saenzPena" },
+          ]),
+        ]}
       />
       <section className="bg-[#F4F6FB] pb-24">
 

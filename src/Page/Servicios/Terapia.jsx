@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { CalendarDays, ShieldCheck, Award, FileText } from "lucide-react"
 import SeoTags from "../../components/SeoTags"
+import { serviceSchema, breadcrumbSchema } from "../../config/structuredData"
 
 export default function Terapia() {
   const certificados = [
@@ -25,9 +26,24 @@ export default function Terapia() {
   return (
     <>
       <SeoTags
-        title="Terapia Radiante | ICRR"
-        description="Tecnología de vanguardia en radioterapia y planificación 3D con los más altos estándares de calidad."
+        title="Terapia Radiante y Radioterapia en Resistencia | ICRR"
+        description="Tratamientos oncológicos con radioterapia de precisión, planificación 3D, control de dosis y seguimiento médico integral. Certificación IRAM-ISO 9001 en Resistencia, Chaco."
         image="/servicios/TR.png"
+        path="/servicios/terapia-radiante"
+        keywords="terapia radiante Resistencia, radioterapia Chaco, tratamiento oncológico, radioterapia de precisión, ICRR"
+        jsonLd={[
+          serviceSchema({
+            name: "Terapia Radiante",
+            description: "Radioterapia de precisión con planificación 3D y seguimiento médico integral.",
+            path: "/servicios/terapia-radiante",
+            image: "/servicios/TR.png",
+          }),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Servicios", path: "/servicios" },
+            { name: "Terapia Radiante", path: "/servicios/terapia-radiante" },
+          ]),
+        ]}
       />
       <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
         {/* Fondo decorativo tenue */}

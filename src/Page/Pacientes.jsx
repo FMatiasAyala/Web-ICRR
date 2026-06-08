@@ -11,9 +11,10 @@ export default function Pacientes() {
   return (
     <>
       <SeoTags
-        title="Pacientes | ICRR"
-        description="Accedé al portal de pacientes del Consultorio Radiológico Resistencia para consultar estudios, resultados y preparaciones médicas."
+        title="Portal de Pacientes y Preparaciones | ICRR"
+        description="Accedé al portal de pacientes del Instituto CRR para consultar estudios, resultados, coberturas y preparaciones médicas en Resistencia, Chaco."
         image="/logos/icrr_logo3.jpg"
+        path="/pacientes"
       />
 
       <section className="bg-[#F4F6FB] pb-24">

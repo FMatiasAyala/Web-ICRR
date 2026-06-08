@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { UserRound, FlaskConical, CalendarDays, MapPin, Check, HeartPulse, Bone } from "lucide-react"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
+import { serviceSchema, breadcrumbSchema } from "../../config/structuredData"
 
 
 
@@ -36,9 +37,24 @@ export default function CheqIn() {
   return (
     <>
       <SeoTags
-        title="Programas CHEQ-IN | ICRR"
-        description="Circuitos de salud diseñados para evaluar tu bienestar en una sola jornada, de manera ágil y coordinada."
+        title="Programas CHEQ-IN: Chequeo de Salud en una Jornada | ICRR"
+        description="Circuitos de salud Cheq-In diseñados para evaluar tu bienestar en una sola jornada, de manera ágil y coordinada. General, Cardio y Óseo, en Resistencia, Chaco."
         image="/servicios/cheq-in-banner.jpg"
+        path="/servicios/cheq-in"
+        keywords="cheq-in, chequeo de salud Resistencia, control médico preventivo, chequeo cardiovascular, salud ósea, Chaco"
+        jsonLd={[
+          serviceSchema({
+            name: "Programas CHEQ-IN",
+            description: "Chequeos de salud integrales en una sola jornada: General, Cardio y Óseo.",
+            path: "/servicios/cheq-in",
+            image: "/servicios/cheq-in-banner.jpg",
+          }),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Servicios", path: "/servicios" },
+            { name: "Cheq-In", path: "/servicios/cheq-in" },
+          ]),
+        ]}
       />
       <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
         {/* Fondo decorativo tenue */}

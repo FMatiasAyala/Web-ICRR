@@ -6,8 +6,9 @@ export default function Nosotros() {
     <>
       <SeoTags
         title="Sobre Nosotros | ICRR"
-        description="Conocé nuestro equipo médico, nuestra historia y compromiso con la salud diagnóstica en Resistencia."
+        description="Conocé nuestro equipo médico, nuestra historia y el compromiso del Instituto CRR con la salud diagnóstica en Resistencia, Chaco."
         image="/logos/icrr_logo2.jpg"
+        path="/nosotros"
       />
       <section className="flex flex-col bg-[#F4F6FB] pb-24">
         {/* === Encabezado con imagen del equipo === */}

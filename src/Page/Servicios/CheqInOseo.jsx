@@ -9,9 +9,10 @@ export default function CheqInOseo() {
   return (
     <>
       <SeoTags
-        title="CHEQ-IN Óseo | ICRR"
-        description="Conocé el estado de tu salud ósea en una sola jornada."
+        title="CHEQ-IN Óseo: Chequeo de Salud Ósea | ICRR"
+        description="Conocé el estado de tu salud ósea en una sola jornada con el programa Cheq-In Óseo, en Resistencia, Chaco."
         image="/servicios/cheq-in-oseo.jpg"
+        path="/servicios/cheq-in-oseo"
       />
       <section className="relative min-h-screen bg-[#Eef3f9] overflow-hidden flex flex-col items-center justify-center py-24">
 

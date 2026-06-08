@@ -7,9 +7,10 @@ export default function CheqInCardio() {
   return (
     <>
       <SeoTags
-        title="CHEQ-IN Cardio | ICRR"
-        description="Conocé tu estado de salud cardiovascular en una sola jornada."
+        title="CHEQ-IN Cardio: Chequeo Cardiovascular | ICRR"
+        description="Conocé tu estado de salud cardiovascular en una sola jornada con el programa Cheq-In Cardio, en Resistencia, Chaco."
         image="/servicios/cheq-in-cardio.jpg"
+        path="/servicios/cheq-in-cardio"
       />
       <section className="relative min-h-screen bg-[#Eef3f9] overflow-hidden flex flex-col items-center justify-center py-24">
         

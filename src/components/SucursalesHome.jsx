@@ -2,8 +2,12 @@
 import { Link } from "react-router-dom"
 import { MapPin, Phone } from "lucide-react"
 import { motion } from "framer-motion"
+import SeoTags from "./SeoTags"
+import { breadcrumbSchema, allSucursalesSchema } from "../config/structuredData"
 
-export default function SucursalesHome() {
+// `asPage` solo es true cuando se renderiza como ruta /sucursales (no como sección del Home),
+// para no duplicar las etiquetas SEO en la página de inicio.
+export default function SucursalesHome({ asPage = false }) {
   const sucursales = [
     {
       prefix: "Sede",
@@ -30,6 +34,22 @@ export default function SucursalesHome() {
 
   return (
     <section className="bg-[#F4F6FB] py-10 pb-24 overflow-x-hidden">
+      {asPage && (
+        <SeoTags
+          title="Nuestras Sedes en Resistencia, Fontana y Sáenz Peña | ICRR"
+          description="Conocé las sedes del Instituto CRR en Resistencia, Fontana y Presidencia Roque Sáenz Peña, Chaco. Direcciones, horarios y cómo llegar."
+          image="/logos/icrr_logo2.jpg"
+          path="/sucursales"
+          keywords="sucursales ICRR, sedes diagnóstico por imágenes Chaco, Resistencia, Fontana, Sáenz Peña"
+          jsonLd={[
+            ...allSucursalesSchema(),
+            breadcrumbSchema([
+              { name: "Inicio", path: "/" },
+              { name: "Sucursales", path: "/sucursales" },
+            ]),
+          ]}
+        />
+      )}
       <div className="container mx-auto px-6 mb-12 text-center" id="sucursales">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

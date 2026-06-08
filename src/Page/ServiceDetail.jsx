@@ -21,7 +21,7 @@ export default function ServiceDetail() {
   if (!Component)
     return (
       <>
-        <SeoTags title="Servicio no encontrado | ICRR" />
+        <SeoTags title="Servicio no encontrado | ICRR" noindex />
         <section className="min-h-screen bg-[#F4F6FB] flex items-center justify-center px-6">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

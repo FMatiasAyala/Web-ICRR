@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import Preparaciones from "../components/Preparaciones"
 import SeoTags from "../components/SeoTags"
+import { faqSchema, breadcrumbSchema } from "../config/structuredData"
 
 export default function Turnos() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -68,9 +69,18 @@ export default function Turnos() {
   return (
     <>
       <SeoTags
-        title="Solicitar Turno | ICRR"
-        description="Reservá tu turno online de forma ágil. Atención personalizada por WhatsApp para todas nuestras especialidades."
+        title="Solicitar Turno Online | ICRR"
+        description="Reservá tu turno de forma ágil por WhatsApp para todas nuestras especialidades: imágenes, terapia radiante, medicina nuclear y prácticas médicas en Resistencia, Chaco."
         image="/img/turnos.jpg"
+        path="/turnos"
+        keywords="turnos diagnóstico por imágenes, reservar turno resonancia, turnos ICRR Resistencia, turnos por WhatsApp"
+        jsonLd={[
+          faqSchema(faqs),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Turnos", path: "/turnos" },
+          ]),
+        ]}
       />
 
       <section id="turnos" className="bg-[#F8FAFC] pb-24 overflow-x-hidden pt-10">

@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo_title.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instituto Consultorio Radiológico Resistencia</title>
+
+    <!-- SEO básico -->
+    <title>Instituto Consultorio Radiológico Resistencia | ICRR</title>
     <meta
       name="description"
-      content="Centro especializado en diagnóstico por imágenes, resonancias, tomografías y ecografías en Resistencia, Chaco."
+      content="Centro de diagnóstico por imágenes en Resistencia, Chaco: resonancias, tomografías, ecografías, mamografías, radiografías, densitometrías, medicina nuclear y terapia radiante."
     />
-    <meta name="theme-color" content="#0a3d62" />
+    <meta
+      name="keywords"
+      content="diagnóstico por imágenes, resonancia magnética, tomografía, ecografía, mamografía, radiografía, densitometría, medicina nuclear, terapia radiante, Resistencia, Chaco, ICRR"
+    />
+    <meta name="author" content="Instituto Consultorio Radiológico Resistencia" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://www.icrr.com.ar/" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="AR-H" />
+    <meta name="geo.placename" content="Resistencia, Chaco" />
+
+    <!-- Open Graph (fallback para crawlers sin JS: WhatsApp, Facebook) -->
+    <meta property="og:site_name" content="Instituto Consultorio Radiológico Resistencia" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Instituto Consultorio Radiológico Resistencia | ICRR" />
+    <meta
+      property="og:description"
+      content="Centro de diagnóstico por imágenes en Resistencia, Chaco: resonancias, tomografías, ecografías, mamografías y más."
+    />
+    <meta property="og:url" content="https://www.icrr.com.ar/" />
+    <meta property="og:image" content="https://www.icrr.com.ar/logos/icrr_logo2.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Instituto Consultorio Radiológico Resistencia | ICRR" />
+    <meta
+      name="twitter:description"
+      content="Centro de diagnóstico por imágenes en Resistencia, Chaco."
+    />
+    <meta name="twitter:image" content="https://www.icrr.com.ar/logos/icrr_logo2.jpg" />
+
+    <!-- PWA / Apple -->
+    <meta name="theme-color" content="#0B2CF5" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
@@ -17,6 +53,39 @@
       content="black-translucent"
     />
     <meta name="apple-mobile-web-app-title" content="ICRR" />
+
+    <!-- Rendimiento: precarga de orígenes externos -->
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Datos estructurados base (entidad del negocio) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "@id": "https://www.icrr.com.ar/#organization",
+        "name": "Instituto Consultorio Radiológico Resistencia",
+        "alternateName": "ICRR",
+        "url": "https://www.icrr.com.ar",
+        "logo": "https://www.icrr.com.ar/logos/icrr_logo2.jpg",
+        "image": "https://www.icrr.com.ar/logos/icrr_logo2.jpg",
+        "email": "turnoscrr@gmail.com",
+        "telephone": "+543624880444",
+        "medicalSpecialty": ["Radiology", "DiagnosticImaging"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. 9 de Julio 635",
+          "addressLocality": "Resistencia",
+          "addressRegion": "Chaco",
+          "postalCode": "H3500",
+          "addressCountry": "AR"
+        },
+        "sameAs": [
+          "https://www.facebook.com/InstitutoCRR",
+          "https://www.instagram.com/institutocrr/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

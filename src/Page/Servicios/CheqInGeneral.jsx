@@ -7,9 +7,10 @@ export default function CheqInGeneral() {
   return (
     <>
       <SeoTags
-        title="CHEQ-IN General | ICRR"
-        description="Circuito de salud diseñado para evaluar tu bienestar en una sola jornada."
+        title="CHEQ-IN General: Chequeo de Salud Integral | ICRR"
+        description="Circuito de salud Cheq-In General diseñado para evaluar tu bienestar en una sola jornada, en Resistencia, Chaco."
         image="/servicios/cheq-in-general.jpg"
+        path="/servicios/cheq-in-general"
       />
       <section className="relative min-h-screen bg-[#Eef3f9] overflow-hidden flex flex-col items-center justify-center py-24">
         

@@ -3,14 +3,26 @@ import { MapPin, Clock, Phone, Mail, CheckCircle, CalendarDays, Navigation } fro
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
+import { SUCURSALES } from "../../config/site"
+import { sucursalSchema, breadcrumbSchema } from "../../config/structuredData"
 
 export default function SucursalFontana() {
   return (
     <>
       <SeoTags
-        title="Sucursal Fontana | ICRR"
-        description="Atención médica especializada y diagnóstico por imágenes en nuestra sede de Fontana, Chaco."
+        title="Sucursal Fontana — Av. Alvear 3875 | ICRR"
+        description="Atención médica especializada y diagnóstico por imágenes en nuestra sede de Fontana, Chaco (Av. Alvear 3875)."
         image="/sucursales/fachadaFontana.jpg"
+        path="/sucursales/fontana"
+        keywords="ICRR Fontana, diagnóstico por imágenes Fontana, Av. Alvear, Chaco"
+        jsonLd={[
+          sucursalSchema(SUCURSALES.find((s) => s.slug === "fontana")),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Sucursales", path: "/sucursales" },
+            { name: "Sucursal Fontana", path: "/sucursales/fontana" },
+          ]),
+        ]}
       />
       <section className="bg-[#F4F6FB] pb-24">
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { HeartPulse, Radiation, Stethoscope, LucideXCircle, CalendarDays } from "lucide-react"
 import SeoTags from "../components/SeoTags"
+import { serviceListSchema, breadcrumbSchema } from "../config/structuredData"
 
 export default function ServiciosPage() {
   const servicios = [
@@ -59,9 +60,18 @@ export default function ServiciosPage() {
   return (
     <>
       <SeoTags
-        title="Servicios | ICRR"
-        description="Resonancias, tomografías, rayos X, densitometrías, ecografías y más. Conocé los servicios de diagnóstico por imágenes que ofrecemos en ICRR."
+        title="Servicios de Diagnóstico y Tratamiento | ICRR"
+        description="Resonancias, tomografías, radiografías, densitometrías, ecografías, terapia radiante y Cheq-In. Conocé todos los servicios del Instituto CRR en Resistencia, Chaco."
         image="/logos/icrr_logo2.jpg"
+        path="/servicios"
+        keywords="servicios diagnóstico por imágenes, terapia radiante, prácticas médicas, Cheq-In, Resistencia, Chaco"
+        jsonLd={[
+          serviceListSchema(servicios),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Servicios", path: "/servicios" },
+          ]),
+        ]}
       />
       <section className="relative min-h-screen bg-[#F4F6FB] py-24">
         {/* Encabezado */}

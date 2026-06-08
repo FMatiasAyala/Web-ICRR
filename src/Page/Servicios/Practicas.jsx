@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { CalendarDays, Search, Stethoscope, User, MapPin } from "lucide-react"
 import SeoTags from "../../components/SeoTags"
+import { serviceSchema, breadcrumbSchema } from "../../config/structuredData"
 
 export default function PracticasMedicas() {
   const [busqueda, setBusqueda] = useState("")
@@ -114,9 +115,24 @@ export default function PracticasMedicas() {
   return (
     <>
       <SeoTags
-        title="Prácticas Médicas | ICRR"
-        description="Consultorios médicos especializados con atención integral en múltiples disciplinas."
+        title="Prácticas Médicas y Consultorios Especializados | ICRR"
+        description="Consultorios médicos especializados con atención integral en múltiples disciplinas: clínica médica, cardiología y más, en Resistencia, Chaco."
         image="/servicios/PM.png"
+        path="/servicios/practicas-medicas"
+        keywords="prácticas médicas Resistencia, consultorios especializados, clínica médica, cardiología, Chaco, ICRR"
+        jsonLd={[
+          serviceSchema({
+            name: "Prácticas Médicas",
+            description: "Consultorios médicos especializados y procedimientos de apoyo diagnóstico.",
+            path: "/servicios/practicas-medicas",
+            image: "/servicios/PM.png",
+          }),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Servicios", path: "/servicios" },
+            { name: "Prácticas Médicas", path: "/servicios/practicas-medicas" },
+          ]),
+        ]}
       />
       <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
         {/* Fondo decorativo tenue */}

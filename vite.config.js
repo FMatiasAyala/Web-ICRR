@@ -11,11 +11,15 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "apple-touch-icon.png", "mask-icon.svg"],
       manifest: {
-        name: "Consultorio Radiológico Resistencia",
+        name: "Instituto Consultorio Radiológico Resistencia",
         short_name: "ICRR",
         description:
-          "Instituto Consultorio Radiológico Resistencia - Portal y servicios médicos",
-        theme_color: "#0a3d62", // color institucional azul oscuro
+          "Centro de diagnóstico por imágenes en Resistencia, Chaco: resonancias, tomografías, ecografías, mamografías y más.",
+        lang: "es-AR",
+        start_url: "/",
+        scope: "/",
+        categories: ["medical", "health"],
+        theme_color: "#0B2CF5", // color institucional
         background_color: "#ffffff",
         display: "standalone",
         orientation: "portrait",

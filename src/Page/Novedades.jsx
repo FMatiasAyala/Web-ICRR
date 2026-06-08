@@ -1,10 +1,17 @@
 
 import { Instagram, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import SeoTags from "../components/SeoTags"
 
 export default function NovedadesPlaceholder() {
   return (
     <section className="bg-[#F4F6FB] py-24 min-h-screen">
+      <SeoTags
+        title="Novedades y Noticias | ICRR"
+        description="Enterate de las últimas novedades, campañas de prevención y noticias del Instituto Consultorio Radiológico Resistencia."
+        image="/logos/icrr_logo2.jpg"
+        path="/novedades"
+      />
       <div className="container mx-auto px-6 text-center">
         {/* Encabezado */}
         <div className="flex flex-col items-center mb-20">

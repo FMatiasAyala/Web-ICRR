@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -iE \"tel|whatsapp|direccion|address|calle|av\\\\.|horario|@|http|resistencia|chaco|saenz|fontana|[0-9]{3,}\")",
+      "Bash(npm run *)"
+    ]
+  }
+}

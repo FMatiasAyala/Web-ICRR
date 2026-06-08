@@ -27,7 +27,7 @@ export default function App() {
           <Route path="nosotros" element={<Nosotros />} />
           <Route path="novedades" element={<Novedades />} />
           <Route path="pacientes" element={<Pacientes />} />
-          <Route path="sucursales" element={<SucursalesHome />} />
+          <Route path="sucursales" element={<SucursalesHome asPage />} />
           <Route path="sucursales/:slug" element={<SucursalDetail />} />
           <Route path="*" element={<NotFound />} />
         </Route>

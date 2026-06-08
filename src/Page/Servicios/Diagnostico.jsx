@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { CalendarDays, Radiation } from "lucide-react"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
+import { serviceSchema, breadcrumbSchema } from "../../config/structuredData"
 
 const servicios = [
   {
@@ -180,9 +181,24 @@ export default function Diagnostico() {
   return (
     <>
       <SeoTags
-        title="Diagnóstico por Imágenes | ICRR"
-        description="Servicios de ecografía, tomografía, resonancia y más con tecnología de vanguardia."
-        image="/logos/icrr_logo2.jpg"
+        title="Diagnóstico por Imágenes en Resistencia | ICRR"
+        description="Resonancia magnética, tomografía computada, ecografía, mamografía digital, radiografía y densitometría con tecnología de alta resolución y baja dosis en Resistencia, Chaco."
+        image="/img/diagnosticoImagen.webp"
+        path="/servicios/diagnostico-por-imagen"
+        keywords="resonancia magnética Resistencia, tomografía computada, ecografía, mamografía digital, radiografía, densitometría ósea, Chaco"
+        jsonLd={[
+          serviceSchema({
+            name: "Diagnóstico por Imágenes",
+            description: "Resonancia, tomografía, ecografía, mamografía, radiografía y densitometría de alta resolución.",
+            path: "/servicios/diagnostico-por-imagen",
+            image: "/img/diagnosticoImagen.webp",
+          }),
+          breadcrumbSchema([
+            { name: "Inicio", path: "/" },
+            { name: "Servicios", path: "/servicios" },
+            { name: "Diagnóstico por Imágenes", path: "/servicios/diagnostico-por-imagen" },
+          ]),
+        ]}
       />
       <section className="relative min-h-screen bg-[#F4F6FB] pb-24 overflow-x-hidden">
         {/* Fondo decorativo tenue */}
