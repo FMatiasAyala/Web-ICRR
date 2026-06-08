@@ -1,13 +1,9 @@
 import { motion } from "framer-motion"
-import { UserRound, FlaskConical, CalendarDays, MapPin, Check, HeartPulse } from "lucide-react"
+import { UserRound, FlaskConical, CalendarDays, MapPin, Check, HeartPulse, Bone } from "lucide-react"
 import { Link } from "react-router-dom"
 import SeoTags from "../../components/SeoTags"
 
-const BoneSymbol = ({ className, strokeWidth = 2 }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-    <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2 2 2 0 0 1-4 0 2 2 0 0 1 2-2V8a2 2 0 0 1-2-2 2 2 0 0 1 4 0 2 2 0 0 0 2 2h6a2 2 0 0 0 2-2 2 2 0 0 1 4 0 2 2 0 0 1-2 2v8a2 2 0 0 1 2 2 2 2 0 0 1-4 0z" />
-  </svg>
-);
+
 
 export default function CheqIn() {
   const programas = [
@@ -89,9 +85,9 @@ export default function CheqIn() {
 
           {/* PROGRAMAS */}
           <div className="grid lg:grid-cols-3 gap-8 md:gap-6 mt-16 lg:mt-20">
-            
+
             {/* Tarjeta General */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -109,9 +105,9 @@ export default function CheqIn() {
                 <span className="text-[#001cf0] font-black tracking-tight text-lg">in<sup className="text-[9px] ml-0.5">®</sup></span>
               </div>
               <p className="text-[#505050] text-sm mb-6 leading-snug">
-                <strong className="font-black text-[#606060]">Tu salud, en una evaluación</strong> <br/><span className="italic text-[#707070]">integral y en un solo lugar</span>
+                <strong className="font-black text-[#606060]">Tu salud, en una evaluación</strong> <br /><span className="italic text-[#707070]">integral y en un solo lugar</span>
               </p>
-              
+
               <div className="w-full flex-grow flex flex-col items-center">
                 <div className="w-full mb-6 flex flex-col items-center">
                   <div className="bg-[#001cf0] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">Evaluación clínica</div>
@@ -139,7 +135,7 @@ export default function CheqIn() {
             </motion.div>
 
             {/* Tarjeta Cardio */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -158,9 +154,9 @@ export default function CheqIn() {
                 <span className="text-[#001cf0] font-black tracking-tight text-lg">in<sup className="text-[9px] ml-0.5">®</sup></span>
               </div>
               <p className="text-[#505050] text-sm mb-6 leading-snug">
-                <strong className="font-black text-[#606060]">Cuidar tu corazón</strong> <br/><span className="italic text-[#707070]">también es prevenir</span>
+                <strong className="font-black text-[#606060]">Cuidar tu corazón</strong> <br /><span className="italic text-[#707070]">también es prevenir</span>
               </p>
-              
+
               <div className="w-full flex-grow flex flex-col items-center">
                 <div className="w-full mb-6 flex flex-col items-center">
                   <div className="bg-[#D93F4A] text-white font-bold rounded-full px-6 py-1.5 text-xs mb-2">Evaluación integral</div>
@@ -189,7 +185,7 @@ export default function CheqIn() {
             </motion.div>
 
             {/* Tarjeta Óseo */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -197,7 +193,7 @@ export default function CheqIn() {
               className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all relative flex flex-col items-center text-center border border-gray-100 h-full mt-10"
             >
               <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#E8BC3D] rounded-full flex items-center justify-center border-4 border-[#F4F6FB] shadow-lg">
-                <BoneSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+                <Bone className="text-white w-10 h-10" strokeWidth={2.5} />
               </div>
               <h3 className="text-4xl font-black text-[#E8BC3D] mt-6 mb-4 tracking-tight">Óseo</h3>
               <div className="border-[2px] border-[#E8BC3D] rounded-full px-4 py-1 flex items-center justify-center mb-4">
@@ -208,9 +204,9 @@ export default function CheqIn() {
                 <span className="text-[#001cf0] font-black tracking-tight text-lg">in<sup className="text-[9px] ml-0.5">®</sup></span>
               </div>
               <p className="text-[#505050] text-sm mb-6 leading-snug">
-                <strong className="font-black text-[#606060]">Cuidar tus huesos hoy</strong> <br/><span className="italic text-[#707070]">es prevenir mañana</span>
+                <strong className="font-black text-[#606060]">Cuidar tus huesos hoy</strong> <br /><span className="italic text-[#707070]">es prevenir mañana</span>
               </p>
-              
+
               <div className="w-full flex-grow flex flex-col items-center">
                 <div className="w-full mb-6 flex flex-col items-center">
                   <div className="bg-[#E8BC3D] text-[#505050] font-black rounded-full px-6 py-1.5 text-xs mb-2">Evaluación integral</div>

@@ -1,13 +1,10 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+import { Bone } from "lucide-react"
 import SeoTags from "../../components/SeoTags"
 
 export default function CheqInOseo() {
-  const BoneSymbol = ({ className, strokeWidth = 2 }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2 2 2 0 0 1-4 0 2 2 0 0 1 2-2V8a2 2 0 0 1-2-2 2 2 0 0 1 4 0 2 2 0 0 0 2 2h6a2 2 0 0 0 2-2 2 2 0 0 1 4 0 2 2 0 0 1-2 2v8a2 2 0 0 1 2 2 2 2 0 0 1-4 0z" />
-    </svg>
-  );
+
 
   return (
     <>
@@ -17,69 +14,69 @@ export default function CheqInOseo() {
         image="/servicios/cheq-in-oseo.jpg"
       />
       <section className="relative min-h-screen bg-[#Eef3f9] overflow-hidden flex flex-col items-center justify-center py-24">
-        
+
         {/* Floating Background Circles */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           {/* Top Left */}
-          <motion.div 
-            animate={{ y: [0, -10, 0] }} 
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-[10%] left-[15%] w-16 h-16 bg-[#E8BC3D] rounded-full flex items-center justify-center transform rotate-12 shadow-md"
           >
-            <BoneSymbol className="text-white w-8 h-8" strokeWidth={2.5} />
+            <Bone className="text-white w-8 h-8" strokeWidth={2.5} />
           </motion.div>
           {/* Top Right (Blurred) */}
-          <motion.div 
-            animate={{ y: [0, 15, 0] }} 
+          <motion.div
+            animate={{ y: [0, 15, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             className="absolute top-[5%] right-[10%] w-24 h-24 bg-[#E8BC3D] rounded-full flex items-center justify-center transform -rotate-12 blur-[2px]"
           >
-            <BoneSymbol className="text-white w-12 h-12" strokeWidth={2.5} />
+            <Bone className="text-white w-12 h-12" strokeWidth={2.5} />
           </motion.div>
           {/* Mid Left (Blurred) */}
-          <motion.div 
-            animate={{ y: [0, 10, 0] }} 
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             className="absolute top-[40%] left-[5%] w-32 h-32 bg-[#E8BC3D] rounded-full flex items-center justify-center transform rotate-45 blur-md opacity-90"
           >
-            <BoneSymbol className="text-white w-16 h-16" strokeWidth={2} />
+            <Bone className="text-white w-16 h-16" strokeWidth={2} />
           </motion.div>
           {/* Mid Right */}
-          <motion.div 
-            animate={{ y: [0, -15, 0] }} 
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             className="absolute top-[45%] right-[8%] w-20 h-20 bg-[#E8BC3D] rounded-full flex items-center justify-center transform -rotate-6 shadow-xl"
           >
-            <BoneSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+            <Bone className="text-white w-10 h-10" strokeWidth={2.5} />
           </motion.div>
           {/* Bottom Left */}
-          <motion.div 
-            animate={{ y: [0, -10, 0] }} 
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
             className="absolute bottom-[10%] left-[10%] w-20 h-20 bg-[#E8BC3D] rounded-full flex items-center justify-center transform rotate-12 shadow-xl"
           >
-            <BoneSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+            <Bone className="text-white w-10 h-10" strokeWidth={2.5} />
           </motion.div>
           {/* Bottom Right (Blurred) */}
-          <motion.div 
-            animate={{ y: [0, 20, 0] }} 
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
             className="absolute bottom-[15%] right-[5%] w-36 h-36 bg-[#E8BC3D] rounded-full flex items-center justify-center transform -rotate-12 blur-md opacity-80"
           >
-            <BoneSymbol className="text-white w-16 h-16" strokeWidth={2} />
+            <Bone className="text-white w-16 h-16" strokeWidth={2} />
           </motion.div>
         </div>
 
         {/* Main Card */}
         <div className="relative z-10 w-full max-w-lg mx-auto mt-12 mb-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-white rounded-[2.5rem] p-10 md:p-12 shadow-2xl relative flex flex-col items-center text-center border border-gray-100"
           >
             {/* Top Center Icon */}
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#E8BC3D] rounded-full flex items-center justify-center border-4 border-[#Eef3f9] shadow-lg">
-              <BoneSymbol className="text-white w-10 h-10" strokeWidth={2.5} />
+              <Bone className="text-white w-10 h-10" strokeWidth={2.5} />
             </div>
 
             {/* Title */}
@@ -98,7 +95,7 @@ export default function CheqInOseo() {
 
             {/* Subtitle */}
             <p className="text-[#505050] text-lg mb-10 leading-snug">
-              <strong className="font-black text-[#606060]">Cuidar tus huesos hoy</strong> <br/><span className="italic text-[#707070]">es prevenir mañana</span> 
+              <strong className="font-black text-[#606060]">Cuidar tus huesos hoy</strong> <br /><span className="italic text-[#707070]">es prevenir mañana</span>
             </p>
 
             {/* Section 1 */}
