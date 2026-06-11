@@ -7,6 +7,7 @@ import SucursalesHome from "../components/SucursalesHome"
 import Slogan from "../components/Slogan"
 import SeoTags from "../components/SeoTags"
 import Testimonials from "../components/Testimonials"
+import Stats from "../components/Stats"
 import { organizationSchema, websiteSchema, allSucursalesSchema } from "../config/structuredData"
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <VideoStack />
       <SucursalesHome />
       <Testimonials />
+      <Stats />
       <CTA />
     </>
   )
