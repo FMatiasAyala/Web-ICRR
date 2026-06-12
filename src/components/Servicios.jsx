@@ -127,8 +127,11 @@ export default function ServiciosHome() {
                 <Link
                   to={`/servicios/${s.slug}`}
                   className="inline-flex items-center justify-center text-[#505050] hover:text-[#0B2CF5] transition-colors"
+                  aria-label={`Ver detalles de ${s.title}`}
+                  title={`Ver detalles de ${s.title}`}
                 >
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="sr-only">Ver detalles de {s.title}</span>
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
