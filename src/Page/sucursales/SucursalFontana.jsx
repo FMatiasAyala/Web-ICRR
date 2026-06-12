@@ -73,7 +73,7 @@ export default function SucursalFontana() {
                 </div>
                 <h3 className="text-xl font-black text-[#0B2CF5] mb-3 group-hover:text-white transition-colors">{item.title}</h3>
                 <p className="text-[#505050] font-medium group-hover:text-white/90 transition-colors">{item.desc}</p>
-                <p className="text-[#8B8B8B] text-sm font-medium group-hover:text-white/70 transition-colors uppercase tracking-wider mt-1">{item.sub}</p>
+                <p className="text-gray-500 text-sm font-medium group-hover:text-white/70 transition-colors uppercase tracking-wider mt-1">{item.sub}</p>
               </motion.div>
             ))}
           </div>

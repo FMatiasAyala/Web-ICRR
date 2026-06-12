@@ -267,7 +267,7 @@ export default function Turnos() {
 
         {/* === FINISHER INFO === */}
         <div className="container mx-auto px-6 pt-24 text-center">
-          <div className="inline-flex items-center gap-2 text-[#8B8B8B] font-bold text-xs uppercase tracking-widest bg-white py-3 px-6 rounded-full shadow-sm border border-gray-100">
+          <div className="inline-flex items-center gap-2 text-gray-500 font-bold text-xs uppercase tracking-widest bg-white py-3 px-6 rounded-full shadow-sm border border-gray-100">
             <CheckCircle className="w-4 h-4 text-[#25D366]" />
             Atención oficial verificada
           </div>

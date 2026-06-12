@@ -706,7 +706,7 @@ Peso límite del paciente: 140 kg. Si el técnico o médico determinan que el pa
                           className={`w-full text-left px-5 py-4 font-bold flex justify-between items-center transition-colors ${activoEstudio === `${i}-${j}` ? 'bg-[#F4F6FB] text-[#0B2CF5]' : 'text-[#505050] hover:bg-gray-50'}`}
                         >
                           <span className="text-[15px]">{est.titulo}</span>
-                          <span className={`text-xl transition-transform duration-300 ${activoEstudio === `${i}-${j}` ? 'rotate-45 text-[#0B2CF5]' : 'text-[#8B8B8B]'}`}>
+                          <span className={`text-xl transition-transform duration-300 ${activoEstudio === `${i}-${j}` ? 'rotate-45 text-[#0B2CF5]' : 'text-gray-500'}`}>
                             +
                           </span>
                         </button>

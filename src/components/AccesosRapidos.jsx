@@ -42,9 +42,9 @@ function AccesosRapidos() {
               className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 h-full flex flex-col justify-between hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 border border-white/40 border-b-2 group-hover:bg-[#f6f9fc]"
             >
               <div className="flex justify-between items-start mb-4">
-                <h4 className="text-[22px] md:text-2xl font-black text-[#0B2CF5] leading-tight whitespace-pre-line tracking-tight">
+                <h2 className="text-[22px] md:text-2xl font-black text-[#0B2CF5] leading-tight whitespace-pre-line tracking-tight">
                   {a.title}
-                </h4>
+                </h2>
                 <div className="w-12 h-12 rounded-full border border-[#0B2CF5]/20 flex items-center justify-center bg-white shadow-sm flex-shrink-0">
                   <img src={a.img} alt="" className="w-6 h-6 object-contain" />
                 </div>

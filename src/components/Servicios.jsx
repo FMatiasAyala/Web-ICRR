@@ -123,7 +123,7 @@ export default function ServiciosHome() {
 
               <div className="px-6 pb-8 pt-6 text-center">
                 <h3 className="text-[22px] font-black text-[#505050] mb-3">{s.title}</h3>
-                <p className="text-[#8B8B8B] text-sm leading-relaxed mb-6 font-medium px-2">{s.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-6 font-medium px-2">{s.desc}</p>
                 <Link
                   to={`/servicios/${s.slug}`}
                   className="inline-flex items-center justify-center text-[#505050] hover:text-[#0B2CF5] transition-colors"

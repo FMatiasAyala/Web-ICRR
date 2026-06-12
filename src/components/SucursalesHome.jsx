@@ -97,7 +97,7 @@ export default function SucursalesHome({ asPage = false }) {
                   <span className="font-black">{s.nombre}</span>
                 </h3>
               </div>
-              <p className="text-[#8B8B8B] text-[13px] md:text-sm leading-snug font-medium whitespace-pre-line ml-[24px]">
+              <p className="text-gray-500 text-[13px] md:text-sm leading-snug font-medium whitespace-pre-line ml-[24px]">
                 {s.direccion}
               </p>
               <div className="w-9 h-[3px] bg-[#0B2CF5] mt-3 ml-[24px]"></div>

@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
 
           <h4 className="font-black text-white text-[18px] mt-8 mb-5 tracking-tight uppercase">Otras Sedes</h4>
-          <p className="text-[14px] text-white/60 font-medium leading-relaxed">
+          <p className="text-[14px] text-white/80 font-medium leading-relaxed">
             Av. Alvear 3876 - Fontana, Chaco <br />
             Av. J. D. Perón 1220 - Presidencia Roque Sáenz Peña
           </p>
@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Columna 2 */}
         <div>
           <h4 className="font-black text-white text-[18px] mb-5 tracking-tight uppercase">Servicios</h4>
-          <ul className="space-y-3 text-[14px] text-white/60 font-medium">
+          <ul className="space-y-3 text-[14px] text-white/80 font-medium">
             <li>
               <Link to="/servicios/diagnostico-por-imagen" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                 <span className="text-white opacity-40 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">•</span> Diagnóstico por Imágenes
@@ -74,16 +74,18 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 text-white p-3 rounded-full hover:bg-white hover:text-[#0B2CF5] transition-all"
+              aria-label="Ir a nuestro Facebook"
             >
-              <FaFacebook className="w-5 h-5" />
+              <FaFacebook className="w-5 h-5" aria-hidden="true" />
             </a>
             <a
               href="https://www.instagram.com/institutocrr/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 text-white p-3 rounded-full hover:bg-white hover:text-[#0B2CF5] transition-all"
+              aria-label="Ir a nuestro Instagram"
             >
-              <FaInstagram className="w-5 h-5" />
+              <FaInstagram className="w-5 h-5" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -107,7 +109,7 @@ export default function Footer() {
 
       {/* Footer inferior */}
       <div className="container mx-auto px-6 mt-10">
-        <p className="text-center text-[13px] text-white/40 font-medium">
+        <p className="text-center text-[13px] text-white/70 font-medium">
           © {new Date().getFullYear()} Instituto Consultorio Radiológico Resistencia. <br className="md:hidden" /> Todos los derechos reservados.
         </p>
       </div>
