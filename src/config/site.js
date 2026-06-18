@@ -5,7 +5,7 @@ export const SITE = {
   name: "Instituto Consultorio Radiológico Resistencia",
   shortName: "ICRR",
   // Dominio de producción (sin barra final).
-  url: "https://www.icrr.com.ar",
+  url: "https://icrr.com.ar",
   locale: "es_AR",
   lang: "es",
   description:
@@ -71,7 +71,7 @@ export const SUCURSALES = [
   },
 ]
 
-// Construye una URL absoluta a partir de una ruta ("/servicios" -> "https://www.icrr.com.ar/servicios").
+// Construye una URL absoluta a partir de una ruta ("/servicios" -> "https://icrr.com.ar/servicios").
 export function absoluteUrl(path = "/") {
   if (!path) return SITE.url
   if (path.startsWith("http")) return path

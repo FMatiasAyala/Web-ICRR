@@ -6,4 +6,4 @@ Allow: /
 # Bloquear rutas de error/no útiles para indexación
 Disallow: /404
 
-Sitemap: https://www.icrr.com.ar/sitemap.xml
+Sitemap: https://icrr.com.ar/sitemap.xml
