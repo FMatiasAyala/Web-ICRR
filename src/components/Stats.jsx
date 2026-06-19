@@ -1,20 +1,59 @@
 import { ClipboardList, FilePlus, Users } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { useInView } from "framer-motion";
+
+function AnimatedNumber({ end, prefix = "+ " }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (isInView) {
+      let frame = 0;
+      const duration = 2000;
+      const totalFrames = Math.round(duration / 16);
+
+      const timer = setInterval(() => {
+        frame++;
+        const progress = frame / totalFrames;
+        const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const current = Math.round(end * easeOut);
+
+        if (frame >= totalFrames) {
+          setCount(end);
+          clearInterval(timer);
+        } else {
+          setCount(current);
+        }
+      }, 16);
+
+      return () => clearInterval(timer);
+    }
+  }, [isInView, end]);
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      {count.toLocaleString("es-AR")}
+    </span>
+  );
+}
 
 export default function Stats() {
   const stats = [
     {
       icon: <ClipboardList className="w-14 h-14 text-[#4A65F6] mb-4 opacity-90" strokeWidth={1.5} />,
-      number: "+ 49",
+      end: 49,
       text: "años al servicio de los chaqueños",
     },
     {
       icon: <FilePlus className="w-14 h-14 text-[#4A65F6] mb-4 opacity-90" strokeWidth={1.5} />,
-      number: "+ 340.000",
+      end: 340000,
       text: "estudios anuales",
     },
     {
       icon: <Users className="w-14 h-14 text-[#4A65F6] mb-4 opacity-90" strokeWidth={1.5} />,
-      number: "+ 30",
+      end: 30,
       text: "especialistas",
     },
   ];
@@ -30,7 +69,7 @@ export default function Stats() {
             >
               {stat.icon}
               <h3 className="text-4xl md:text-[2.8rem] font-black text-[#0B2CF5] mb-4 tracking-tight whitespace-nowrap">
-                {stat.number}
+                <AnimatedNumber end={stat.end} />
               </h3>
               <p className="text-[#505050] font-medium text-[15px] md:text-base">
                 {stat.text}
