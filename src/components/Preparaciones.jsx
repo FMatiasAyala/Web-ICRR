@@ -324,9 +324,7 @@ Cada turno tiene una duración aproximada de 30 minutos. `
         {
           titulo: "TOMOGRAFIA SIN CONTRASTE.",
           detalle: `No requiere preparación.
-          DURACION TOMOGRAFIA SIN CONTRASTE.
-
-El estudio dura 5 minutos. Puede concurrir al instituto sin turno y se lo atenderá por orden de llegada.`
+          DURACION TOMOGRAFIA SIN CONTRASTE.`
         },
         {
           titulo: "TOMOGRAFIA CON CONTRASTE - Angiotomografia",
