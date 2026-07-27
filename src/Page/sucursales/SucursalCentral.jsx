@@ -12,7 +12,7 @@ export default function SucursalCentral() {
       <SeoTags
         title="Sede Central Resistencia — Av. 9 de Julio 635 | ICRR"
         description="Nuestra casa matriz en Resistencia, Chaco (Av. 9 de Julio 635), con tecnología de alta complejidad y atención integral en diagnóstico por imágenes."
-        image="/sucursales/fachadaCentral.jpg"
+        image="/img/sucursales/fachadaCentral.webp"
         path="/sucursales/central"
         keywords="ICRR Resistencia, diagnóstico por imágenes Av. 9 de Julio, sede central Chaco"
         jsonLd={[
@@ -29,7 +29,7 @@ export default function SucursalCentral() {
         {/* HERO */}
         <div className="relative h-[65vh] overflow-hidden bg-[#0B2CF5]">
           <img
-            src="/sucursales/fachadaCentral.webp"
+            src="/img/sucursales/fachadaCentral.webp"
             alt="Sede Central ICRR"
             className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-60"
           />

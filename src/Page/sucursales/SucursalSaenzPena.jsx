@@ -12,7 +12,7 @@ export default function SucursalSaenzPena() {
       <SeoTags
         title="Sucursal Sáenz Peña — Av. J. D. Perón 1220 | ICRR"
         description="Atención médica y diagnóstico por imágenes en Presidencia Roque Sáenz Peña, Chaco (Av. J. Domingo Perón 1220). Tecnología y calidad en el corazón de la provincia."
-        image="/sucursales/fachadaSP.jpg"
+        image="/img/sucursales/fachadaSP.webp"
         path="/sucursales/saenzPena"
         keywords="ICRR Sáenz Peña, diagnóstico por imágenes Sáenz Peña, Presidencia Roque Sáenz Peña, Chaco"
         jsonLd={[
@@ -29,7 +29,7 @@ export default function SucursalSaenzPena() {
         {/* HERO */}
         <div className="relative h-[65vh] overflow-hidden bg-[#0B2CF5]">
           <img
-            src="/sucursales/fachadaSP.webp"
+            src="/img/sucursales/fachadaSP.webp"
             alt="Sucursal Sáenz Peña ICRR"
             className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-60"
           />

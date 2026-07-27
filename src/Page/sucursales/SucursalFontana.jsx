@@ -12,7 +12,7 @@ export default function SucursalFontana() {
       <SeoTags
         title="Sucursal Fontana — Av. Alvear 3875 | ICRR"
         description="Atención médica especializada y diagnóstico por imágenes en nuestra sede de Fontana, Chaco (Av. Alvear 3875)."
-        image="/sucursales/fachadaFontana.jpg"
+        image="/img/sucursales/fachadaFontana.webp"
         path="/sucursales/fontana"
         keywords="ICRR Fontana, diagnóstico por imágenes Fontana, Av. Alvear, Chaco"
         jsonLd={[
@@ -29,7 +29,7 @@ export default function SucursalFontana() {
         {/* HERO */}
         <div className="relative h-[65vh] overflow-hidden bg-[#0B2CF5]">
           <img
-            src="/sucursales/fachadaFontana.webp"
+            src="/img/sucursales/fachadaFontana.webp"
             alt="Sucursal Fontana ICRR"
             className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-60"
           />

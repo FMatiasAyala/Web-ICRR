@@ -41,7 +41,7 @@ export default function ServiciosPage() {
           icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
           title: "Piso De La Mujer",
           desc: "Atención integral con estudios específicos para la salud femenina y programas de prevención.",
-          img: "/servicios/PisoDeLaMujer.png",
+          img: "/img/servicios/PisoDeLaMujer.png",
           slug: "piso-de-la-mujer",
           bg: "bg-[#FDF5F5]",
         }, */
@@ -49,7 +49,7 @@ export default function ServiciosPage() {
       icon: <HeartPulse className="w-12 h-12 text-[#2E86AB]" />,
       title: "Cheq-In",
       desc: "Cheqin es el punto de partida. Un programa que te permite obtener en media jornada tu estado de salud general.",
-      img: "/servicios/Cheq-in.png",
+      img: "/img/servicios/Cheq-in.png",
       slug: "cheq-in",
       bg: "bg-[#E8F4FB]",
       abbr: "Cq",

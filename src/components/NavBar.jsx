@@ -23,7 +23,6 @@ export default function Navbar() {
     { to: "/turnos", label: "Turnos" },
     { to: "/nosotros", label: "Nosotros" },
     { to: "/novedades", label: "Novedades" },
-    { to: "/pacientes", label: "Pacientes" },
   ]
 
   return (
@@ -37,7 +36,7 @@ export default function Navbar() {
 
           {/* Desktop */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-end">
-            {links.filter(l => l.label !== "Pacientes").map(({ to, label }) => (
+            {links.map(({ to, label }) => (
               <NavLink
                 key={to}
                 to={to}
@@ -93,7 +92,7 @@ export default function Navbar() {
         {open && (
           <div className="lg:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0 z-40">
             <nav className="container mx-auto flex flex-col px-6 py-4 gap-3">
-              {links.filter(l => l.label !== "Pacientes").map(({ to, label }) => (
+              {links.map(({ to, label }) => (
                 <NavLink
                   key={to}
                   to={to}

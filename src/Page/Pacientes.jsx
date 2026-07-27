@@ -70,7 +70,7 @@ export default function Pacientes() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { icon: <BsBank />, title: "Transferencia", desc: "Aboná mediante CBU/Alias de forma directa." },
-                { icon: <FaCreditCard />, title: "Tarjetas", desc: "3 cuotas sin interés en consumos superiores a $10.000." },
+                { icon: <FaCreditCard />, title: "Tarjetas", desc: "" },
                 { icon: <BsCash />, title: "Efectivo", desc: "Pago presencial en nuestras sucursales." }
               ].map((item, i) => (
                 <motion.div

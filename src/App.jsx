@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import AppLayout from "./layouts/AppLayout"
 import Home from "./Page/Home"
 import ServiciosPage from "./Page/ServiciosPage"
@@ -10,7 +10,6 @@ import NotFound from "./Page/NotFound"
 import SucursalDetail from "./Page/SucursalDetail"
 import SucursalesHome from "./components/SucursalesHome"
 import Novedades from "./Page/Novedades"
-import Pacientes from "./Page/Pacientes"
 import ScrollToTop from "./components/ScrollToTop"
 
 export default function App() {
@@ -26,7 +25,8 @@ export default function App() {
           <Route path="turnos" element={<Turnos />} />
           <Route path="nosotros" element={<Nosotros />} />
           <Route path="novedades" element={<Novedades />} />
-          <Route path="pacientes" element={<Pacientes />} />
+          {/* Vista de Pacientes dada de baja: se redirige al home. */}
+          <Route path="pacientes" element={<Navigate to="/" replace />} />
           <Route path="sucursales" element={<SucursalesHome asPage />} />
           <Route path="sucursales/:slug" element={<SucursalDetail />} />
           <Route path="*" element={<NotFound />} />

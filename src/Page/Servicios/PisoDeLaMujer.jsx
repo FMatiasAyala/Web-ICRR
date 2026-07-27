@@ -16,7 +16,7 @@ export default function PisoDeLaMujer() {
       <SeoTags
         title="Piso de la Mujer: Salud Femenina Integral | ICRR"
         description="Un espacio pensado para el cuidado integral de la salud femenina, con estudios específicos y programas de prevención en Resistencia, Chaco."
-        image="/servicios/PisoDeLaMujer.png"
+        image="/img/servicios/PisoDeLaMujer.png"
         path="/servicios/piso-de-la-mujer"
         keywords="salud de la mujer Resistencia, mamografía, prevención ginecológica, piso de la mujer, Chaco, ICRR"
       />
