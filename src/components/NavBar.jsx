@@ -66,7 +66,7 @@ export default function Navbar() {
                     Pacientes
                   </a>
                   <a
-                    href="https://pacientes.icrrportal.com.ar/derivante1.php"
+                    href="https://derivantes.icrrportal.com.ar"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#505050] text-center font-bold text-[14px] px-4 py-2.5 rounded-xl hover:bg-[#F4F6FB] hover:text-[#0B2CF5] transition-colors mt-1"
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <a href="https://pacientes.icrrportal.com.ar/" target="_blank" rel="noopener noreferrer" className="text-[#505050] font-bold text-[16px] ml-4 hover:text-[#0B2CF5]">
                   Pacientes
                 </a>
-                <a href="https://pacientes.icrrportal.com.ar/derivante1.php" target="_blank" rel="noopener noreferrer" className="text-[#505050] font-bold text-[16px] ml-4 hover:text-[#0B2CF5]">
+                <a href="https://derivantes.icrrportal.com.ar" target="_blank" rel="noopener noreferrer" className="text-[#505050] font-bold text-[16px] ml-4 hover:text-[#0B2CF5]">
                   Derivantes
                 </a>
               </div>

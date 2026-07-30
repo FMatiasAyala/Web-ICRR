@@ -52,7 +52,7 @@ export default function Turnos() {
     },
     {
       q: "¿Cómo sé si mi obra social tiene cobertura?",
-      a: "Trabajamos con las principales obras sociales y prepagas. Podés consultar el listado completo en nuestra sección de Coberturas o contactarnos por WhatsApp para confirmar."
+      a: "Trabajamos con las principales obras sociales y prepagas. Podés consultar el listado completo por WhatsApp para confirmar."
     },
     {
       q: "¿Cuándo recibo los resultados de mi estudio?",
