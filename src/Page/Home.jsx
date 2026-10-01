@@ -1,10 +1,13 @@
-import Hero from "../components/Hero"
+// import Hero from "../components/Hero"
+// Campaña Octubre Rosa: hero temporal
+import HeroOctubreRosa from "../components/HeroOctubreRosa"
 import VideoStack from "../components/VideoStack"
 import Servicios from "../components/Servicios"
 import AccesosRapidos from "../components/AccesosRapidos"
 import CTA from "../components/CTA"
 import SucursalesHome from "../components/SucursalesHome"
-import Slogan from "../components/Slogan"
+// Hero original (desactivado durante Octubre Rosa)
+// import Slogan from "../components/Slogan"
 import SeoTags from "../components/SeoTags"
 import Testimonials from "../components/Testimonials"
 import Stats from "../components/Stats"
@@ -21,7 +24,9 @@ export default function Home() {
         keywords="diagnóstico por imágenes Resistencia, resonancia magnética Chaco, tomografía, ecografía, mamografía, densitometría, ICRR"
         jsonLd={[organizationSchema(), websiteSchema(), ...allSucursalesSchema()]}
       />
-      <Slogan />
+      {/* Hero original — descomentar al terminar Octubre Rosa y quitar <HeroOctubreRosa /> */}
+      {/* <Slogan /> */}
+      <HeroOctubreRosa />
       <AccesosRapidos />
       <Servicios />
       <VideoStack />

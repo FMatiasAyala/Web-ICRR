@@ -44,6 +44,15 @@ const redes = [
   },
 ]
 
+/* ===== Colores — CAMPAÑA OCTUBRE ROSA (activo) ===== */
+const barBg = "bg-[#FF4D94]"
+const iconHover = "hover:text-[#FF4D94]"
+
+/* ===== Colores — ORIGINALES (descomentar al terminar la campaña y comentar el bloque de arriba) =====
+const barBg = "bg-[#0B2CF5]"
+const iconHover = "hover:text-[#0B2CF5]"
+*/
+
 /* ícono de pin de ubicación */
 const PinIcon = () => (
   <svg className="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
@@ -53,7 +62,7 @@ const PinIcon = () => (
 
 export default function TopBar() {
   return (
-    <div className="w-full bg-[#0B2CF5] text-white text-[13px] border-b border-white/10 relative z-[60]">
+    <div className={`w-full ${barBg} text-white text-[13px] border-b border-white/10 relative z-[60]`}>
       <div className="container mx-auto flex items-center justify-between px-6 py-2">
         {/* Sucursales */}
         <ul className="flex items-center gap-5 sm:gap-8">
@@ -82,7 +91,7 @@ export default function TopBar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex items-center justify-center w-[26px] h-[26px] rounded-full border-[1.5px] border-white hover:bg-white hover:text-[#0B2CF5] transition-all duration-300"
+                className={`flex items-center justify-center w-[26px] h-[26px] rounded-full border-[1.5px] border-white hover:bg-white ${iconHover} transition-all duration-300`}
               >
                 <div className="scale-75">{icon}</div>
               </a>

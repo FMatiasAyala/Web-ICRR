@@ -3,8 +3,25 @@ import { NavLink, Link, useLocation } from "react-router-dom"
 import TopBar from "./TopBar"
 
 const base = "inline-flex items-center font-black transition px-2 py-1.5 rounded-md text-[15px] tracking-tight"
+
+/* ===== Colores — CAMPAÑA OCTUBRE ROSA (activo) ===== */
+const active = "text-[#FF4D94] border-b-2 border-[#FF4D94]"
+const inactive = "text-[#FF4D94] hover:opacity-75 hover:border-b-2 hover:border-[#FF4D94]"
+const portalBtn = "bg-[#FF4D94] hover:bg-[#E0337A] shadow-[0_4px_14px_rgb(255,77,148,0.3)] hover:shadow-[0_6px_20px_rgb(255,77,148,0.4)]"
+const dropdownLink = "hover:bg-[#FFF0F6] hover:text-[#FF4D94]"
+const brandText = "text-[#FF4D94]"
+const brandHover = "hover:text-[#FF4D94]"
+const mobileActive = "bg-[#FFF0F6] text-[#FF4D94]"
+
+/* ===== Colores — ORIGINALES (descomentar al terminar la campaña y comentar el bloque de arriba) =====
 const active = "text-[#0B2CF5] border-b-2 border-[#0B2CF5]"
 const inactive = "text-[#0B2CF5] hover:opacity-75 hover:border-b-2 hover:border-[#0B2CF5]"
+const portalBtn = "bg-[#0B2CF5] hover:bg-[#0820bb] shadow-[0_4px_14px_rgb(11,44,245,0.3)] hover:shadow-[0_6px_20px_rgb(11,44,245,0.4)]"
+const dropdownLink = "hover:bg-[#F4F6FB] hover:text-[#0B2CF5]"
+const brandText = "text-[#0B2CF5]"
+const brandHover = "hover:text-[#0B2CF5]"
+const mobileActive = "bg-[#F4F6FB] text-[#0B2CF5]"
+*/
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -52,7 +69,7 @@ export default function Navbar() {
 
             {/* Portal Dropdown */}
             <div className="relative group flex flex-col items-center">
-              <button className="bg-[#0B2CF5] text-white font-black px-7 py-2.5 rounded-full text-[15px] hover:bg-[#0820bb] transition-all shadow-[0_4px_14px_rgb(11,44,245,0.3)] hover:shadow-[0_6px_20px_rgb(11,44,245,0.4)] tracking-tight">
+              <button className={`${portalBtn} text-white font-black px-7 py-2.5 rounded-full text-[15px] transition-all tracking-tight`}>
                 Portal
               </button>
               <div className="absolute top-[100%] pt-3 w-max opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top">
@@ -61,7 +78,7 @@ export default function Navbar() {
                     href="https://pacientes.icrrportal.com.ar/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#505050] text-center font-bold text-[14px] px-4 py-2.5 rounded-xl hover:bg-[#F4F6FB] hover:text-[#0B2CF5] transition-colors"
+                    className={`text-[#505050] text-center font-bold text-[14px] px-4 py-2.5 rounded-xl ${dropdownLink} transition-colors`}
                   >
                     Pacientes
                   </a>
@@ -69,7 +86,7 @@ export default function Navbar() {
                     href="https://derivantes.icrrportal.com.ar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#505050] text-center font-bold text-[14px] px-4 py-2.5 rounded-xl hover:bg-[#F4F6FB] hover:text-[#0B2CF5] transition-colors mt-1"
+                    className={`text-[#505050] text-center font-bold text-[14px] px-4 py-2.5 rounded-xl ${dropdownLink} transition-colors mt-1`}
                   >
                     Derivantes
                   </a>
@@ -80,7 +97,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden text-[#0B2CF5] text-2xl"
+            className={`lg:hidden ${brandText} text-2xl`}
             onClick={() => setOpen((v) => !v)}
             aria-label="Abrir menú"
           >
@@ -105,7 +122,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     [
                       "px-4 py-3 rounded-xl font-bold text-[16px]",
-                      isActive ? "bg-[#F4F6FB] text-[#0B2CF5]" : "text-[#505050] hover:bg-gray-50",
+                      isActive ? mobileActive : "text-[#505050] hover:bg-gray-50",
                     ].join(" ")
                   }
                   end={to === "/"}
@@ -117,11 +134,11 @@ export default function Navbar() {
               <div className="w-full h-[1px] bg-gray-100 my-2"></div>
 
               <div className="px-4 py-2 flex flex-col gap-3">
-                <span className="font-black text-[#0B2CF5] uppercase tracking-wider text-sm">Portal</span>
-                <a href="https://pacientes.icrrportal.com.ar/" target="_blank" rel="noopener noreferrer" className="text-[#505050] font-bold text-[16px] ml-4 hover:text-[#0B2CF5]">
+                <span className={`font-black ${brandText} uppercase tracking-wider text-sm`}>Portal</span>
+                <a href="https://pacientes.icrrportal.com.ar/" target="_blank" rel="noopener noreferrer" className={`text-[#505050] font-bold text-[16px] ml-4 ${brandHover}`}>
                   Pacientes
                 </a>
-                <a href="https://derivantes.icrrportal.com.ar" target="_blank" rel="noopener noreferrer" className="text-[#505050] font-bold text-[16px] ml-4 hover:text-[#0B2CF5]">
+                <a href="https://derivantes.icrrportal.com.ar" target="_blank" rel="noopener noreferrer" className={`text-[#505050] font-bold text-[16px] ml-4 ${brandHover}`}>
                   Derivantes
                 </a>
               </div>
