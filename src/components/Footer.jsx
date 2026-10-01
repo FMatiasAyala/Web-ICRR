@@ -3,9 +3,20 @@ import { Phone, MapPin, Mail } from "lucide-react"
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 
+/* ===== Colores — CAMPAÑA OCTUBRE ROSA (activo) ===== */
+const footerBg = "bg-[#FF4D94]"
+const brandHoverText = "hover:text-[#FF4D94]"
+const portalBtn = "text-[#FF4D94] hover:bg-pink-50"
+
+/* ===== Colores — ORIGINALES (descomentar al terminar la campaña y comentar el bloque de arriba) =====
+const footerBg = "bg-[#0B2CF5]"
+const brandHoverText = "hover:text-[#0B2CF5]"
+const portalBtn = "text-[#0B2CF5] hover:bg-blue-50"
+*/
+
 export default function Footer() {
   return (
-    <footer className="bg-[#0B2CF5] text-white pt-20 pb-8 relative overflow-hidden">
+    <footer className={`${footerBg} text-white pt-20 pb-8 relative overflow-hidden`}>
       {/* Decoración sutil de fondo */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none" />
 
@@ -73,7 +84,7 @@ export default function Footer() {
               href="https://www.facebook.com/InstitutoCRR"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/10 text-white p-3 rounded-full hover:bg-white hover:text-[#0B2CF5] transition-all"
+              className={`bg-white/10 text-white p-3 rounded-full hover:bg-white ${brandHoverText} transition-all`}
               aria-label="Ir a nuestro Facebook"
             >
               <FaFacebook className="w-5 h-5" aria-hidden="true" />
@@ -82,7 +93,7 @@ export default function Footer() {
               href="https://www.instagram.com/institutocrr/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/10 text-white p-3 rounded-full hover:bg-white hover:text-[#0B2CF5] transition-all"
+              className={`bg-white/10 text-white p-3 rounded-full hover:bg-white ${brandHoverText} transition-all`}
               aria-label="Ir a nuestro Instagram"
             >
               <FaInstagram className="w-5 h-5" aria-hidden="true" />
@@ -100,7 +111,7 @@ export default function Footer() {
             href="https://pacientes.icrrportal.com.ar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-white text-[#0B2CF5] font-black px-8 py-3 rounded-full shadow-lg hover:bg-blue-50 transition-all text-[14px] tracking-widest uppercase"
+            className={`inline-flex items-center justify-center bg-white ${portalBtn} font-black px-8 py-3 rounded-full shadow-lg transition-all text-[14px] tracking-widest uppercase`}
           >
             Ingresar al Portal
           </a>
