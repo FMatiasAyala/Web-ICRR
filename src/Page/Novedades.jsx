@@ -1,9 +1,69 @@
 
-import { Instagram, ArrowRight } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Instagram, ArrowRight, Play, Images } from "lucide-react"
 import { motion } from "framer-motion"
 import SeoTags from "../components/SeoTags"
 
-export default function NovedadesPlaceholder() {
+// Generado en el VPS por scripts/instagram-sync.mjs (cron)
+const FEED_URL = "/data/instagram/instagram.json"
+
+const formatFecha = (iso) =>
+  new Date(iso).toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" })
+
+function PostCard({ post, i }) {
+  const TypeIcon = post.type === "VIDEO" ? Play : post.type === "CAROUSEL_ALBUM" ? Images : null
+
+  return (
+    <motion.a
+      href={post.permalink}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: (i % 3) * 0.1 }}
+      className="bg-white rounded-[2.5rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 group hover:shadow-2xl transition-all duration-500 flex flex-col"
+    >
+      <div className="aspect-square bg-[#F4F6FB] relative overflow-hidden">
+        <img
+          src={post.image}
+          alt={post.caption ? post.caption.slice(0, 120) : "Publicación de Instagram del ICRR"}
+          loading="lazy"
+          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        {TypeIcon && (
+          <span className="absolute top-4 right-4 grid h-9 w-9 place-items-center rounded-full bg-black/40 text-white backdrop-blur-sm">
+            <TypeIcon className="w-4 h-4" />
+          </span>
+        )}
+      </div>
+      <div className="p-8 text-left flex flex-col flex-1">
+        <p className="text-[#505050] font-medium text-[15px] leading-relaxed line-clamp-3 whitespace-pre-line">
+          {post.caption}
+        </p>
+        <div className="mt-auto pt-6 flex items-center justify-between text-[13px]">
+          <span className="text-[#505050]/70 font-medium">{formatFecha(post.timestamp)}</span>
+          <span className="inline-flex items-center gap-1 font-black text-[#0B2CF5]">
+            Ver en Instagram
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </span>
+        </div>
+      </div>
+    </motion.a>
+  )
+}
+
+export default function Novedades() {
+  // null = cargando o sin datos todavía → se muestran los placeholders
+  const [posts, setPosts] = useState(null)
+
+  useEffect(() => {
+    fetch(FEED_URL, { cache: "no-cache" })
+      .then((res) => res.json())
+      .then((data) => data.posts?.length && setPosts(data.posts))
+      .catch(() => {}) // sin feed: quedan los placeholders y el botón a Instagram
+  }, [])
+
   return (
     <section className="bg-[#F4F6FB] py-24 min-h-screen">
       <SeoTags
@@ -45,9 +105,9 @@ export default function NovedadesPlaceholder() {
           </motion.p>
         </div>
 
-        {/* Grid de Placeholders Modernos */}
+        {/* Publicaciones de Instagram (o placeholders mientras no haya feed) */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {[...Array(6)].map((_, i) => (
+          {posts ? posts.map((post, i) => <PostCard key={post.id} post={post} i={i} />) : [...Array(6)].map((_, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
